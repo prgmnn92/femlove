@@ -8,6 +8,7 @@ import BlogPreview from "@/components/BlogPreview";
 import CTA from "@/components/CTA";
 import AboutMe from "@/components/AboutMe";
 import { sanityClient } from "lib/sanity";
+import HeadingH1 from "@/components/headings/HeadingH1";
 
 export default function Home({ posts }) {
   return (

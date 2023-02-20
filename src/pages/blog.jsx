@@ -1,5 +1,6 @@
 import BlogCard from "@/components/BlogCard";
 import Container from "@/components/Container";
+import HeadingH1 from "@/components/headings/HeadingH1";
 import Input from "@/components/Input";
 import Layout from "@/components/Layout";
 import React, { useState } from "react";
@@ -18,10 +19,8 @@ const Blog = ({ posts }) => {
 
   return (
     <Layout>
-      <Container className="px-4 py-8 lg:py-16 ">
-        <h1 className="max-w-md mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-center mx-auto py-16">
-          Alle Beiträge
-        </h1>
+      <Container className="px-4 py-8 lg:py-16">
+        <HeadingH1>Alle Beiträge</HeadingH1>
         <div className="my-2">
           <Input
             value={searchPhrase}
