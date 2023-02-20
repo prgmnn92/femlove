@@ -16,7 +16,7 @@ const NavLink = ({ href, children }) => {
   );
 };
 
-const Navigation = () => {
+const Navigation = ({ openModal }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const handleMenu = () => {
@@ -78,7 +78,12 @@ const Navigation = () => {
               <NavLink href={"/kontakt"}>Kontakt</NavLink>
             </li>
             <li>
-              <Button className={"bg-black text-white ml-2"}>Subscribe</Button>
+              <Button
+                className={"bg-black text-white ml-2"}
+                onClick={() => openModal()}
+              >
+                Subscribe
+              </Button>
             </li>
           </ul>
         </div>

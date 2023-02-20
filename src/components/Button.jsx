@@ -1,8 +1,12 @@
 import React from "react";
 
-const Button = ({ children, className }) => {
+const Button = ({ children, className, onClick, type }) => {
   return (
-    <button className={`rounded-full font-semibold px-7 py-2 ${className}`}>
+    <button
+      type={type || "button"}
+      onClick={onClick}
+      className={`rounded-full font-semibold px-7 py-2 ${className}`}
+    >
       {children}
     </button>
   );

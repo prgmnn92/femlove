@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
 
 import Footer from "./Footer";
 import Navigation from "./Navigation";
+import Modal from "./Modal";
 
 const Layout = (props) => {
   const { children } = props;
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
   //   const ogimage = GetImage(props?.openGraphImage)?.src ?? "";
   const ogimage = "";
   return (
@@ -37,7 +47,12 @@ const Layout = (props) => {
 
       <div className="antialiased flex flex-col min-h-screen">
         <div className="grow pt-8">
-          <Navigation {...props} />
+          <Navigation
+            closeModal={closeModal}
+            openModal={openModal}
+            {...props}
+          />
+          <Modal isOpen={isOpen} closeModal={closeModal} />
           <div>{children}</div>
         </div>
         <Footer {...props} />

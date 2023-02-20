@@ -25,7 +25,10 @@ const CTA = () => {
             </label>
             <Input type="email" id="email" name="email" />
           </div>
-          <Button className="text-white bg-f-green border-0 py-2 px-8 focus:outline-none rounded text-lg">
+          <Button
+            type="submit"
+            className="text-white bg-f-green border-0 py-2 px-8 focus:outline-none rounded text-lg"
+          >
             Abonnieren
           </Button>
         </div>
