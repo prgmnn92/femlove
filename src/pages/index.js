@@ -9,6 +9,7 @@ import CTA from "@/components/CTA";
 import AboutMe from "@/components/AboutMe";
 import { sanityClient } from "lib/sanity";
 import HeadingH1 from "@/components/headings/HeadingH1";
+import Input from "@/components/Input";
 
 export default function Home({ posts }) {
   return (
@@ -30,9 +31,28 @@ export default function Home({ posts }) {
               Ein Blog, bei dem sich alles rund um den Zyklus, deine Gesundheit
               und deinem Weg zu mehr Selbstakzeptanz dreht.
             </p>
-            <Button className={"bg-f-green text-white"}>
-              <Link href="/">Kontakt</Link>
-            </Button>
+            <div className="flex lg:w-2/3 w-full sm:flex-row flex-col px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+              <div className="relative flex-grow w-full">
+                <label
+                  htmlFor="email"
+                  className="leading-7 text-sm text-gray-600 font-medium"
+                >
+                  Email
+                </label>
+                <Input
+                  className={"lg:min-w-[240px]"}
+                  type="email"
+                  id="email"
+                  name="email"
+                />
+              </div>
+              <Button
+                type="submit"
+                className="text-white bg-f-green border-0 py-2 px-8 focus:outline-none rounded text-lg"
+              >
+                Abonnieren
+              </Button>
+            </div>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <Image

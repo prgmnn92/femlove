@@ -6,6 +6,8 @@ import Footer from "./Footer";
 import Navigation from "./Navigation";
 import Modal from "./Modal";
 
+import { urlFor } from "lib/sanity";
+
 const Layout = (props) => {
   const { children } = props;
   let [isOpen, setIsOpen] = useState(false);
@@ -17,13 +19,13 @@ const Layout = (props) => {
   function openModal() {
     setIsOpen(true);
   }
-  //   const ogimage = GetImage(props?.openGraphImage)?.src ?? "";
-  const ogimage = "";
+  const ogimage = urlFor(props?.openGraphImage) ?? "";
+
   return (
     <>
       <Head>
-        {/* <link rel="preconnect" href="https://cdn.sanity.io/" />
-        <link rel="dns-prefetch" href="https://cdn.sanity.io//" /> */}
+        <link rel="preconnect" href="https://cdn.sanity.io/" />
+        <link rel="dns-prefetch" href="https://cdn.sanity.io//" />
       </Head>
       <NextSeo
         title={props.title}
@@ -43,6 +45,11 @@ const Layout = (props) => {
           ],
           site_name: props.title,
         }}
+        // twitter={{
+        //   handle: "@xyz",
+        //   site: "@xyz",
+        //   cardType: "summary_large_image"
+        // }}
       />
 
       <div className="antialiased flex flex-col min-h-screen">
