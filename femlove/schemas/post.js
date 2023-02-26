@@ -25,6 +25,14 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'string',
+      options: {
+        maxLength: 155,
+      },
+    }),
+    defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',

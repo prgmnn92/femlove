@@ -6,10 +6,10 @@ import Container from "./Container";
 const Footer = () => {
   return (
     <footer className="text-gray-600">
-      <Container className="px-5 py-8 flex items-center sm:flex-row flex-col">
+      <Container className="flex flex-col items-center px-5 py-8 sm:flex-row">
         <Link
           href="/"
-          className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+          className="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start"
         >
           <Image
             src="/logos/brand.png"
@@ -18,11 +18,17 @@ const Footer = () => {
             height={50}
           />
         </Link>
-        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        <p className="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0">
           © 2023 Femlove by Franzi
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <a className="ml-3 text-gray-700">
+        <span className="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
+          <a
+            aria-label="Link to instagram account of femlove"
+            href={"https://www.instagram.com/femlovebyfranzi/"}
+            target="_blank"
+            rel="noreferrer"
+            className="ml-3 text-gray-700"
+          >
             <svg
               fill="none"
               stroke="currentColor"
@@ -36,7 +42,13 @@ const Footer = () => {
               <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
             </svg>
           </a>
-          <a className="ml-3 text-gray-700">
+          <a
+            aria-label="Link to pinterest account of femlove"
+            href={"https://www.pinterest.de/femlovebyfranzi/"}
+            target="_blank"
+            rel="noreferrer"
+            className="ml-3 text-gray-700"
+          >
             <svg
               width="20"
               height="20"

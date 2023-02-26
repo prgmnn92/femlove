@@ -1,3 +1,4 @@
+import BlockCTA from '../components/BlockCTA'
 import {defineType, defineArrayMember} from 'sanity'
 
 /**
@@ -28,6 +29,7 @@ export default defineType({
         {title: 'H2', value: 'h2'},
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
+        {title: 'p', value: 'p'},
         {title: 'Quote', value: 'blockquote'},
       ],
       lists: [{title: 'Bullet', value: 'bullet'}],
@@ -62,6 +64,44 @@ export default defineType({
     defineArrayMember({
       type: 'image',
       options: {hotspot: true},
+      fields: [
+        {
+          title: 'alt',
+          name: 'alt',
+          type: 'string',
+        },
+      ],
+    }),
+    defineArrayMember({
+      title: 'Internal Link',
+      type: 'object',
+      name: 'internalLink',
+      fields: [
+        {
+          title: 'ID',
+          name: 'id',
+          type: 'string',
+        },
+        {
+          title: 'Value',
+          name: 'value',
+          type: 'string',
+        },
+      ],
+    }),
+    defineArrayMember({
+      type: 'object',
+      name: 'blockCTA',
+      fields: [
+        // fields must be defined, and it must be an array
+        {
+          name: 'myField', // field name is required and must be unique
+          type: 'string', // field type is required
+        },
+      ],
+      components: {
+        annotation: BlockCTA,
+      },
     }),
   ],
 })

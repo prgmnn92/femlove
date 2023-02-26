@@ -4,7 +4,7 @@ import HeadingH1 from "@/components/headings/HeadingH1";
 import Input from "@/components/Input";
 import Layout from "@/components/Layout";
 import React, { useState } from "react";
-import { sanityClient } from "../../lib/sanity";
+import { sanityClient } from "@lib/sanity";
 
 const Blog = ({ posts }) => {
   const [categoryFilter, setCategoryFilter] = useState("");
@@ -29,7 +29,7 @@ const Blog = ({ posts }) => {
             className="max-w-sm"
           />
         </div>
-        <div className="flex pb-8">
+        <div className="flex flex-wrap pb-8">
           {filters?.map((item) => {
             return (
               <div
@@ -48,23 +48,14 @@ const Blog = ({ posts }) => {
             );
           })}
         </div>
-        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+        <div className="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-4">
           {posts.map((post) => (
             <BlogCard
               key={post._id}
               post={post}
-              className="p-4 md:w-1/3 sm:mb-0 mb-6"
+              className="p-4 mb-6 md:w-1/3 sm:mb-0"
             />
           ))}
-
-          {/* <BlogCard className="p-4 md:w-1/3 sm:mb-0 mb-6" />
-          <BlogCard className="p-4 md:w-1/3 sm:mb-0 mb-6" />
-          <BlogCard className="p-4 md:w-1/3 sm:mb-0 mb-6" />
-          <BlogCard className="p-4 md:w-1/3 sm:mb-0 mb-6" />
-          <BlogCard className="p-4 md:w-1/3 sm:mb-0 mb-6" />
-          <BlogCard className="p-4 md:w-1/3 sm:mb-0 mb-6" />
-          <BlogCard className="p-4 md:w-1/3 sm:mb-0 mb-6" />
-          <BlogCard className="p-4 md:w-1/3 sm:mb-0 mb-6" /> */}
         </div>
       </Container>
     </Layout>

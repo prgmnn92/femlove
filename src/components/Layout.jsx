@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Navigation from "./Navigation";
 import Modal from "./Modal";
 
-import { urlFor } from "lib/sanity";
+import { urlFor } from "@lib/sanity";
 
 const Layout = (props) => {
   const { children } = props;
@@ -19,7 +19,7 @@ const Layout = (props) => {
   function openModal() {
     setIsOpen(true);
   }
-  const ogimage = urlFor(props?.openGraphImage) ?? "";
+  //const ogimage = urlFor(props?.openGraphImage) ?? "";
 
   return (
     <>
@@ -37,7 +37,7 @@ const Layout = (props) => {
           description: props.description,
           images: [
             {
-              url: ogimage,
+              url: "", //ogimage || "",
               width: 800,
               height: 600,
               alt: props.title,
@@ -52,8 +52,8 @@ const Layout = (props) => {
         // }}
       />
 
-      <div className="antialiased flex flex-col min-h-screen">
-        <div className="grow pt-8">
+      <div className="flex flex-col min-h-screen antialiased">
+        <div className="grow">
           <Navigation
             closeModal={closeModal}
             openModal={openModal}

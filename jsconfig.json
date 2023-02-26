@@ -2,7 +2,21 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@lib/*": [
+        "./lib/*"
+      ],
+      "@utils/*": [
+        "./utils/*"
+      ],
+      // "@components/*": [
+      //   "./components/*"
+      // ],
+      // "@femlove/*": [
+      //   "./femlove/*"
+      // ]
     }
   }
 }

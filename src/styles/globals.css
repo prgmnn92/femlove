@@ -5,6 +5,7 @@
 @font-face {
   font-family: 'Roxborough-CF';
   src: url('/fonts/Roxborough-CF.ttf'); 
+  font-display: swap;
  }
 
 
@@ -21,6 +22,24 @@
   h6 {
       font-family: 'Roxborough-CF', system-ui, sans-serif;
   }
+
+  /* Text inside of the blog content page */
+  .block-text  a {
+    @apply text-blue-600 underline;
+  } 
+  .block-text  h2 {
+    @apply mt-6 mb-6 text-xl font-medium lg:text-2xl;
+  } 
+  .block-text  h1 {
+    @apply mb-8 text-2xl lg:text-4xl;
+  } 
+
+  .block-text  img {
+    @apply mx-auto my-8;
+  } 
+  /* .block-text  p {
+    @apply mb-4;
+  }  */
 }
 
 :root {
@@ -79,15 +98,10 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   font-style: "Montserrat", Monaco, 'Cascadia Mono', 'Segoe UI Mono',
   'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
   'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 }
 
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
 

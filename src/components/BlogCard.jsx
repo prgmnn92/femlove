@@ -1,26 +1,31 @@
 import Image from "next/image";
 
-import { urlFor } from "lib/sanity";
+import { urlFor } from "@lib/sanity";
+import Link from "next/link";
 
 const BlogCard = ({ className, post }) => {
+  // console.log(post);
   return (
     <div className={className}>
-      <div className="rounded-lg h-64 overflow-hidden">
+      <div className="h-64 overflow-hidden rounded-lg">
         <Image
           alt="content"
-          className="object-cover object-center h-full w-full"
+          className="object-cover object-center w-full h-full"
           src={urlFor(post.mainImage).url()}
           width={1200}
           height={500}
         />
       </div>
-      <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
+      <h2 className="mt-5 text-xl font-medium text-gray-900 title-font">
         {post.title}
       </h2>
-      <p className="text-base leading-relaxed mt-2 truncate ...">
+      <p className="mt-2 text-base leading-relaxed line-clamp-3">
         {post.shortDescription}
       </p>
-      <a className="text-f-green inline-flex items-center mt-3">
+      <Link
+        href={"/post/" + post.slug.current}
+        className="inline-flex items-center mt-3 text-f-green"
+      >
         Erfahre Mehr
         <svg
           fill="none"
@@ -33,7 +38,7 @@ const BlogCard = ({ className, post }) => {
         >
           <path d="M5 12h14M12 5l7 7-7 7"></path>
         </svg>
-      </a>
+      </Link>
     </div>
   );
 };

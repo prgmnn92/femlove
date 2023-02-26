@@ -8,7 +8,7 @@ const Kontakt = () => {
   return (
     <Layout>
       <section>
-        <Container className="px-4 py-8 lg:py-4">
+        <Container className="px-4 py-8 lg:py-12">
           <HeadingH1>Schreibe mir eine Nachricht</HeadingH1>
         </Container>
       </section>

@@ -2,45 +2,61 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Container from "./Container";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
     <section>
-      <Container className=" px-5 py-24 flex flex-col">
-        <div className="lg:w-4/6 mx-auto">
-          <div className="rounded-lg h-64 overflow-hidden">
-            <Image
-              alt="content"
-              className="object-cover object-center h-full w-full"
-              src="https://dummyimage.com/1200x500"
-              width={1200}
-              height={500}
-            />
-          </div>
-          <div className="flex flex-col sm:flex-row mt-10">
-            <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-              <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+      <Container className="flex flex-col px-5 ">
+        <div className="mx-auto lg:w-4/6">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.2, delay: 0.05 }}
+            className="flex justify-end h-1 overflow-hidden bg-gray-200 rounded"
+          >
+            <div className="w-24 h-full bg-f-green"></div>
+          </motion.div>
+
+          <div className="flex flex-col mt-10 sm:flex-row">
+            <div className="text-center sm:w-1/3 sm:pr-8 sm:py-8">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.2, delay: 0.15 }}
+                className="inline-flex items-center justify-center w-20 h-20 text-gray-400 bg-gray-200 rounded-full"
+              >
                 <Image
                   alt="content"
-                  className="object-cover object-center h-full w-full rounded-full"
+                  className="object-cover object-center w-full h-full rounded-full"
                   src="/images/femlove_me.webp"
                   width={100}
                   height={100}
                 />
-              </div>
-              <div className="flex flex-col items-center text-center justify-center">
-                <h2 className="font-medium title-font mt-4 text-gray-900 text-lg">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.2, delay: 0.05 }}
+                className="flex flex-col items-center justify-center text-center"
+              >
+                <h2 className="mt-4 text-lg font-medium text-gray-900 title-font">
                   Franziska
                 </h2>
-                <div className="w-12 h-1 bg-f-green rounded mt-2 mb-4"></div>
+                <div className="w-12 h-1 mt-2 mb-4 rounded bg-f-green"></div>
                 <p className="text-base">
                   Raclette knausgaard hella meggs normcore williamsburg enamel
                   pin sartorial venmo tbh hot chicken gentrify portland.
                 </p>
-              </div>
+              </motion.div>
             </div>
-            <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-              <p className="leading-relaxed text-lg mb-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.2, delay: 0.25 }}
+              className="pt-4 mt-4 text-center border-t border-gray-200 sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l sm:border-t-0 sm:mt-0 sm:text-left"
+            >
+              <p className="mb-4 text-lg leading-relaxed">
                 Herzlich Willkommen auf meinem Blog! Ich freue mich, dass du her
                 gefunden hast und wünsche dir viel Spaß beim Rumstöbern. Lerne
                 mehr über deinen Zyklus, deine Gesundheit und finde deinen Weg
@@ -48,7 +64,7 @@ const AboutMe = () => {
               </p>
               <Link
                 href={"/ueber-mich"}
-                className="text-f-green inline-flex items-center"
+                className="inline-flex items-center text-f-green"
               >
                 Erfahre Mehr
                 <svg
@@ -63,7 +79,7 @@ const AboutMe = () => {
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Container>

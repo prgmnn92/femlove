@@ -11,23 +11,22 @@ const ÜberMich = () => {
     <Layout>
       <section>
         <Container className="px-4 py-8 lg:py-16">
-          <h1 className="max-w-md mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl text-center mx-auto py-16"></h1>
           <HeadingH1>Hi! Ich bin Franzi.</HeadingH1>
         </Container>
       </section>
       <section>
         <Container className="flex flex-wrap pb-8">
-          <div className="lg:w-1/2 w-full mb-10 lg:mb-0 overflow-hidden pb-8 lg:text-lg">
+          <div className="w-full pb-8 mb-10 overflow-hidden lg:w-1/2 lg:mb-0 lg:text-lg">
             <Image
               alt="feature"
-              className="object-cover object-center h-full w-full"
+              className="object-cover object-center w-full h-full"
               src="/images/femlove_me.webp"
               width={500}
               height={700}
             />
           </div>
-          <div className="flex flex-col flex-wrap mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
-            <p className="font-semibold pb-3">
+          <div className="flex flex-col flex-wrap mb-10 lg:w-1/2 lg:pl-12 lg:text-left">
+            <p className="pb-3 font-semibold">
               Holistic Health & Wellness Coach i.A. ​
             </p>
             <p>
@@ -38,7 +37,7 @@ const ÜberMich = () => {
               dabei mich von negativen Glaubenssätzen und gesellschaftlichen
               Erwartungen lösen.
             </p>
-            <p className="font-semibold pb-3 pt-9">
+            <p className="pb-3 font-semibold pt-9">
               Warum habe ich Femlove ins Leben gerufen?
             </p>
             <p className="pb-6">
@@ -56,7 +55,7 @@ const ÜberMich = () => {
           </div>
         </Container>
         <Container className="flex flex-wrap">
-          <div className="flex flex-col flex-wrap mb-10 lg:w-1/2  lg:text-left text-center">
+          <div className="flex flex-col flex-wrap mb-10 lg:w-1/2 lg:text-left">
             <p className="pb-6">
               Ich weiß, dass es ganz vielen Frauen so geht, wie mir damals.
               Egal, ob vorherige Pilleneinnahme oder nicht.
@@ -90,10 +89,10 @@ const ÜberMich = () => {
               Love, <b>Franzi</b>
             </p>
           </div>
-          <div className="lg:w-1/2 w-full mb-10 lg:mb-0 overflow-hidden lg:pl-12 pb-8 lg:text-lg">
+          <div className="w-full pb-8 mb-10 overflow-hidden lg:w-1/2 lg:mb-0 lg:pl-12 lg:text-lg">
             <Image
               alt="feature"
-              className="object-cover object-center h-full w-full"
+              className="object-cover object-center w-full h-full"
               src="/images/femlove_me.webp"
               width={500}
               height={700}
@@ -103,13 +102,13 @@ const ÜberMich = () => {
       </section>
       <section>
         <Container className="max-w-4xl">
-          <h2 className="max-w-md mb-4 text-2xl tracking-tight leading-none md:text-3xl xl:text-4xl text-center mx-auto py-8">
+          <h2 className="max-w-md py-8 mx-auto mb-4 text-2xl leading-none tracking-tight md:text-3xl xl:text-4xl">
             Finde deinen Weg zu einem gesunden Zyklus- und Körperbewusstsein
           </h2>
           <div className="flex">
-            <div className="lg:w-1/3 w-full">image</div>
-            <div className="lg:w-2/3 w-full">
-              <p className="font-semibold pb-3 pt-9">Zyklus</p>
+            <div className="w-full lg:w-1/3">image</div>
+            <div className="w-full lg:w-2/3">
+              <p className="pb-3 font-semibold pt-9">Zyklus</p>
               <p className="pb-6">
                 Der weibliche Zyklus macht dich aus - als Frau.
               </p>
@@ -146,9 +145,9 @@ const ÜberMich = () => {
             </div>
           </div>
           <div className="flex">
-            <div className="lg:w-1/3 w-full">image</div>
-            <div className="lg:w-2/3 w-full">
-              <p className="font-semibold pb-3 pt-9">Gesundheit</p>
+            <div className="w-full lg:w-1/3">image</div>
+            <div className="w-full lg:w-2/3">
+              <p className="pb-3 font-semibold pt-9">Gesundheit</p>
               <p className="pb-6">
                 Der weibliche Zyklus hat einen sehr großen Einfluss auf die
                 Gesundheit und das Wohlbefinden der Frau. Dein Lebensstil hat
@@ -169,9 +168,9 @@ const ÜberMich = () => {
             </div>
           </div>
           <div className="flex">
-            <div className="lg:w-1/3 w-full">image</div>
-            <div className="lg:w-2/3 w-full">
-              <p className="font-semibold pb-3 pt-9">
+            <div className="w-full lg:w-1/3">image</div>
+            <div className="w-full lg:w-2/3">
+              <p className="pb-3 font-semibold pt-9">
                 Selbstakzeptanz & Selbstliebe
               </p>
               <p className="pb-6">
