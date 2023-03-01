@@ -10,7 +10,7 @@ const ÜberMich = () => {
   return (
     <Layout>
       <section>
-        <Container className="px-4 py-8 lg:py-16">
+        <Container className="px-4 py-8 lg:py-12">
           <HeadingH1>Hi! Ich bin Franzi.</HeadingH1>
         </Container>
       </section>

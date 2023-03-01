@@ -17,6 +17,7 @@ module.exports = {
         "f-offwhite": "#FAF7F4",
         "f-brown": "#996A42",
         "f-neutral": "#F0E6DB",
+        "f-main": "#E8998D",
       },
     },
   },

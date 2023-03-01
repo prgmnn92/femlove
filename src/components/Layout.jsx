@@ -6,8 +6,6 @@ import Footer from "./Footer";
 import Navigation from "./Navigation";
 import Modal from "./Modal";
 
-import { urlFor } from "@lib/sanity";
-
 const Layout = (props) => {
   const { children } = props;
   let [isOpen, setIsOpen] = useState(false);

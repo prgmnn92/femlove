@@ -12,8 +12,8 @@ const AboutMe = () => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: 0.05 }}
-            className="flex justify-end h-1 overflow-hidden bg-gray-200 rounded"
+            transition={{ duration: 0.2, delay: 0.15 }}
+            className="flex justify-end h-1 overflow-hidden rounded bg-opacity-20 bg-f-green"
           >
             <div className="w-24 h-full bg-f-green"></div>
           </motion.div>
@@ -23,8 +23,8 @@ const AboutMe = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.2, delay: 0.15 }}
-                className="inline-flex items-center justify-center w-20 h-20 text-gray-400 bg-gray-200 rounded-full"
+                transition={{ duration: 0.2, delay: 0.25 }}
+                className="inline-flex items-center justify-center w-20 h-20 text-gray-400 rounded-full bg-opacity-20 bg-f-green"
               >
                 <Image
                   alt="content"
@@ -37,7 +37,7 @@ const AboutMe = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.2, delay: 0.05 }}
+                transition={{ duration: 0.2, delay: 0.15 }}
                 className="flex flex-col items-center justify-center text-center"
               >
                 <h2 className="mt-4 text-lg font-medium text-gray-900 title-font">
@@ -53,7 +53,7 @@ const AboutMe = () => {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.2, delay: 0.25 }}
+              transition={{ duration: 0.2, delay: 0.35 }}
               className="pt-4 mt-4 text-center border-t border-gray-200 sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l sm:border-t-0 sm:mt-0 sm:text-left"
             >
               <p className="mb-4 text-lg leading-relaxed">

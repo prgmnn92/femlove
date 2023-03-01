@@ -12,7 +12,7 @@ const Kontakt = () => {
           <HeadingH1>Schreibe mir eine Nachricht</HeadingH1>
         </Container>
       </section>
-      <section className="bg-rose-50/20">
+      <section>
         <Container>
           <ContactForm />
         </Container>

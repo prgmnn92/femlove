@@ -6,6 +6,7 @@ import cn from "classnames";
 import { Menu, Transition } from "@headlessui/react";
 
 const InPageLinks = [
+  { href: "/", name: "Start" },
   { href: "/blog", name: "Blog" },
   { href: "/empfehlungen", name: "Empfehlungen" },
   { href: "/ueber-mich", name: "Über Mich" },
@@ -44,23 +45,16 @@ const Navigation = () => {
           id="navbar-default"
         >
           <ul className="flex flex-col items-center p-4 mt-4 border border-gray-100 rounded-lg bg-f-offwhite md:flex-row md:space-x-8 md:mt-0 md:text-sm md:border-0 md:bg-white ">
-            <li>
-              <NavLink href={"/blog"}>Blog</NavLink>
-            </li>
-            <li>
-              <NavLink href={"/empfehlungen"}>Empfehlungen</NavLink>
-            </li>
-            <li>
-              <NavLink href={"/ueber-mich"}>Über Mich</NavLink>
-            </li>
-            <li>
-              <NavLink href={"/kontakt"}>Kontakt</NavLink>
-            </li>
+            {InPageLinks.map((linkItem) => (
+              <li key={linkItem.name}>
+                <NavLink href={linkItem.href}>{linkItem.name}</NavLink>
+              </li>
+            ))}
             <li className="pt-4 md:pt-0">
               <Link
                 href={"https://mailchi.mp/8007355fc29b/newsletter-abonnieren"}
                 className={
-                  "bg-black text-white md:ml-2 rounded-full font-semibold px-7 py-2"
+                  "bg-f-main text-md text-white md:ml-2 rounded-full font-semibold px-7 py-2"
                 }
                 target="_blank"
                 rel="noreferrer"
@@ -122,7 +116,7 @@ function MobileMenu() {
                 <Link
                   href={"https://mailchi.mp/8007355fc29b/newsletter-abonnieren"}
                   className={
-                    "bg-black text-white md:ml-2 rounded-full font-semibold px-7 py-2 mx-auto"
+                    "bg-f-main text-white md:ml-2 rounded-full font-semibold px-7 py-2 mx-auto"
                   }
                   // onClick={() => openModal()}
                   target="_blank"

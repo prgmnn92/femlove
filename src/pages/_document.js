@@ -4,7 +4,12 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="bg-f-offwhite">
+      <body
+        style={{
+          backgroundColor:
+            "linear-gradient(0deg, rgb(238, 210, 204), rgb(255, 255, 255));",
+        }}
+      >
         <Main />
         <NextScript />
       </body>

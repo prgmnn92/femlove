@@ -19,7 +19,7 @@ const Blog = ({ posts }) => {
 
   return (
     <Layout>
-      <Container className="px-4 py-8 lg:py-16">
+      <Container className="px-4 py-8 lg:py-12">
         <HeadingH1>Alle Beiträge</HeadingH1>
         <div className="my-2">
           <Input
@@ -53,7 +53,7 @@ const Blog = ({ posts }) => {
             <BlogCard
               key={post._id}
               post={post}
-              className="p-4 mb-6 md:w-1/3 sm:mb-0"
+              className="mb-6 md:w-1/3 sm:mb-0"
             />
           ))}
         </div>

@@ -8,7 +8,7 @@ const ErrorIcon = () => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className="w-5 h-5 inline mr-2"
+    className="inline w-5 h-5 mr-2"
   >
     <path
       strokeLinecap="round"
@@ -54,7 +54,7 @@ const ContactForm = () => {
 
   return (
     <form
-      className="grid gap-4 max-w-md mx-auto"
+      className="grid max-w-md gap-4 mx-auto"
       onSubmit={(e) => handleSubmit(e)}
     >
       <div className="grid gap-1">
@@ -64,7 +64,7 @@ const ContactForm = () => {
           id="name"
           value={name}
           onChange={(event) => setName(event.target.value)}
-          className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
+          className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 "
         />
         {errors.name && (
           <div className="flex items-center text-red-700">
@@ -80,7 +80,7 @@ const ContactForm = () => {
           id="email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
-          className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
+          className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 "
         />
         {errors.email && (
           <div className="flex items-center text-red-700">
@@ -107,7 +107,7 @@ const ContactForm = () => {
         )}
       </div>
       <div className="text-center">
-        <Button className={"bg-f-green text-white"} type="submit">
+        <Button className={"bg-f-main text-white"} type="submit">
           Abschicken
         </Button>
       </div>

@@ -13,7 +13,7 @@ const BlogPreview = ({ posts }) => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.2, delay: 0.05 }}
             viewport={{ once: true }}
-            className="h-1 overflow-hidden bg-gray-200 rounded"
+            className="h-1 overflow-hidden rounded bg-opacity-20 bg-f-green"
           >
             <div className="w-24 h-full bg-f-green"></div>
           </motion.div>
@@ -50,7 +50,7 @@ const BlogPreview = ({ posts }) => {
             <BlogCard
               key={post._id}
               post={post}
-              className="p-4 mb-6 md:w-1/3 sm:mb-0"
+              className="mb-6 md:w-1/3 sm:mb-0"
             />
           ))}
         </motion.div>

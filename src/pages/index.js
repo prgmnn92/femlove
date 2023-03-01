@@ -46,7 +46,7 @@ export default function Home({ posts }) {
               </div>
               <Button
                 type="submit"
-                className="px-8 py-2 text-lg text-white border-0 rounded bg-f-green focus:outline-none"
+                className="px-8 py-2 text-lg text-white border-0 rounded bg-f-main focus:outline-none"
               >
                 Abonnieren
               </Button>

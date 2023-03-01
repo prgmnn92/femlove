@@ -7,9 +7,9 @@ import React from "react";
 
 const EmpfehlungsCard = ({ title, children }) => {
   return (
-    <div className="w-full bg-white lg:p-8 p-6 flex flex-wrap mb-8">
-      <div className="w-full lg:w-1/3 pb-6">
-        <h2 className="lg:text-4xl text-2xl">{title}</h2>
+    <div className="flex flex-wrap w-full p-6 mb-8 bg-white shadow lg:p-8">
+      <div className="w-full pb-6 lg:w-1/3">
+        <h2 className="text-2xl lg:text-4xl">{title}</h2>
       </div>
       <div className="w-full lg:w-2/3 lg:pl-4">{children}</div>
     </div>
@@ -20,7 +20,7 @@ const Empfehlungen = () => {
   return (
     <Layout>
       <section>
-        <Container className="px-4 py-8 lg:py-16">
+        <Container className="px-4 py-8 lg:py-12">
           <HeadingH1>Meine Empfehlungen</HeadingH1>
           <EmpfehlungsCard title={"NFP mit trackle"}>
             <p className="pb-3">
