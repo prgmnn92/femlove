@@ -5,6 +5,7 @@ import Head from "next/head";
 import Footer from "./Footer";
 import Navigation from "./Navigation";
 import Modal from "./Modal";
+import { ModalContext } from "@/ModalContext";
 
 const Layout = (props) => {
   const { children } = props;
@@ -58,7 +59,9 @@ const Layout = (props) => {
             {...props}
           />
           <Modal isOpen={isOpen} closeModal={closeModal} />
-          <div>{children}</div>
+          <ModalContext.Provider value={openModal}>
+            <div>{children}</div>
+          </ModalContext.Provider>
         </div>
         <Footer {...props} />
       </div>

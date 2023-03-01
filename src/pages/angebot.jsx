@@ -5,8 +5,8 @@ import CTA from "@/components/CTA";
 import HeadingH1 from "@/components/headings/HeadingH1";
 import Layout from "@/components/Layout";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
+import { ModalContext } from "@/ModalContext";
 
 const Angebot = () => {
   return (
@@ -48,56 +48,59 @@ const Angebot = () => {
   );
 };
 
-const WorkTogether = () => (
-  <section className="text-gray-600 body-font">
-    <div className="container flex flex-wrap items-center px-5 py-24 mx-auto">
-      <div className="pr-0 lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0">
-        <h2 className="text-3xl font-medium text-gray-900 title-font">
-          So kannst du mit mir zusammenarbeiten
-        </h2>
-        <p className="mt-4 text-lg leading-relaxed">Wenn du:</p>
-        <ul className="max-w-2xl text-lg list-disc">
-          <li className="pb-1 ml-3">
-            gerade erst deinen Zyklus kennenlernst und so viel mehr darüber
-            lernen möchtest,
-          </li>
-          <li className="pb-1 ml-3">
-            deinen Zyklus zwar schon kennst, es dir jedoch schwer fällt
-            langfristige Veränderungen in Bezug auf Bewegung, Ernährung und
-            Selbstfürsorge - und dann auch noch zyklusgerecht - in deinen Alltag
-            zu integrieren,
-          </li>
-          <li className="pb-1 ml-3">
-            einfach Bock hast. dein Leben zyklusgerechter zu gestalten, um das
-            Beste aus dir und deiner Superpower herauszuholen,
-          </li>
-          <li className="pb-1 ml-3">
-            die Pille absetzen möchtest und dich fragst wie du deinen Körper in
-            der Zeit nach dem Absetzen ideal unterstützen kannst,
-          </li>
-          <li className="pb-1 ml-3">
-            dir noch nicht sicher bist, wie die Zusammenarbeit konkret mit mir
-            aussieht und mich einfach erstmal besser kennenlernen möchtest.
-          </li>
-        </ul>
-        <div className="pt-6">
-          <Button className={"bg-f-main text-white"}>
-            Kostenloses Kennenlerngespräch
-          </Button>
+const WorkTogether = () => {
+  const openModal = useContext(ModalContext);
+  return (
+    <section className="text-gray-600 body-font">
+      <div className="container flex flex-wrap items-center px-5 py-24 mx-auto">
+        <div className="pr-0 lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0">
+          <h2 className="text-3xl font-medium text-gray-900 title-font">
+            So kannst du mit mir zusammenarbeiten
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed">Wenn du:</p>
+          <ul className="max-w-2xl text-lg list-disc">
+            <li className="pb-1 ml-3">
+              gerade erst deinen Zyklus kennenlernst und so viel mehr darüber
+              lernen möchtest,
+            </li>
+            <li className="pb-1 ml-3">
+              deinen Zyklus zwar schon kennst, es dir jedoch schwer fällt
+              langfristige Veränderungen in Bezug auf Bewegung, Ernährung und
+              Selbstfürsorge - und dann auch noch zyklusgerecht - in deinen
+              Alltag zu integrieren,
+            </li>
+            <li className="pb-1 ml-3">
+              einfach Bock hast. dein Leben zyklusgerechter zu gestalten, um das
+              Beste aus dir und deiner Superpower herauszuholen,
+            </li>
+            <li className="pb-1 ml-3">
+              die Pille absetzen möchtest und dich fragst wie du deinen Körper
+              in der Zeit nach dem Absetzen ideal unterstützen kannst,
+            </li>
+            <li className="pb-1 ml-3">
+              dir noch nicht sicher bist, wie die Zusammenarbeit konkret mit mir
+              aussieht und mich einfach erstmal besser kennenlernen möchtest.
+            </li>
+          </ul>
+          <div className="pt-6">
+            <Button className={"bg-f-main text-white"} onClick={openModal}>
+              Kostenloses Kennenlerngespräch
+            </Button>
+          </div>
+        </div>
+        <div className="flex flex-col w-full p-8 mt-10 bg-gray-100 rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
+          <Image
+            alt="feature"
+            className="object-cover object-center w-full h-full"
+            src="https://dummyimage.com/460x500"
+            width={460}
+            height={500}
+          />
         </div>
       </div>
-      <div className="flex flex-col w-full p-8 mt-10 bg-gray-100 rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
-        <Image
-          alt="feature"
-          className="object-cover object-center w-full h-full"
-          src="https://dummyimage.com/460x500"
-          width={460}
-          height={500}
-        />
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const StepsView = () => (
   <section className="text-gray-600 body-font">
