@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import Container from "./Container";
 import Input from "./Input";
 import { motion } from "framer-motion";
 
 const CTA = () => {
+  const [email, setEmail] = useState("");
+  const newsletterHandler = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleSubmit = () => {
+    handleCreateNewsletter(email);
+    setEmail("");
+  };
+
+  const handleCreateNewsletter = async (email) => {
+    try {
+      const response = await fetch("/api/subNewsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+        }),
+      });
+
+      const newsletterEntry = await response.json();
+      console.log(newsletterEntry);
+    } catch (error) {
+      console.log("Error creating appointment", error);
+    }
+  };
   return (
     <section>
       <Container className="px-5 py-24">
@@ -34,11 +61,18 @@ const CTA = () => {
             >
               Email
             </label>
-            <Input type="email" id="email" name="email" />
+            <Input
+              type="email"
+              id="email"
+              name="email"
+              onChange={newsletterHandler}
+              value={email}
+            />
           </div>
           <Button
             type="submit"
             className="px-8 py-2 text-lg text-white border-0 rounded bg-f-main focus:outline-none"
+            onClick={handleSubmit}
           >
             Abonnieren
           </Button>
