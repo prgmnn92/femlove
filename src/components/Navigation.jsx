@@ -17,7 +17,7 @@ const InPageLinks = [
 const NavLink = ({ href, children }) => {
   return (
     <Link
-      className="block py-2 pl-2 pr-3 font-medium text-center text-gray-700 transition-all rounded hover:text-f-green md:hover:bg-transparent md:border-0 md:hover:text-f-green md:p-0"
+      className="block py-2 pl-2 pr-3 font-medium text-center text-gray-700 transition-all rounded hover:text-f-green lg:hover:bg-transparent lg:border-0 lg:hover:text-f-green lg:p-0"
       href={href}
     >
       {children}
@@ -40,21 +40,21 @@ const Navigation = () => {
         <MobileMenu />
         <div
           className={cn({
-            "w-full md:block md:w-auto  md:static absolute left-0 top-[50px] shadow-sm md:shadow-none  transition-all opacity-1 hidden": true,
+            "w-full lg:block lg:w-auto  lg:static absolute left-0 top-[50px] shadow-sm lg:shadow-none  transition-all opacity-1 hidden": true,
           })}
           id="navbar-default"
         >
-          <ul className="flex flex-col items-center p-4 mt-4 border border-gray-100 rounded-lg bg-f-offwhite md:flex-row md:space-x-8 md:mt-0 md:text-sm md:border-0 md:bg-white ">
+          <ul className="flex p-4 mt-4 border border-gray-100 rounded-lg lg:flex-wrap bg-f-offwhite lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:border-0 lg:bg-white ">
             {InPageLinks.map((linkItem) => (
               <li key={linkItem.name}>
                 <NavLink href={linkItem.href}>{linkItem.name}</NavLink>
               </li>
             ))}
-            <li className="pt-4 md:pt-0">
+            <li className="pt-4 lg:pt-0">
               <Link
                 href={"https://mailchi.mp/8007355fc29b/newsletter-abonnieren"}
                 className={
-                  "bg-f-main text-md text-white md:ml-2 rounded-full font-semibold px-7 py-2"
+                  "bg-f-main text-md text-white lg:ml-2 rounded-full font-semibold px-7 py-2"
                 }
                 target="_blank"
                 rel="noreferrer"
@@ -73,7 +73,7 @@ const Navigation = () => {
 function MobileMenu() {
   return (
     <>
-      <Menu as="div" className="relative inline-block text-left md:hidden">
+      <Menu as="div" className="relative inline-block text-left lg:hidden">
         <div>
           <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium rounded-md text-f-green bg-f-green bg-opacity-5 hover:bg-opacity-20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             <svg
@@ -116,7 +116,7 @@ function MobileMenu() {
                 <Link
                   href={"https://mailchi.mp/8007355fc29b/newsletter-abonnieren"}
                   className={
-                    "bg-f-main text-white md:ml-2 rounded-full font-semibold px-7 py-2 mx-auto"
+                    "bg-f-main text-white lg:ml-2 rounded-full font-semibold px-7 py-2 mx-auto"
                   }
                   // onClick={() => openModal()}
                   target="_blank"
