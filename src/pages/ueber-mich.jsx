@@ -5,6 +5,11 @@ import HeadingH1 from "@/components/headings/HeadingH1";
 import Layout from "@/components/Layout";
 import Image from "next/image";
 import React from "react";
+import dynamic from "next/dynamic";
+const ReactPlayer = dynamic(() => import("react-player/youtube"), {
+  ssr: false,
+});
+import { motion } from "framer-motion";
 
 const ÜberMich = () => {
   return (
@@ -16,7 +21,13 @@ const ÜberMich = () => {
       </section>
       <section>
         <Container className="flex flex-wrap pb-8">
-          <div className="w-full pb-8 mb-10 overflow-hidden lg:w-1/2 lg:mb-0 lg:text-lg">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.2, delay: 0.15 }}
+            delay={0.1}
+            className="w-full pb-8 mb-10 overflow-hidden lg:w-1/2 lg:mb-0 lg:text-lg lg:pr-12"
+          >
             <Image
               alt="feature"
               className="object-cover object-center w-full h-full"
@@ -24,8 +35,14 @@ const ÜberMich = () => {
               width={500}
               height={700}
             />
-          </div>
-          <div className="flex flex-col flex-wrap mb-10 lg:w-1/2 lg:pl-12 lg:text-left">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.2, delay: 0.15 }}
+            delay={0.1}
+            className="flex flex-col flex-wrap md:mb-10 lg:w-1/2 lg:text-left"
+          >
             <p className="pb-3 font-semibold">
               Holistic Health & Wellness Coach i.A. ​
             </p>
@@ -45,17 +62,13 @@ const ÜberMich = () => {
               abgesetzt, mit Erschrecken festgestellt, dass ich bei NULL stehe -
               zumindest was meinen Zyklus angeht.
             </p>
-            <p>
+            <p className="pb-6">
               Denn: Nach 10 Jahren Pilleneinnahme hatte ich 0 Ahnung und 0
               Bewusstsein für meinen Zyklus, war maximal überfordert und wusste
               gar nicht wo ich anfangen soll. Dazu kamen Schmerzen, die ich
               durch die Pille natürlich nicht kannte; dachte es wäre normal →
               Spoiler: Ist es nicht.
             </p>
-          </div>
-        </Container>
-        <Container className="flex flex-wrap">
-          <div className="flex flex-col flex-wrap mb-10 lg:w-1/2 lg:text-left">
             <p className="pb-6">
               Ich weiß, dass es ganz vielen Frauen so geht, wie mir damals.
               Egal, ob vorherige Pilleneinnahme oder nicht.
@@ -66,11 +79,21 @@ const ÜberMich = () => {
               Potenzial dahinter steckt und wie frau die Zyklusphasen nutzen &
               unterstützen kann.
             </p>
-            <p className="pb-6">
+            <p>
               Ja, auch du verdienst es, genau dieses Bewusstsein zu erfahren. 🙌
               On top lernst du, dich selbst zu akzeptieren, achtsam mit deinem
               Körper umzugehen und ihm zu geben was er braucht. ✨
             </p>
+          </motion.div>
+        </Container>
+        <Container className="flex flex-wrap">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.2, delay: 0.15 }}
+            delay={0.1}
+            className="flex flex-col flex-wrap mb-10 lg:w-1/2 lg:pr-12 lg:text-left"
+          >
             <p className="pb-6">
               Damit du auf deinem Weg nicht alleine bist, stehe ich dir mit dem
               Wissen, meinen Erfahrungen, Tipps & Ratschlägen zur Seite. 🙋‍♀️
@@ -88,109 +111,20 @@ const ÜberMich = () => {
             <p className="pb-6">
               Love, <b>Franzi</b>
             </p>
-          </div>
-          <div className="w-full pb-8 mb-10 overflow-hidden lg:w-1/2 lg:mb-0 lg:pl-12 lg:text-lg">
-            <Image
-              alt="feature"
-              className="object-cover object-center w-full h-full"
-              src="/images/femlove_me.webp"
-              width={500}
-              height={700}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.2, delay: 0.15 }}
+            delay={0.1}
+            className="w-full pb-8 mb-10 overflow-hidden lg:w-1/2 lg:mb-0 lg:text-lg"
+          >
+            <ReactPlayer
+              url="https://www.youtube.com/watch?v=5ah_cRdRSTM&t=6s"
+              width="100%"
+              height="100%"
             />
-          </div>
-        </Container>
-      </section>
-      <section>
-        <Container className="max-w-4xl">
-          <h2 className="max-w-md py-8 mx-auto mb-4 text-2xl leading-none tracking-tight md:text-3xl xl:text-4xl">
-            Finde deinen Weg zu einem gesunden Zyklus- und Körperbewusstsein
-          </h2>
-          <div className="flex">
-            <div className="w-full lg:w-1/3">image</div>
-            <div className="w-full lg:w-2/3">
-              <p className="pb-3 font-semibold pt-9">Zyklus</p>
-              <p className="pb-6">
-                Der weibliche Zyklus macht dich aus - als Frau.
-              </p>
-              <p className="pb-6">
-                Leider wird der Zyklus recht stiefmütterlich behandelt: Frau hat
-                halt ein Mal im Monat "ihre Tage" und die sind einfach nur
-                nervig und schmerzhaft. Außerdem wird ohnehin nicht gerne über
-                dieses "Thema" gesprochen; in unserer Gesellschaft ist es nach
-                wie vor mehr Tabu als Normal.
-              </p>
-              <p className="pb-6">
-                Das führt dazu, dass viele Frauen einfach nicht wissen, was über
-                die Zeit in ihrem Körper eigentlich stattfindet - welche Phasen
-                sie im Zyklus durchlaufen, wie ihre Hormone das Ganze steuern
-                und wie die Phasen sogar genutzt werden können.
-              </p>
-              <p className="pb-6">
-                Das Problem liegt aus meiner Sicht vor allem darin, dass selbst
-                in der Schulzeit VIEL zu WENIG über das weibliche Geschlecht
-                sowie die Hormone und die Abläufe im Körper der Frau aufgeklärt
-                wird.
-              </p>
-              <p className="pb-6">
-                Dabei ist das Wissen rund um den weiblichen Zyklus unerlässlich,
-                um ein gesundes und ausgeglichenes Leben zu führen.
-              </p>
-              <p className="pb-6">
-                Also liegt es letztlich an dir, dass du den Mut hast, dich mit
-                DIR zu beschäftigen. Lerne dich und deinen Zyklus kennen, nimm
-                einzelne Phasen bewusst wahr und erlange damit ein
-                Zyklusbewusstsein, das dich (besser: dein Selbstbild &
-                Körpergefühl) bereichern wird!
-              </p>
-            </div>
-          </div>
-          <div className="flex">
-            <div className="w-full lg:w-1/3">image</div>
-            <div className="w-full lg:w-2/3">
-              <p className="pb-3 font-semibold pt-9">Gesundheit</p>
-              <p className="pb-6">
-                Der weibliche Zyklus hat einen sehr großen Einfluss auf die
-                Gesundheit und das Wohlbefinden der Frau. Dein Lebensstil hat
-                demnach ebenfalls einen Einfluss auf deinen Zyklus - positiv wie
-                negativ.
-              </p>
-              <p className="pb-6">
-                Das Thema Gesundheit ist also unverzichtbar, wenn es um den
-                Zyklus und die Zyklusgesundheit geht.
-              </p>
-              <p className="pb-6">
-                Eine ganzheitliche Zyklusgesundheit kann also gezielt angegangen
-                werden, wenn du weißt, wie du deinen Körper während der
-                einzelnen Zyklusphasen optimal unterstützen kannst - so hat
-                bspw. die Ernährung einen großen Einfluss auf deine Hormon- und
-                Zyklusgesundheit.
-              </p>
-            </div>
-          </div>
-          <div className="flex">
-            <div className="w-full lg:w-1/3">image</div>
-            <div className="w-full lg:w-2/3">
-              <p className="pb-3 font-semibold pt-9">
-                Selbstakzeptanz & Selbstliebe
-              </p>
-              <p className="pb-6">
-                Mein Ziel ist es, dass du ein gesundes Zyklusbewusstsein
-                aufbaust und davon auch in Bezug auf eine gesteigerte
-                Selbstakzeptanz und mehr Selbstliebe profitieren kannst.
-              </p>
-              <p className="pb-6">
-                Ein gesundes Zyklusbewusstsein hilft dir, eine Art Verbundenheit
-                mit dir und deinem Körper herzustellen. Du lernst dich besser
-                kennen, kannst die verschiedenen Energien der einzelnen Phasen
-                akzeptieren und sie gekonnt nutzen.
-              </p>
-              <p className="pb-6">
-                Du wirst mit der Zeit eine tiefere Verbindung zu dir erfahren,
-                dich selbst besser annehmen und eine Intuition aufbauen, die
-                dich durch den Zyklus leitet.
-              </p>
-            </div>
-          </div>
+          </motion.div>
         </Container>
       </section>
       <CTA />

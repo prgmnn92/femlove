@@ -7,6 +7,7 @@ import Layout from "@/components/Layout";
 import Image from "next/image";
 import React, { useContext } from "react";
 import { ModalContext } from "@/ModalContext";
+import { motion } from "framer-motion";
 
 const Angebot = () => {
   return (
@@ -18,7 +19,13 @@ const Angebot = () => {
       </section>
       <section>
         <Container>
-          <div className="flex flex-wrap w-full p-6 mb-8 bg-white shadow lg:p-8">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.2, delay: 0.15 }}
+            delay={0.1}
+            className="flex flex-wrap w-full p-6 mb-8 bg-white shadow lg:p-8"
+          >
             <div className="w-full pb-6 lg:w-1/3">
               <h2 className="text-2xl lg:text-4xl">
                 Du musst den Weg nicht alleine gehen.
@@ -38,7 +45,7 @@ const Angebot = () => {
                 zyklusgerechtes Leben nicht alleine gehen.
               </p>
             </div>
-          </div>
+          </motion.div>
         </Container>
       </section>
       <WorkTogether />
@@ -52,32 +59,38 @@ const WorkTogether = () => {
   const openModal = useContext(ModalContext);
   return (
     <section className="text-gray-600 body-font">
-      <div className="container flex flex-wrap items-center px-5 py-24 mx-auto">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.2, delay: 0.15 }}
+        delay={0.1}
+        className="container flex flex-wrap items-center px-5 py-24 mx-auto"
+      >
         <div className="pr-0 lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0">
           <h2 className="text-3xl font-medium text-gray-900 title-font">
             So kannst du mit mir zusammenarbeiten
           </h2>
           <p className="mt-4 text-lg leading-relaxed">Wenn du:</p>
           <ul className="max-w-2xl text-lg list-disc">
-            <li className="pb-1 ml-3">
+            <li className="pb-1 ml-6 lg:ml-3">
               gerade erst deinen Zyklus kennenlernst und so viel mehr darüber
               lernen möchtest,
             </li>
-            <li className="pb-1 ml-3">
+            <li className="pb-1 ml-6 lg:ml-3">
               deinen Zyklus zwar schon kennst, es dir jedoch schwer fällt
               langfristige Veränderungen in Bezug auf Bewegung, Ernährung und
               Selbstfürsorge - und dann auch noch zyklusgerecht - in deinen
               Alltag zu integrieren,
             </li>
-            <li className="pb-1 ml-3">
+            <li className="pb-1 ml-6 lg:ml-3">
               einfach Bock hast. dein Leben zyklusgerechter zu gestalten, um das
               Beste aus dir und deiner Superpower herauszuholen,
             </li>
-            <li className="pb-1 ml-3">
+            <li className="pb-1 ml-6 lg:ml-3">
               die Pille absetzen möchtest und dich fragst wie du deinen Körper
               in der Zeit nach dem Absetzen ideal unterstützen kannst,
             </li>
-            <li className="pb-1 ml-3">
+            <li className="pb-1 ml-6 lg:ml-3">
               dir noch nicht sicher bist, wie die Zusammenarbeit konkret mit mir
               aussieht und mich einfach erstmal besser kennenlernen möchtest.
             </li>
@@ -88,16 +101,16 @@ const WorkTogether = () => {
             </Button>
           </div>
         </div>
-        <div className="flex flex-col w-full p-8 mt-10 bg-gray-100 rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
+        <div className="flex flex-col w-full mt-10rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
           <Image
             alt="feature"
             className="object-cover object-center w-full h-full"
-            src="https://dummyimage.com/460x500"
+            src="/images/mark-adriane.webp"
             width={460}
             height={500}
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
@@ -105,7 +118,13 @@ const WorkTogether = () => {
 const StepsView = () => (
   <section className="text-gray-600 body-font">
     <Container className="flex flex-wrap px-5 py-24">
-      <div className="relative flex pt-10 pb-20 mx-auto sm:items-center md:w-2/3">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.2, delay: 0.15 }}
+        delay={0.1}
+        className="relative flex pt-10 pb-20 mx-auto sm:items-center md:w-2/3"
+      >
         <div className="absolute inset-0 flex items-center justify-center w-6 h-full">
           <div className="w-1 h-full pointer-events-none bg-f-green bg-opacity-20"></div>
         </div>
@@ -139,8 +158,14 @@ const StepsView = () => (
             </p>
           </div>
         </div>
-      </div>
-      <div className="relative flex pb-20 mx-auto sm:items-center md:w-2/3">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.2, delay: 0.15 }}
+        delay={0.1}
+        className="relative flex pb-20 mx-auto sm:items-center md:w-2/3"
+      >
         <div className="absolute inset-0 flex items-center justify-center w-6 h-full">
           <div className="w-1 h-full pointer-events-none bg-f-green bg-opacity-20"></div>
         </div>
@@ -175,8 +200,14 @@ const StepsView = () => (
             </p>
           </div>
         </div>
-      </div>
-      <div className="relative flex pb-20 mx-auto sm:items-center md:w-2/3">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.2, delay: 0.15 }}
+        delay={0.1}
+        className="relative flex pb-20 mx-auto sm:items-center md:w-2/3"
+      >
         <div className="absolute inset-0 flex items-center justify-center w-6 h-full">
           <div className="w-1 h-full pointer-events-none bg-f-green bg-opacity-20"></div>
         </div>
@@ -213,7 +244,7 @@ const StepsView = () => (
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Container>
   </section>
 );

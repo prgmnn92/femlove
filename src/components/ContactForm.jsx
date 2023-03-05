@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import { motion } from "framer-motion";
 
 const ErrorIcon = () => (
   <svg
@@ -24,6 +25,27 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
 
+  const handleCreateContactEntry = async (name, email, message) => {
+    try {
+      const response = await fetch("/api/createContactEntry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+
+      const contactEntry = await response.json();
+      console.log(contactEntry);
+    } catch (error) {
+      console.log("Error creating appointment", error);
+    }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -43,7 +65,7 @@ const ContactForm = () => {
 
     if (Object.keys(errors).length === 0) {
       // Hier könntest du z.B. den Formular-Inhalt an einen Server senden
-      console.log("Formular abgeschickt:", { name, email, message });
+      handleCreateContactEntry(name, email, message);
       setName("");
       setEmail("");
       setMessage("");
@@ -53,65 +75,72 @@ const ContactForm = () => {
   };
 
   return (
-    <form
-      className="grid max-w-md gap-4 mx-auto"
-      onSubmit={(e) => handleSubmit(e)}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.2, delay: 0.15 }}
+      delay={0.1}
     >
-      <div className="grid gap-1">
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-          className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 "
-        />
-        {errors.name && (
-          <div className="flex items-center text-red-700">
-            <ErrorIcon />
-            <span>{errors.name}</span>
-          </div>
-        )}
-      </div>
-      <div className="grid gap-1">
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 "
-        />
-        {errors.email && (
-          <div className="flex items-center text-red-700">
-            <ErrorIcon />
-            <span>{errors.email}</span>
-          </div>
-        )}
-      </div>
-      <div className="grid gap-1">
-        <label htmlFor="message">Nachricht</label>
-        <textarea
-          id="message"
-          value={message}
-          onChange={(event) => setMessage(event.target.value)}
-          className={
-            "min-h-[150px] w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
-          }
-        />
-        {errors.message && (
-          <div className="flex items-center text-red-700">
-            <ErrorIcon />
-            <span>{errors.message}</span>
-          </div>
-        )}
-      </div>
-      <div className="text-center">
-        <Button className={"bg-f-main text-white"} type="submit">
-          Abschicken
-        </Button>
-      </div>
-    </form>
+      <form
+        className="grid max-w-md gap-4 mx-auto"
+        onSubmit={(e) => handleSubmit(e)}
+      >
+        <div className="grid gap-1">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 "
+          />
+          {errors.name && (
+            <div className="flex items-center text-red-700">
+              <ErrorIcon />
+              <span>{errors.name}</span>
+            </div>
+          )}
+        </div>
+        <div className="grid gap-1">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 "
+          />
+          {errors.email && (
+            <div className="flex items-center text-red-700">
+              <ErrorIcon />
+              <span>{errors.email}</span>
+            </div>
+          )}
+        </div>
+        <div className="grid gap-1">
+          <label htmlFor="message">Nachricht</label>
+          <textarea
+            id="message"
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
+            className={
+              "min-h-[150px] w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
+            }
+          />
+          {errors.message && (
+            <div className="flex items-center text-red-700">
+              <ErrorIcon />
+              <span>{errors.message}</span>
+            </div>
+          )}
+        </div>
+        <div className="text-center">
+          <Button className={"bg-f-main text-white"} type="submit">
+            Abschicken
+          </Button>
+        </div>
+      </form>
+    </motion.div>
   );
 };
 

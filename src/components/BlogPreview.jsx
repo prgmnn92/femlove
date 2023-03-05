@@ -2,8 +2,9 @@ import React from "react";
 import BlogCard from "./BlogCard";
 import Container from "./Container";
 import { motion } from "framer-motion";
+import { getCategoriesTitle } from "@utils/getCategoriesTitle";
 
-const BlogPreview = ({ posts }) => {
+const BlogPreview = ({ posts, categories }) => {
   return (
     <section>
       <Container className="px-5 py-24 ">
@@ -43,14 +44,12 @@ const BlogPreview = ({ posts }) => {
           transition={{ duration: 0.2, delay: 0.25 }}
           className="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-4"
         >
-          {/* <BlogCard className="p-4 mb-6 md:w-1/3 sm:mb-0" />
-          <BlogCard className="p-4 mb-6 md:w-1/3 sm:mb-0" />
-          <BlogCard className="p-4 mb-6 md:w-1/3 sm:mb-0" /> */}
           {posts.map((post) => (
             <BlogCard
               key={post._id}
               post={post}
               className="mb-6 md:w-1/3 sm:mb-0"
+              category={getCategoriesTitle(categories, post.categories)}
             />
           ))}
         </motion.div>

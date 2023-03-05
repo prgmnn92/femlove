@@ -148,6 +148,9 @@ export default function Modal({ isOpen, closeModal }) {
                       />
                     </div>
                     <div>
+                      <label className="text-sm font-medium leading-7 text-gray-600">
+                        Deine Anliegen (Mehrfachauswahl mögich):
+                      </label>
                       {checkboxes.map((item, idx) => (
                         <div
                           key={slugify(item.name)}

@@ -8,10 +8,10 @@ import { Menu, Transition } from "@headlessui/react";
 const InPageLinks = [
   { href: "/", name: "Start" },
   { href: "/blog", name: "Blog" },
-  { href: "/empfehlungen", name: "Empfehlungen" },
   { href: "/ueber-mich", name: "Über Mich" },
-  { href: "/kontakt", name: "Kontakt" },
+  { href: "/empfehlungen", name: "Empfehlungen" },
   { href: "/angebot", name: "Angebot" },
+  { href: "/kontakt", name: "Kontakt" },
 ];
 
 const NavLink = ({ href, children }) => {
@@ -54,13 +54,13 @@ const Navigation = () => {
               <Link
                 href={"https://mailchi.mp/8007355fc29b/newsletter-abonnieren"}
                 className={
-                  "bg-f-main text-md text-white lg:ml-2 rounded-full font-semibold px-7 py-2"
+                  "bg-f-main text-md text-white lg:ml-2 rounded-full font-semibold px-7 py-2 hover:brightness-105 transition-all"
                 }
                 target="_blank"
                 rel="noreferrer"
                 // ref={"noreferrer"}
               >
-                Mehr Erfahren
+                Newsletter
               </Link>
             </li>
           </ul>
@@ -116,14 +116,14 @@ function MobileMenu() {
                 <Link
                   href={"https://mailchi.mp/8007355fc29b/newsletter-abonnieren"}
                   className={
-                    "bg-f-main text-white lg:ml-2 rounded-full font-semibold px-7 py-2 mx-auto"
+                    "bg-f-main text-white lg:ml-2 rounded-full font-semibold px-7 py-2 mx-auto hover:brightness-105 transition-all"
                   }
                   // onClick={() => openModal()}
                   target="_blank"
                   rel="noreferrer"
                   // ref={"noreferrer"}
                 >
-                  Mehr Erfahren
+                  Newsletter
                 </Link>
               </Menu.Item>
             </div>

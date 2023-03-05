@@ -4,15 +4,21 @@ import HeadingH1 from "@/components/headings/HeadingH1";
 import Layout from "@/components/Layout";
 import Link from "next/link";
 import React from "react";
-
+import { motion } from "framer-motion";
 const EmpfehlungsCard = ({ title, children }) => {
   return (
-    <div className="flex flex-wrap w-full p-6 mb-8 bg-white shadow lg:p-8">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.2, delay: 0.15 }}
+      delay={0.1}
+      className="flex flex-wrap w-full p-6 mb-8 bg-white shadow lg:p-8"
+    >
       <div className="w-full pb-6 lg:w-1/3">
         <h2 className="text-2xl lg:text-4xl">{title}</h2>
       </div>
       <div className="w-full lg:w-2/3 lg:pl-4">{children}</div>
-    </div>
+    </motion.div>
   );
 };
 

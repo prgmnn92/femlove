@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 import { urlFor } from "@lib/sanity";
 import Link from "next/link";
 
-const BlogCard = ({ className, post }) => {
-  // console.log(post);
+const BlogCard = ({ className, post, category }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
@@ -23,7 +22,15 @@ const BlogCard = ({ className, post }) => {
           />
         </div>
         <div className="px-6 py-3">
-          <h2 className="mt-5 text-xl font-semibold text-gray-900 title-font">
+          {category.map((item) => (
+            <div
+              className="inline px-3 py-2 lg:text-xs font-bold text-white rounded-full bg-f-red text-[10px] mr-2"
+              key={item}
+            >
+              {item}
+            </div>
+          ))}
+          <h2 className="mt-3 text-xl font-semibold text-gray-900 title-font">
             {post.title}
           </h2>
           <p className="mt-2 text-sm leading-relaxed opacity-75 line-clamp-3">

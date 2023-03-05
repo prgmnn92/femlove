@@ -15,9 +15,13 @@ import { singlequery, pathquery, configQuery } from "@lib/groq";
 import Container from "@/components/Container";
 import Image from "next/image";
 import GetImage from "@utils/getImage";
+import { getCategoriesTitle } from "@utils/getCategoriesTitle";
+import { motion } from "framer-motion";
+import { ArrowLongLeftIcon } from "@heroicons/react/20/solid";
+import CTA from "@/components/CTA";
 
 const Post = (props) => {
-  const { postdata, siteconfig, preview } = props;
+  const { postdata, siteconfig, preview, category } = props;
 
   const post = postdata;
   const siteConfig = siteconfig;
@@ -72,12 +76,37 @@ const Post = (props) => {
           />
           <article>
             <Container className={"block-text py-16 pt-20 max-w-3xl"}>
-              <h1>{post.title}</h1>
-              <p>{post.shortDescription}</p>
-              <MainImage post={post} />
-              {post.body && <PortableText value={post.body} />}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.2, delay: 0.15 }}
+                delay={0.1}
+              >
+                <div
+                  className="mb-4 cursor-pointer"
+                  onClick={() => router.back()}
+                >
+                  <ArrowLongLeftIcon width={24} height={24} />
+                </div>
+
+                <div className="pb-4">
+                  {category.map((item) => (
+                    <div
+                      className="inline px-3 py-2 lg:text-xs font-bold text-white rounded-full bg-f-red text-[10px] mr-2"
+                      key={item}
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <h1>{post.title}</h1>
+                <p>{post.shortDescription}</p>
+                <MainImage post={post} />
+                {post.body && <PortableText value={post.body} />}
+              </motion.div>
             </Container>
           </article>
+          <CTA />
         </Layout>
       )}
     </>
@@ -99,20 +128,20 @@ const MainImage = ({ post }) => {
 };
 
 export async function getStaticProps({ params, preview = false }) {
-  //console.log(params);
   const post = await getClient(preview).fetch(singlequery, {
     slug: params.slug,
   });
-
+  const categories = await sanityClient.fetch(`*[_type == "category"]`);
   const config = await getClient(preview).fetch(configQuery);
-
+  const category = await getCategoriesTitle(categories, post.categories);
   return {
     props: {
       postdata: { ...post },
       siteconfig: { ...config },
       preview,
+      category,
     },
-    revalidate: 86400, // every 24h
+    revalidate: 86400, // every 36h
   };
 }
 

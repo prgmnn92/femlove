@@ -1,6 +1,6 @@
 import { addNewsletterRecord } from "@lib/airtable";
 
-const subNewsletter = async (req, res) => {
+const createNewsletterEntry = async (req, res) => {
   if (req.method === "POST") {
     //find a record
 
@@ -27,4 +27,4 @@ const subNewsletter = async (req, res) => {
   }
 };
 
-export default subNewsletter;
+export default createNewsletterEntry;

@@ -9,9 +9,11 @@ import AboutMe from "@/components/AboutMe";
 import { sanityClient } from "@lib/sanity";
 import Input from "@/components/Input";
 import { motion } from "framer-motion";
+import ThankYou from "@/components/ThankYou";
 
-export default function Home({ posts }) {
+export default function Home({ posts, categories }) {
   const [email, setEmail] = useState("");
+  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
   const newsletterHandler = (e) => {
     setEmail(e.target.value);
   };
@@ -22,7 +24,7 @@ export default function Home({ posts }) {
 
   const handleCreateNewsletter = async (email) => {
     try {
-      const response = await fetch("/api/subNewsletter", {
+      const response = await fetch("/api/createNewsletterEntry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,7 +33,7 @@ export default function Home({ posts }) {
           email,
         }),
       });
-
+      setNewsletterSubmitted(true);
       const newsletterEntry = await response.json();
       console.log(newsletterEntry);
     } catch (error) {
@@ -57,29 +59,35 @@ export default function Home({ posts }) {
               und deinem Weg zu mehr Selbstakzeptanz dreht.
             </p>
             <div className="flex flex-col items-end w-full px-8 space-y-4 lg:w-2/3 sm:flex-row sm:space-x-4 sm:space-y-0 sm:px-0">
-              <div className="relative flex-grow w-full">
-                <label
-                  htmlFor="email"
-                  className="text-sm font-medium leading-7 text-gray-600"
-                >
-                  Email
-                </label>
-                <Input
-                  className={"lg:min-w-[240px]"}
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={email}
-                  onChange={newsletterHandler}
-                />
-              </div>
-              <Button
-                type="submit"
-                className="px-8 py-2 text-lg text-white border-0 rounded bg-f-main focus:outline-none"
-                onClick={handleSubmit}
-              >
-                Abonnieren
-              </Button>
+              {newsletterSubmitted ? (
+                <ThankYou isNewsletter={true} />
+              ) : (
+                <>
+                  <div className="relative flex-grow w-full">
+                    <label
+                      htmlFor="email"
+                      className="text-sm font-medium leading-7 text-gray-600"
+                    >
+                      Email
+                    </label>
+                    <Input
+                      className={"lg:min-w-[240px]"}
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={email}
+                      onChange={newsletterHandler}
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    className="px-8 py-2 text-lg text-white border-0 rounded bg-f-main focus:outline-none"
+                    onClick={handleSubmit}
+                  >
+                    Abonnieren
+                  </Button>
+                </>
+              )}
             </div>
           </motion.div>
           <motion.div
@@ -96,7 +104,7 @@ export default function Home({ posts }) {
             />
           </motion.div>
         </Container>
-        <BlogPreview posts={posts} />
+        <BlogPreview posts={posts} categories={categories} />
         <AboutMe />
         <CTA />
       </Layout>
@@ -106,10 +114,12 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const posts = await sanityClient.fetch(`*[_type == "post"]`);
+  const categories = await sanityClient.fetch(`*[_type == "category"]`);
 
   return {
     props: {
       posts,
+      categories,
     },
   };
 }
