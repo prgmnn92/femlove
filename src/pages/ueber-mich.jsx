@@ -10,10 +10,12 @@ const ReactPlayer = dynamic(() => import("react-player/youtube"), {
   ssr: false,
 });
 import { motion } from "framer-motion";
+import { sanityClient } from "@lib/sanity";
+import { configQuery } from "@lib/groq";
 
-const ÜberMich = () => {
+const ÜberMich = ({ siteConfig }) => {
   return (
-    <Layout>
+    <Layout {...siteConfig}>
       <section>
         <Container className="px-4 py-8 lg:py-12">
           <HeadingH1>Hi! Ich bin Franzi.</HeadingH1>
@@ -131,5 +133,16 @@ const ÜberMich = () => {
     </Layout>
   );
 };
+
+export async function getStaticProps({ params, preview = false }) {
+  const config = await sanityClient.fetch(configQuery);
+  return {
+    props: {
+      siteconfig: { ...config },
+      preview,
+    },
+    revalidate: 100,
+  };
+}
 
 export default ÜberMich;

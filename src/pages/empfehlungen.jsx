@@ -5,6 +5,8 @@ import Layout from "@/components/Layout";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import { sanityClient } from "@lib/sanity";
+import { configQuery } from "@lib/groq";
 const EmpfehlungsCard = ({ title, children }) => {
   return (
     <motion.div
@@ -22,9 +24,9 @@ const EmpfehlungsCard = ({ title, children }) => {
   );
 };
 
-const Empfehlungen = () => {
+const Empfehlungen = ({ siteConfig }) => {
   return (
-    <Layout>
+    <Layout {...siteConfig}>
       <section>
         <Container className="px-4 py-8 lg:py-12">
           <HeadingH1>Meine Empfehlungen</HeadingH1>
@@ -143,5 +145,15 @@ const Empfehlungen = () => {
     </Layout>
   );
 };
+export async function getStaticProps({ params, preview = false }) {
+  const config = await sanityClient.fetch(configQuery);
+  return {
+    props: {
+      siteconfig: { ...config },
+      preview,
+    },
+    revalidate: 100,
+  };
+}
 
 export default Empfehlungen;

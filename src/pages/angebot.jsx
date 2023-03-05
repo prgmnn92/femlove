@@ -8,10 +8,12 @@ import Image from "next/image";
 import React, { useContext } from "react";
 import { ModalContext } from "@/ModalContext";
 import { motion } from "framer-motion";
+import { sanityClient } from "@lib/sanity";
+import { configQuery } from "@lib/groq";
 
-const Angebot = () => {
+const Angebot = ({ siteConfig }) => {
   return (
-    <Layout>
+    <Layout {...siteConfig}>
       <section>
         <Container className="px-4 py-8 lg:py-12">
           <HeadingH1>Mein Angebot</HeadingH1>
@@ -251,5 +253,16 @@ const StepsView = () => (
 
 //TODO: Steps in components unwamdeln
 //TODO: CTA am ende der Steps?
+
+export async function getStaticProps({ params, preview = false }) {
+  const config = await sanityClient.fetch(configQuery);
+  return {
+    props: {
+      siteconfig: { ...config },
+      preview,
+    },
+    revalidate: 100,
+  };
+}
 
 export default Angebot;

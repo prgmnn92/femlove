@@ -12,7 +12,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import CTA from "@/components/CTA";
 import { motion } from "framer-motion";
 
-const Blog = ({ posts, categories }) => {
+const Blog = ({ posts, categories, siteConfig }) => {
   const [categoryFilter, setCategoryFilter] = useState("");
   const [searchPhrase, setSearchPhrase] = useState("");
   const filters = [
@@ -24,7 +24,7 @@ const Blog = ({ posts, categories }) => {
   ];
 
   return (
-    <Layout>
+    <Layout {...siteConfig}>
       <Container className="px-4 py-8 lg:py-12">
         <HeadingH1>Alle Beiträge</HeadingH1>
         <motion.div

@@ -10,8 +10,9 @@ import { sanityClient } from "@lib/sanity";
 import Input from "@/components/Input";
 import { motion } from "framer-motion";
 import ThankYou from "@/components/ThankYou";
+import { configQuery } from "@lib/groq";
 
-export default function Home({ posts, categories }) {
+export default function Home({ posts, categories, siteConfig }) {
   const [email, setEmail] = useState("");
   const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
   const newsletterHandler = (e) => {
@@ -42,7 +43,7 @@ export default function Home({ posts, categories }) {
   };
   return (
     <>
-      <Layout>
+      <Layout {...siteConfig}>
         <Container className="grid px-4 py-8 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <motion.div
             initial={{ opacity: 0 }}
@@ -115,9 +116,11 @@ export default function Home({ posts, categories }) {
 export async function getStaticProps() {
   const posts = await sanityClient.fetch(`*[_type == "post"]`);
   const categories = await sanityClient.fetch(`*[_type == "category"]`);
+  const config = await sanityClient.fetch(configQuery);
 
   return {
     props: {
+      siteconfig: { ...config },
       posts,
       categories,
     },
