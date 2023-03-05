@@ -1,9 +1,11 @@
+import React, { Fragment } from "react";
+
+import { Menu, Transition } from "@headlessui/react";
+import cn from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import React, { Fragment } from "react";
+
 import Container from "./Container";
-import cn from "classnames";
-import { Menu, Transition } from "@headlessui/react";
 
 const InPageLinks = [
   { href: "/", name: "Start" },

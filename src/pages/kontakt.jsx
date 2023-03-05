@@ -1,10 +1,13 @@
-import ContactForm from "@/components/ContactForm";
-import Container from "@/components/Container";
-import HeadingH1 from "@/components/headings/HeadingH1";
-import Layout from "@/components/Layout";
+import React from "react";
+
 import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
-import React from "react";
+
+import ContactForm from "@/components/ContactForm";
+import Container from "@/components/Container";
+import CTA from "@/components/CTA";
+import HeadingH1 from "@/components/headings/HeadingH1";
+import Layout from "@/components/Layout";
 
 const Kontakt = ({ siteConfig }) => {
   return (
@@ -19,6 +22,7 @@ const Kontakt = ({ siteConfig }) => {
           <ContactForm />
         </Container>
       </section>
+      <CTA />
     </Layout>
   );
 };

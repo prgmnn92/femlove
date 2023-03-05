@@ -1,12 +1,15 @@
+import React from "react";
+
+import { configQuery } from "@lib/groq";
+import { sanityClient } from "@lib/sanity";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
 import Container from "@/components/Container";
 import CTA from "@/components/CTA";
 import HeadingH1 from "@/components/headings/HeadingH1";
 import Layout from "@/components/Layout";
-import Link from "next/link";
-import React from "react";
-import { motion } from "framer-motion";
-import { sanityClient } from "@lib/sanity";
-import { configQuery } from "@lib/groq";
+
 const EmpfehlungsCard = ({ title, children }) => {
   return (
     <motion.div

@@ -1,8 +1,9 @@
+import React from "react";
+
+import Container from "@/components/Container";
 import CTA from "@/components/CTA";
 import HeadingH1 from "@/components/headings/HeadingH1";
 import Layout from "@/components/Layout";
-import Container from "@/components/Container";
-import React from "react";
 
 const Impressum = () => {
   return (

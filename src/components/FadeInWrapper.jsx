@@ -1,15 +1,11 @@
 import React, { useRef } from "react";
+
 import { motion, useInView } from "framer-motion";
 
 const FadeInWrapper = (props) => {
   const { children, delay, className, ...propsLeft } = props;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  //   useEffect(() => {
-  //     if (inView) {
-  //       controls.start("visible");
-  //     }
-  //   }, [controls, inView]);
 
   return (
     <motion.div

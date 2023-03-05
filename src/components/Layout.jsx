@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { NextSeo } from "next-seo";
+
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 import Footer from "./Footer";
-import Navigation from "./Navigation";
 import Modal from "./Modal";
+import Navigation from "./Navigation";
 import { ModalContext } from "@/ModalContext";
 
 const Layout = (props) => {

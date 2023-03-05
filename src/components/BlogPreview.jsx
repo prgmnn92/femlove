@@ -1,8 +1,10 @@
 import React from "react";
+
+import { getCategoriesTitle } from "@utils/getCategoriesTitle";
+import { motion } from "framer-motion";
+
 import BlogCard from "./BlogCard";
 import Container from "./Container";
-import { motion } from "framer-motion";
-import { getCategoriesTitle } from "@utils/getCategoriesTitle";
 
 const BlogPreview = ({ posts, categories }) => {
   return (

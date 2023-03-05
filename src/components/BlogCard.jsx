@@ -1,7 +1,6 @@
-import Image from "next/image";
-import { motion } from "framer-motion";
-
 import { urlFor } from "@lib/sanity";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 const BlogCard = ({ className, post, category }) => {

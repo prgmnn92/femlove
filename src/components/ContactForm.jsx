@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import Button from "./Button";
+
 import { motion } from "framer-motion";
+
+import Button from "./Button";
 
 const ErrorIcon = () => (
   <svg

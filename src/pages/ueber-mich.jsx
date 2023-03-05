@@ -1,17 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
+import React from "react";
+
+import { configQuery } from "@lib/groq";
+import { sanityClient } from "@lib/sanity";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+
 import Container from "@/components/Container";
 import CTA from "@/components/CTA";
 import HeadingH1 from "@/components/headings/HeadingH1";
 import Layout from "@/components/Layout";
-import Image from "next/image";
-import React from "react";
-import dynamic from "next/dynamic";
+
 const ReactPlayer = dynamic(() => import("react-player/youtube"), {
   ssr: false,
 });
-import { motion } from "framer-motion";
-import { sanityClient } from "@lib/sanity";
-import { configQuery } from "@lib/groq";
 
 const ÜberMich = ({ siteConfig }) => {
   return (

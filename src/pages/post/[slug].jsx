@@ -1,8 +1,7 @@
-import Layout from "@/components/Layout";
-import { NextSeo } from "next-seo";
 import React from "react";
-import { useRouter } from "next/router";
-import ErrorPage from "next/error";
+
+import { ArrowLongLeftIcon } from "@heroicons/react/20/solid";
+import { singlequery, pathquery, configQuery } from "@lib/groq";
 import {
   sanityClient,
   getClient,
@@ -11,14 +10,17 @@ import {
   urlFor,
 } from "@lib/sanity";
 import { getImageDimensions } from "@sanity/asset-utils";
-import { singlequery, pathquery, configQuery } from "@lib/groq";
-import Container from "@/components/Container";
-import Image from "next/image";
-import GetImage from "@utils/getImage";
 import { getCategoriesTitle } from "@utils/getCategoriesTitle";
+import GetImage from "@utils/getImage";
 import { motion } from "framer-motion";
-import { ArrowLongLeftIcon } from "@heroicons/react/20/solid";
+import ErrorPage from "next/error";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
+
+import Container from "@/components/Container";
 import CTA from "@/components/CTA";
+import Layout from "@/components/Layout";
 
 const Post = (props) => {
   const { postdata, siteconfig, preview, category } = props;

@@ -1,7 +1,10 @@
-import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import Input from "./Input";
+
+import { Dialog, Transition } from "@headlessui/react";
 import slugify from "slugify";
+
+import Input from "./Input";
+
 
 export default function Modal({ isOpen, closeModal }) {
   const [name, setName] = useState("");

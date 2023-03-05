@@ -1,16 +1,20 @@
-import BlogCard from "@/components/BlogCard";
-import Container from "@/components/Container";
-import HeadingH1 from "@/components/headings/HeadingH1";
-import Input from "@/components/Input";
-import Layout from "@/components/Layout";
 import React, { useState, Fragment } from "react";
+
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { sanityClient } from "@lib/sanity";
 import { getCategoriesTitle } from "@utils/getCategoriesTitle";
 import classNames from "classnames";
-import { Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import CTA from "@/components/CTA";
 import { motion } from "framer-motion";
+
+import BlogCard from "@/components/BlogCard";
+import Container from "@/components/Container";
+import CTA from "@/components/CTA";
+import HeadingH1 from "@/components/headings/HeadingH1";
+import Input from "@/components/Input";
+import Layout from "@/components/Layout";
+
+
 
 const Blog = ({ posts, categories, siteConfig }) => {
   const [categoryFilter, setCategoryFilter] = useState("");

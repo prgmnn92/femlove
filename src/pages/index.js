@@ -1,16 +1,19 @@
 import { useState } from "react";
-import Image from "next/image";
-import Layout from "@/components/Layout";
-import Container from "@/components/Container";
-import Button from "@/components/Button";
-import BlogPreview from "@/components/BlogPreview";
-import CTA from "@/components/CTA";
-import AboutMe from "@/components/AboutMe";
-import { sanityClient } from "@lib/sanity";
-import Input from "@/components/Input";
-import { motion } from "framer-motion";
-import ThankYou from "@/components/ThankYou";
+
 import { configQuery } from "@lib/groq";
+import { sanityClient } from "@lib/sanity";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+import AboutMe from "@/components/AboutMe";
+import BlogPreview from "@/components/BlogPreview";
+import Button from "@/components/Button";
+import Container from "@/components/Container";
+import CTA from "@/components/CTA";
+import Input from "@/components/Input";
+import Layout from "@/components/Layout";
+import ThankYou from "@/components/ThankYou";
+
 
 export default function Home({ posts, categories, siteConfig }) {
   const [email, setEmail] = useState("");

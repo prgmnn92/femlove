@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+
+import { motion } from "framer-motion";
+
 import Button from "./Button";
 import Container from "./Container";
 import Input from "./Input";
-import { motion } from "framer-motion";
 import ThankYou from "./ThankYou";
 
 const CTA = () => {
