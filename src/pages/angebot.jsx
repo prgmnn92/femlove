@@ -13,7 +13,6 @@ import HeadingH1 from "@/components/headings/HeadingH1";
 import Layout from "@/components/Layout";
 import { ModalContext } from "@/ModalContext";
 
-
 const Angebot = ({ siteConfig }) => {
   return (
     <Layout {...siteConfig}>
@@ -261,7 +260,7 @@ export async function getStaticProps({ params, preview = false }) {
   const config = await sanityClient.fetch(configQuery);
   return {
     props: {
-      siteconfig: { ...config },
+      siteConfig: { ...config },
       preview,
     },
     revalidate: 100,

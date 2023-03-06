@@ -2,6 +2,7 @@ import React, { useState, Fragment } from "react";
 
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 import { getCategoriesTitle } from "@utils/getCategoriesTitle";
 import classNames from "classnames";
@@ -13,8 +14,6 @@ import CTA from "@/components/CTA";
 import HeadingH1 from "@/components/headings/HeadingH1";
 import Input from "@/components/Input";
 import Layout from "@/components/Layout";
-
-
 
 const Blog = ({ posts, categories, siteConfig }) => {
   const [categoryFilter, setCategoryFilter] = useState("");
@@ -137,9 +136,11 @@ const Blog = ({ posts, categories, siteConfig }) => {
 export async function getStaticProps() {
   const posts = await sanityClient.fetch(`*[_type == "post"]`);
   const categories = await sanityClient.fetch(`*[_type == "category"]`);
+  const config = await sanityClient.fetch(configQuery);
 
   return {
     props: {
+      siteConfig: { ...config },
       posts,
       categories,
     },

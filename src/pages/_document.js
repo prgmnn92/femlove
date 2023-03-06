@@ -7,7 +7,7 @@ export default function Document() {
       <body
         style={{
           backgroundColor:
-            "linear-gradient(0deg, rgb(238, 210, 204), rgb(255, 255, 255));",
+            "linear-gradient(0deg, rgb(238, 210, 204), rgb(255, 255, 255))",
         }}
       >
         <Main />

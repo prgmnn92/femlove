@@ -31,7 +31,7 @@ export async function getStaticProps({ params, preview = false }) {
   const config = await sanityClient.fetch(configQuery);
   return {
     props: {
-      siteconfig: { ...config },
+      siteConfig: { ...config },
       preview,
     },
     revalidate: 100,

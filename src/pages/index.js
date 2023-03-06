@@ -14,7 +14,6 @@ import Input from "@/components/Input";
 import Layout from "@/components/Layout";
 import ThankYou from "@/components/ThankYou";
 
-
 export default function Home({ posts, categories, siteConfig }) {
   const [email, setEmail] = useState("");
   const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
@@ -123,7 +122,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      siteconfig: { ...config },
+      siteConfig: { ...config },
       posts,
       categories,
     },
