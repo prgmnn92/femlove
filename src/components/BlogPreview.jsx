@@ -53,19 +53,14 @@ const BlogPreview = ({ posts, categories }) => {
               return new Date(b._createdAt) - new Date(a._createdAt);
             })
             .slice(0, 3)
-            .map(
-              (post) => (
-                console.log(post._createdAt),
-                (
-                  <BlogCard
-                    key={post._id}
-                    post={post}
-                    className="mb-6 md:w-1/3 sm:mb-0"
-                    category={getCategoriesTitle(categories, post.categories)}
-                  />
-                )
-              )
-            )}
+            .map((post) => (
+              <BlogCard
+                key={post._id}
+                post={post}
+                className="mb-6 md:w-1/3 sm:mb-0"
+                category={getCategoriesTitle(categories, post.categories)}
+              />
+            ))}
         </motion.div>
       </Container>
     </section>
