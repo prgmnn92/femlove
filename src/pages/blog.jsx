@@ -96,6 +96,11 @@ const Blog = ({ posts, categories, siteConfig }) => {
           className="flex flex-wrap mt-4 mb-10 sm:my-4"
         >
           {posts
+            .sort(function (a, b) {
+              // Turn your strings into dates, and then subtract them
+              // to get a value that is either negative, positive, or zero.
+              return new Date(b._createdAt) - new Date(a._createdAt);
+            })
             .filter((post) => {
               let postCategories = getCategoriesTitle(
                 categories,
