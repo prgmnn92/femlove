@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const BlogCard = ({ className, post, category }) => {
   return (
-    <div className={className + " p-2"}>
+    <div className={className + " md:p-2"}>
       <motion.div
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.2 }}

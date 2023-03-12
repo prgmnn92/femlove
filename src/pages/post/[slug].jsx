@@ -25,6 +25,7 @@ const Post = (props) => {
   const { postdata, siteconfig, preview, category } = props;
 
   const post = postdata;
+  console.log(post);
   const siteConfig = siteconfig;
 
   const router = useRouter();

@@ -31,6 +31,7 @@ export default defineType({
         {title: 'H4', value: 'h4'},
         {title: 'p', value: 'p'},
         {title: 'Quote', value: 'blockquote'},
+        {title: 'Line', value: 'hr'},
       ],
       lists: [{title: 'Bullet', value: 'bullet'}],
       // Marks let you mark up inline text in the block editor.
@@ -102,6 +103,19 @@ export default defineType({
       components: {
         annotation: BlockCTA,
       },
+    }),
+    defineArrayMember({
+      title: 'Video blog post',
+      name: 'videoBlogPost',
+      type: 'document',
+      fields: [
+        {title: 'Title', name: 'title', type: 'string'},
+        {
+          title: 'Video file',
+          name: 'video',
+          type: 'mux.video',
+        },
+      ],
     }),
   ],
 })

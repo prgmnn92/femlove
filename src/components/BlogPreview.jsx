@@ -43,7 +43,7 @@ const BlogPreview = ({ posts }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.2, delay: 0.25 }}
-          className="flex flex-wrap items-stretch mx-4 mt-4 mb-10 sm:-m-4"
+          className="flex flex-wrap items-stretch mt-4 mb-10 sm:m-4"
         >
           {posts
             .sort(function (a, b) {
