@@ -4,13 +4,13 @@ const createNewsletterEntry = async (req, res) => {
   if (req.method === "POST") {
     //find a record
 
-    const { email } = req.body;
+    const { email, name } = req.body;
 
     try {
       if (email) {
         //create a record
 
-        addNewsletterRecord(email);
+        addNewsletterRecord(email, name);
 
         res.json({
           message: "Succesfully send",

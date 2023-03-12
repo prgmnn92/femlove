@@ -9,14 +9,18 @@ import ThankYou from "./ThankYou";
 
 const CTA = () => {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
 
   const newsletterHandler = (e) => {
-    setEmail(e.target.value);
+    console.log(e.target.name);
+    if (e.target.name == "email") setEmail(e.target.value);
+    if (e.target.name == "name") setName(e.target.value);
   };
   const handleSubmit = () => {
-    handleCreateNewsletter(email);
+    handleCreateNewsletter(email, name);
     setEmail("");
+    setName("");
   };
 
   const handleCreateNewsletter = async (email) => {
@@ -28,6 +32,7 @@ const CTA = () => {
         },
         body: JSON.stringify({
           email,
+          name,
         }),
       });
 
@@ -58,13 +63,26 @@ const CTA = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.2, delay: 0.25 }}
-          className="flex flex-col items-end w-full px-8 mx-auto space-y-4 lg:w-2/3 sm:flex-row sm:space-x-4 sm:space-y-0 sm:px-0"
+          className="flex flex-col w-full px-8 mx-auto space-y-4 lg:w-2/3 sm:space-y-0 sm:px-0"
         >
           {newsletterSubmitted ? (
             <ThankYou isNewsletter={true} />
           ) : (
             <>
               <div className="relative flex-grow w-full">
+                <label
+                  htmlFor="name"
+                  className="text-sm font-medium leading-7 text-gray-600"
+                >
+                  Vorname
+                </label>
+                <Input
+                  type="text"
+                  id="name-cta"
+                  name="name"
+                  onChange={newsletterHandler}
+                  value={name}
+                />
                 <label
                   htmlFor="email"
                   className="text-sm font-medium leading-7 text-gray-600"
@@ -73,19 +91,21 @@ const CTA = () => {
                 </label>
                 <Input
                   type="email"
-                  id="email"
+                  id="email-cta"
                   name="email"
                   onChange={newsletterHandler}
                   value={email}
                 />
               </div>
-              <Button
-                type="submit"
-                className="px-8 py-2 text-lg text-white border-0 rounded bg-f-main focus:outline-none"
-                onClick={handleSubmit}
-              >
-                Abonnieren
-              </Button>
+              <div className="pt-4">
+                <Button
+                  type="submit"
+                  className="text-lg text-white border-0 rounded bg-f-main focus:outline-none"
+                  onClick={handleSubmit}
+                >
+                  Abonnieren
+                </Button>
+              </div>
             </>
           )}
         </motion.div>
