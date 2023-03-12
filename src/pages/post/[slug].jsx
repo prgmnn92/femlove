@@ -10,7 +10,6 @@ import {
   urlFor,
 } from "@lib/sanity";
 import { getImageDimensions } from "@sanity/asset-utils";
-import { getCategoriesTitle } from "@utils/getCategoriesTitle";
 import GetImage from "@utils/getImage";
 import { motion } from "framer-motion";
 import ErrorPage from "next/error";
@@ -92,12 +91,12 @@ const Post = (props) => {
                 </div>
 
                 <div className="pb-4">
-                  {category.map((item) => (
+                  {post.categories.map((item) => (
                     <div
                       className="inline px-3 py-2 lg:text-xs font-bold text-white rounded-full bg-f-red text-[10px] mr-2"
-                      key={item}
+                      key={item._id}
                     >
-                      {item}
+                      {item.title}
                     </div>
                   ))}
                 </div>
@@ -133,15 +132,12 @@ export async function getStaticProps({ params, preview = false }) {
   const post = await getClient(preview).fetch(singlequery, {
     slug: params.slug,
   });
-  const categories = await sanityClient.fetch(`*[_type == "category"]`);
   const config = await getClient(preview).fetch(configQuery);
-  const category = await getCategoriesTitle(categories, post.categories);
   return {
     props: {
       postdata: { ...post },
       siteconfig: { ...config },
       preview,
-      category,
     },
     revalidate: 86400, // every 36h
   };

@@ -2,9 +2,8 @@ import React, { useState, Fragment } from "react";
 
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { configQuery } from "@lib/groq";
+import { configQuery, postqueryBlogs } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
-import { getCategoriesTitle } from "@utils/getCategoriesTitle";
 import classNames from "classnames";
 import { motion } from "framer-motion";
 
@@ -15,7 +14,7 @@ import HeadingH1 from "@/components/headings/HeadingH1";
 import Input from "@/components/Input";
 import Layout from "@/components/Layout";
 
-const Blog = ({ posts, categories, siteConfig }) => {
+const Blog = ({ posts, siteConfig }) => {
   const [categoryFilter, setCategoryFilter] = useState("");
   const [searchPhrase, setSearchPhrase] = useState("");
   const filters = [
@@ -24,6 +23,7 @@ const Blog = ({ posts, categories, siteConfig }) => {
     "Menstruation",
     "Ernährung",
     "Hormonfreie Verhütung",
+    "Sonstiges",
   ];
 
   return (
@@ -96,19 +96,9 @@ const Blog = ({ posts, categories, siteConfig }) => {
           className="flex flex-wrap mt-4 mb-10 sm:my-4"
         >
           {posts
-            .sort(function (a, b) {
-              // Turn your strings into dates, and then subtract them
-              // to get a value that is either negative, positive, or zero.
-              return new Date(b._createdAt) - new Date(a._createdAt);
-            })
             .filter((post) => {
-              let postCategories = getCategoriesTitle(
-                categories,
-                post.categories
-              );
-
               return categoryFilter
-                ? postCategories.includes(categoryFilter)
+                ? post.categories.includes(categoryFilter)
                 : true;
             })
             .filter((post) => {
@@ -128,7 +118,7 @@ const Blog = ({ posts, categories, siteConfig }) => {
                 key={post._id}
                 post={post}
                 className="mb-6 md:w-1/3 sm:mb-0"
-                category={getCategoriesTitle(categories, post.categories)}
+                category={post.categories}
               />
             ))}
         </motion.div>
@@ -139,15 +129,13 @@ const Blog = ({ posts, categories, siteConfig }) => {
 };
 
 export async function getStaticProps() {
-  const posts = await sanityClient.fetch(`*[_type == "post"]`);
-  const categories = await sanityClient.fetch(`*[_type == "category"]`);
+  const posts = await sanityClient.fetch(postqueryBlogs);
   const config = await sanityClient.fetch(configQuery);
 
   return {
     props: {
       siteConfig: { ...config },
       posts,
-      categories,
     },
   };
 }

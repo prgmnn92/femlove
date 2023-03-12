@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { configQuery } from "@lib/groq";
+import { configQuery, postqueryHome } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -14,7 +14,7 @@ import Input from "@/components/Input";
 import Layout from "@/components/Layout";
 import ThankYou from "@/components/ThankYou";
 
-export default function Home({ posts, categories, siteConfig }) {
+export default function Home({ posts, siteConfig }) {
   const [email, setEmail] = useState("");
   const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
   const newsletterHandler = (e) => {
@@ -107,7 +107,7 @@ export default function Home({ posts, categories, siteConfig }) {
             />
           </motion.div>
         </Container>
-        <BlogPreview posts={posts} categories={categories} />
+        <BlogPreview posts={posts} />
         <AboutMe />
         <CTA />
       </Layout>
@@ -116,15 +116,13 @@ export default function Home({ posts, categories, siteConfig }) {
 }
 
 export async function getStaticProps() {
-  const posts = await sanityClient.fetch(`*[_type == "post"]`);
-  const categories = await sanityClient.fetch(`*[_type == "category"]`);
+  const posts = await sanityClient.fetch(postqueryHome);
   const config = await sanityClient.fetch(configQuery);
 
   return {
     props: {
       siteConfig: { ...config },
       posts,
-      categories,
     },
   };
 }

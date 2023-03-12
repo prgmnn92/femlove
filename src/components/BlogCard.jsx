@@ -25,9 +25,9 @@ const BlogCard = ({ className, post, category }) => {
             {category.map((item) => (
               <div
                 className="inline px-3 py-2 lg:text-xs font-bold text-white rounded-full bg-f-red text-[10px] mr-2"
-                key={item}
+                key={item.title}
               >
-                {item}
+                {item.title}
               </div>
             ))}
             <h2 className="mt-3 text-lg font-semibold text-gray-900 title-font">

@@ -1,12 +1,11 @@
 import React from "react";
 
-import { getCategoriesTitle } from "@utils/getCategoriesTitle";
 import { motion } from "framer-motion";
 
 import BlogCard from "./BlogCard";
 import Container from "./Container";
 
-const BlogPreview = ({ posts, categories }) => {
+const BlogPreview = ({ posts }) => {
   return (
     <section>
       <Container className="px-5 py-24 ">
@@ -58,7 +57,7 @@ const BlogPreview = ({ posts, categories }) => {
                 key={post._id}
                 post={post}
                 className="mb-6 md:w-1/3 sm:mb-0"
-                category={getCategoriesTitle(categories, post.categories)}
+                category={post.categories}
               />
             ))}
         </motion.div>
