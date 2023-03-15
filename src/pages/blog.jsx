@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, lazy } from "react";
 
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -7,14 +7,17 @@ import { sanityClient } from "@lib/sanity";
 import classNames from "classnames";
 import { motion } from "framer-motion";
 
-import BlogCard from "@/components/BlogCard";
+import BlogList from "@/components/BlogList";
 import Container from "@/components/Container";
 import CTA from "@/components/CTA";
 import HeadingH1 from "@/components/headings/HeadingH1";
 import Input from "@/components/Input";
 import Layout from "@/components/Layout";
+import PreviewSuspense from "@/components/PreviewSuspense";
 
-const Blog = ({ posts, siteConfig }) => {
+const PreviewBlogList = lazy(() => import("@/components/PreviewBlogList"));
+
+const Blog = ({ posts, siteConfig, preview }) => {
   const [categoryFilter, setCategoryFilter] = useState("");
   const [searchPhrase, setSearchPhrase] = useState("");
   const filters = [
@@ -88,57 +91,26 @@ const Blog = ({ posts, siteConfig }) => {
             categoryFilter={categoryFilter}
           />
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.2, delay: 0.15 }}
-          delay={0.1}
-          className="flex flex-wrap mt-4 mb-10 sm:my-4"
-        >
-          {posts
-            .filter((post) => {
-              return categoryFilter
-                ? post.categories.includes(categoryFilter)
-                : true;
-            })
-            .filter((post) => {
-              if (!searchPhrase) return true;
-              if (post.title.toLowerCase().includes(searchPhrase.toLowerCase()))
-                return true;
-              if (
-                post.shortDescription
-                  .toLowerCase()
-                  .includes(searchPhrase.toLowerCase())
-              )
-                return true;
-              return false;
-            })
-            .map((post) => (
-              <BlogCard
-                key={post._id}
-                post={post}
-                className="mb-6 md:w-1/3 sm:mb-0"
-                category={post.categories}
-              />
-            ))}
-        </motion.div>
+        {preview ? (
+          <PreviewSuspense fallback="Loading...">
+            <PreviewBlogList
+              query={postqueryBlogs}
+              categoryFilter={categoryFilter}
+              searchPhrase={searchPhrase}
+            />
+          </PreviewSuspense>
+        ) : (
+          <BlogList
+            posts={posts}
+            categoryFilter={categoryFilter}
+            searchPhrase={searchPhrase}
+          />
+        )}
       </Container>
       <CTA />
     </Layout>
   );
 };
-
-export async function getStaticProps() {
-  const posts = await sanityClient.fetch(postqueryBlogs);
-  const config = await sanityClient.fetch(configQuery);
-
-  return {
-    props: {
-      siteConfig: { ...config },
-      posts,
-    },
-  };
-}
 
 function FilterDropdown({ filters, handleCategoryFilter, categoryFilter }) {
   return (
@@ -198,6 +170,22 @@ function FilterDropdown({ filters, handleCategoryFilter, categoryFilter }) {
       </Menu>
     </div>
   );
+}
+
+export async function getStaticProps({ preview }) {
+  if (preview) {
+    return { props: { preview } };
+  }
+
+  const posts = await sanityClient.fetch(postqueryBlogs);
+  const config = await sanityClient.fetch(configQuery);
+
+  return {
+    props: {
+      siteConfig: { ...config },
+      posts,
+    },
+  };
 }
 
 export default Blog;
