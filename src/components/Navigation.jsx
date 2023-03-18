@@ -116,7 +116,7 @@ function MobileMenu() {
             <div className="px-4 py-4">
               <Menu.Item className="flex justify-center px-2 py-2 text-center">
                 <Link
-                  href={"https://mailchi.mp/8007355fc29b/newsletter-abonnieren"}
+                  href={"https://femlove-by-franzi.ck.page/newsletter"}
                   className={
                     "bg-f-main text-white lg:ml-2 rounded-full font-semibold px-7 py-2 mx-auto hover:brightness-105 transition-all"
                   }
