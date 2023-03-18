@@ -12,7 +12,7 @@ export const defaultDocumentNode: DefaultDocumentNodeResolver = (S, {schemaType}
         S.view
           .component(Iframe)
           .options({
-            url: `${process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000'}/api/preview`,
+            url: `${process.env.NEXT_PUBLIC_NETLIFY_URL || 'http://localhost:3000'}/api/preview`,
           })
           .title('Preview'),
       ])
