@@ -54,7 +54,7 @@ const Navigation = () => {
             ))}
             <li className="pt-4 lg:pt-0">
               <Link
-                href={"https://mailchi.mp/8007355fc29b/newsletter-abonnieren"}
+                href={"https://femlove-by-franzi.ck.page/newsletter"}
                 className={
                   "bg-f-main text-md text-white lg:ml-2 rounded-full font-semibold px-7 py-2 hover:brightness-105 transition-all"
                 }
