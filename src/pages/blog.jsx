@@ -114,7 +114,7 @@ const Blog = ({ posts, siteConfig, preview }) => {
 
 function FilterDropdown({ filters, handleCategoryFilter, categoryFilter }) {
   return (
-    <div>
+    <div className="relative z-5">
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white rounded-md bg-f-red hover:bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
