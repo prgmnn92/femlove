@@ -34,6 +34,7 @@ const Navigation = () => {
         <Link href={"/"}>
           <Image
             src={"/logos/brand.png"}
+            priority={true}
             alt="Brand Logo"
             width={90}
             height={90}
