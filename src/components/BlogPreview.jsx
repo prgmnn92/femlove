@@ -1,6 +1,7 @@
 import React from "react";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import BlogCard from "./BlogCard";
 import Container from "./Container";
@@ -61,6 +62,14 @@ const BlogPreview = ({ posts }) => {
               />
             ))}
         </motion.div>
+        <div className="flex justify-center md:pt-4">
+          <Link
+            href={"/blog"}
+            className="p-2 px-3 mx-auto font-semibold text-center text-white rounded-full bg-f-red"
+          >
+            Alle Beiträge
+          </Link>
+        </div>
       </Container>
     </section>
   );

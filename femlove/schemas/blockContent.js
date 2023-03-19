@@ -106,7 +106,7 @@ export default defineType({
       fields: [
         // fields must be defined, and it must be an array
         {
-          name: 'myField', // field name is required and must be unique
+          name: 'ButtonText', // field name is required and must be unique
           type: 'string', // field type is required
         },
       ],
