@@ -17,10 +17,17 @@ const PreviewBlogPost = lazy(() => import("@/components/PreviewBlogPost"));
 
 const Post = (props) => {
   const { postdata, siteconfig, preview, data } = props;
-
+  const router = useRouter();
   const post = postdata;
   const siteConfig = siteconfig;
 
+  if (router.isFallback) {
+    return (
+      <Layout>
+        <div>Loading</div>
+      </Layout>
+    );
+  }
   return (
     <>
       {preview ? (
@@ -103,7 +110,7 @@ export async function getStaticPaths() {
           slug: page.slug,
         },
       })) || [],
-    fallback: false,
+    fallback: true,
   };
 }
 
