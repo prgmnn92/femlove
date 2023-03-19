@@ -16,7 +16,7 @@ import PreviewSuspense from "@/components/PreviewSuspense";
 
 const PreviewBlogPost = lazy(() => import("@/components/PreviewBlogPost"));
 
-export const Post = (props) => {
+const Post = (props) => {
   const { postdata, siteconfig, preview, data } = props;
 
   const post = postdata;
