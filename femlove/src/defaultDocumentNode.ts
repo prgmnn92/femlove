@@ -4,7 +4,6 @@ import {DefaultDocumentNodeResolver} from 'sanity/desk'
 import Iframe from 'sanity-plugin-iframe-pane'
 
 export const defaultDocumentNode: DefaultDocumentNodeResolver = (S, {schemaType}) => {
-  console.log(S)
   switch (schemaType) {
     case `post`:
       return S.document().views([

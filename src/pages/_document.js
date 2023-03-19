@@ -10,7 +10,7 @@ export default function Document() {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-1B3C3W4V0P"
         ></Script>
-        {/* <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
@@ -18,8 +18,8 @@ export default function Document() {
 
               gtag('config', 'G-1B3C3W4V0P');
           `}
-        </Script> */}
-        <script
+        </Script>
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -30,7 +30,7 @@ export default function Document() {
               });
             `,
           }}
-        />
+        /> */}
       </Head>
       <body
         style={{
