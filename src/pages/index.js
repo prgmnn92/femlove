@@ -109,6 +109,7 @@ export default function Home({ posts, siteConfig }) {
               alt="mockup"
               width={400}
               height={600}
+              priority={true}
             />
           </motion.div>
         </Container>
