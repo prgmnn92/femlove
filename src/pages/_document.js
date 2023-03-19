@@ -40,6 +40,14 @@ export default function Document() {
       >
         <Main />
         <NextScript />
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=G-1B3C3W4V0P`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
       </body>
     </Html>
   );
