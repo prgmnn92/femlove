@@ -68,7 +68,7 @@ const WorkTogether = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.2, delay: 0.15 }}
         delay={0.1}
-        className="container flex flex-wrap items-center px-5 py-24 mx-auto"
+        className="container flex flex-wrap items-center px-5 py-8 mx-auto md:py-24"
       >
         <div className="pr-0 lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0">
           <h2 className="text-3xl font-medium text-gray-900 title-font">
@@ -105,7 +105,7 @@ const WorkTogether = () => {
             </Button>
           </div>
         </div>
-        <div className="flex flex-col w-full mt-10rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
+        <div className="flex flex-col w-full mt-10 rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
           <Image
             alt="feature"
             className="object-cover object-center w-full h-full"
@@ -121,7 +121,7 @@ const WorkTogether = () => {
 
 const StepsView = () => (
   <section className="text-gray-600 body-font">
-    <Container className="flex flex-wrap px-5 py-24">
+    <Container className="flex flex-wrap px-5 py-8 md:py-24">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
