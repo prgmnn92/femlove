@@ -1,4 +1,3 @@
-"use client";
 import React, { lazy } from "react";
 
 import GetImage from "@lib/getImage";
@@ -104,7 +103,7 @@ export async function getStaticPaths() {
           slug: page.slug,
         },
       })) || [],
-    fallback: true,
+    fallback: false,
   };
 }
 
