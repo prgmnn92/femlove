@@ -1,9 +1,11 @@
 import "../styles/globals.css";
+import { getCookie } from "cookies-next";
 import Script from "next/script";
 
 const isProduction = process.env.NODE_ENV === "production";
 
 export default function App({ Component, pageProps }) {
+  const consent = getCookie("localConsent");
   return (
     <>
       {isProduction && (
@@ -18,10 +20,28 @@ export default function App({ Component, pageProps }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied'
+              });
+   
               gtag('config', 'G-1B3C3W4V0P');
           `}
           </Script>
+          {consent === true && (
+            <Script
+              id="consupd"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+            gtag('consent', 'update', {
+              'ad_storage': 'granted',
+              'analytics_storage': 'granted'
+            });
+          `,
+              }}
+            />
+          )}
         </>
       )}
       <Component {...pageProps} />;
