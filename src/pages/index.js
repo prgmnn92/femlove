@@ -55,11 +55,11 @@ export default function Home({ posts, siteConfig }) {
             className="mr-auto place-self-center lg:col-span-7"
           >
             <h1 className="max-w-md mb-4 text-4xl leading-none tracking-tight md:text-5xl xl:text-6xl ">
-              Zyklus, Gesundheit, Selbstakzeptanz.
+              Zyklus, Lifestyle & Gesundheit.
             </h1>
             <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl ">
-              Ein Blog, bei dem sich alles rund um den Zyklus, deine Gesundheit
-              und deinem Weg zu mehr Selbstakzeptanz dreht.
+              Femlove ist ein Blog, bei dem sich alles um ein gesundes und
+              zyklusgerechtes Leben dreht.
             </p>
             <div className="flex flex-col items-end w-full px-8 space-y-4 lg:w-2/3 sm:flex-row sm:space-x-4 sm:space-y-0 sm:px-0">
               {newsletterSubmitted ? (

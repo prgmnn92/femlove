@@ -29,13 +29,13 @@ const BlogPreview = ({ posts }) => {
               Aktuelle Beiträge
             </h2>
             <p className="pl-0 text-base leading-relaxed sm:w-3/5 sm:pl-10">
-              In meinen Beiträgen dreht es sich um den Zyklus, Gesundheit und
-              Selbstakzeptanz. Ich glaube, dass es wichtig ist, unseren Körper
-              und dessen Funktionen zu verstehen und uns selbst zu lieben. Ich
-              möchte dich ermutigen, stolz auf deinen Körper und deinen Zyklus
-              zu sein und zu lernen, dich selbst zu akzeptieren. Gemeinsam
-              können wir eine gesündere und selbstbewusstere Gesellschaft
-              erschaffen.
+              In meinen Beiträgen dreht es sich alles um ein ganzheitlich
+              gesundes und zyklusgerechtes Leben. Der Zyklus steht dabei im
+              Fokus. Es ist nämlich wichtig, unseren Körper und dessen
+              Funktionen zu verstehen. Dies führt eben auch dazu, dass wir uns
+              selbst besser annehmen und lieben. Ich möchte dich ermutigen,
+              stolz auf deinen Körper und deinen Zyklus zu sein und zu lernen,
+              den Zyklus für dich zu nutzen, statt ihn zu verteufeln.
             </p>
           </motion.div>
         </div>

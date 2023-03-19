@@ -71,6 +71,16 @@ export default defineType({
           name: 'alt',
           type: 'string',
         },
+        {
+          title: 'maxWidth',
+          name: 'maxWidth',
+          type: 'number',
+        },
+        {
+          title: 'isInline',
+          name: 'isInline',
+          type: 'boolean',
+        },
       ],
     }),
     defineArrayMember({

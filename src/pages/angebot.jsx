@@ -109,7 +109,7 @@ const WorkTogether = () => {
           <Image
             alt="feature"
             className="object-cover object-center w-full h-full"
-            src="/images/mark-adriane.webp"
+            src="/images/angebot.webp"
             width={460}
             height={500}
           />

@@ -47,8 +47,9 @@ const AboutMe = () => {
                 </h2>
                 <div className="w-12 h-1 mt-2 mb-4 rounded bg-f-green"></div>
                 <p className="text-base">
-                  Raclette knausgaard hella meggs normcore williamsburg enamel
-                  pin sartorial venmo tbh hot chicken gentrify portland.
+                  @femlovebyfranzi
+                  <br />
+                  Holistic Health & Wellness Coachin
                 </p>
               </motion.div>
             </div>
@@ -59,16 +60,17 @@ const AboutMe = () => {
               className="pt-4 mt-4 text-center border-t border-gray-200 sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l sm:border-t-0 sm:mt-0 sm:text-left"
             >
               <p className="mb-4 text-lg leading-relaxed">
-                Herzlich Willkommen auf meinem Blog! Ich freue mich, dass du her
-                gefunden hast und wünsche dir viel Spaß beim Rumstöbern. Lerne
-                mehr über deinen Zyklus, deine Gesundheit und finde deinen Weg
-                zu mehr Selbstakzeptanz.
+                Herzlich Willkommen auf femlove.blog! Freut mich, dass du
+                hergefunden hast. 😍 Ich wünsche dir ganz viel Freude beim
+                Rumstöbern und lesen! 📖 Bei Fragen oder Anregungen kannst du
+                mich gerne über mein Kontaktformular erreichen. Erfahre gleich
+                mehr über mich. Deine Franzi 💖
               </p>
               <Link
                 href={"/ueber-mich"}
                 className="inline-flex items-center text-f-green"
               >
-                Erfahre Mehr
+                Über mich
                 <svg
                   fill="none"
                   stroke="currentColor"

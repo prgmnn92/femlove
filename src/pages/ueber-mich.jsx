@@ -124,10 +124,16 @@ const ÜberMich = ({ siteConfig }) => {
             delay={0.1}
             className="w-full pb-8 mb-10 overflow-hidden lg:w-1/2 lg:mb-0 lg:text-lg"
           >
-            <ReactPlayer
+            {/* <ReactPlayer
               url="https://www.youtube.com/watch?v=5ah_cRdRSTM&t=6s"
               width="100%"
               height="100%"
+            /> */}
+            <Image
+              src={"/images/free-women.webp"}
+              width={800}
+              height={500}
+              alt="free women"
             />
           </motion.div>
         </Container>
