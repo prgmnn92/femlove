@@ -11,7 +11,7 @@ const BlogList = ({ posts, categoryFilter, searchPhrase }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.2, delay: 0.15 }}
       delay={0.1}
-      className="flex flex-wrap mt-4 mb-10 sm:my-4"
+      className="flex flex-wrap mt-4 mb-0 md:mb-10 sm:my-4"
     >
       {posts
         .filter((post) => {

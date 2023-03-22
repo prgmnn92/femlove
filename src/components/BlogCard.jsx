@@ -24,7 +24,7 @@ const BlogCard = ({ className, post, category }) => {
           <div className="px-6 py-3">
             {category.map((item) => (
               <div
-                className="inline px-3 py-2 lg:text-xs font-bold text-white rounded-full bg-f-red text-[10px] mr-2"
+                className="inline px-3 py-2 lg:text-xs font-bold text-white rounded-full bg-f-green text-[8px] mr-2"
                 key={item.title}
               >
                 {item.title}

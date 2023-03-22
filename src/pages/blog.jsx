@@ -117,7 +117,7 @@ function FilterDropdown({ filters, handleCategoryFilter, categoryFilter }) {
     <div className="relative z-5">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white rounded-md bg-f-red hover:bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white rounded-md bg-f-green hover:bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             Kategorien
             <ChevronDownIcon
               className="w-5 h-5 ml-2 -mr-1 text-violet-200 hover:text-violet-100"
@@ -153,9 +153,9 @@ function FilterDropdown({ filters, handleCategoryFilter, categoryFilter }) {
                           handleCategoryFilter(filterItem);
                         }}
                         className={`${
-                          active ? "bg-f-red text-white" : "text-gray-900"
+                          active ? "bg-f-green text-white" : "text-gray-900"
                         } ${
-                          isActive ? "bg-f-red text-white" : ""
+                          isActive ? "bg-f-green text-white" : ""
                         } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                       >
                         {filterItem}
