@@ -13,6 +13,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/amp/erfahrungsbericht-trackle",
+        destination: "/post/erfahrungsbericht-trackle",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
