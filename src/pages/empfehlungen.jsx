@@ -142,6 +142,15 @@ const Empfehlungen = ({ siteConfig }) => {
               </li>
             </ul>
           </EmpfehlungsCard>
+          <p className="max-w-[1200px] text-xs">
+            *Kennzeichnungspflichtige Werbung (bei Verwendung eines Rabattcodes
+            oder Links auf dieser Seite wird je nach Erfolg eine kleine
+            Provision an mich ausgezahlt). Damit kann meine Arbeit an femlove
+            finanziell unterstützt werden. Für dich entstehen durch die
+            Verwendung der Links keine Nachteile. Die auf dieser Seite erwähnten
+            Produkte habe ich mir alle selbst gekauft und empfehle sie aus
+            Überzeugung.
+          </p>
         </Container>
       </section>
       <CTA />
