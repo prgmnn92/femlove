@@ -100,7 +100,7 @@ const CTA = () => {
               <div className="pt-4">
                 <Button
                   type="submit"
-                  className="text-lg text-white border-0 rounded bg-f-main focus:outline-none"
+                  className="w-full text-lg text-white border-0 rounded md:w-auto bg-f-main focus:outline-none"
                   onClick={handleSubmit}
                 >
                   Abonnieren

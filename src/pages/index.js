@@ -61,7 +61,7 @@ export default function Home({ posts, siteConfig }) {
               Femlove ist ein Blog, bei dem sich alles um ein gesundes und
               zyklusgerechtes Leben dreht.
             </p>
-            <div className="flex flex-col items-end w-full px-8 space-y-4 lg:w-2/3 sm:flex-row sm:space-x-4 sm:space-y-0 sm:px-0">
+            <div className="flex flex-col items-stretch w-full space-y-4 sm:items-end lg:w-2/3 sm:flex-row sm:space-x-4 sm:space-y-0 sm:px-0">
               {newsletterSubmitted ? (
                 <ThankYou isNewsletter={true} />
               ) : (
