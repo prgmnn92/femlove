@@ -588,7 +588,7 @@ const Datenschutz = () => {
                 Standardschutzklauseln der EU-Kommission, beim Vorliegen von
                 Zertifizierungen oder verbindlicher internen
                 Datenschutzvorschriften verarbeiten (Art. 44 bis 49 DSGVO,
-                Informationsseite der EU-Kommission:{" "}
+                Informationsseite der EU-Kommission:
                 <span>
                   <a
                     href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection_de"
@@ -760,7 +760,7 @@ const Datenschutz = () => {
                 der Verwendung von Cookies (wobei dadurch auch die
                 Funktionalität unserer Online-Dienste eingeschränkt sein kann).
                 Ein Widerspruch gegen die Verwendung von Cookies zu
-                Online-Marketing-Zwecken kann auch über die Websites{" "}
+                Online-Marketing-Zwecken kann auch über die Websites
                 <span>
                   <a
                     href="https://optout.aboutads.info"
@@ -769,8 +769,8 @@ const Datenschutz = () => {
                   >
                     https://optout.aboutads.info
                   </a>
-                </span>{" "}
-                und{" "}
+                </span>
+                und
                 <span>
                   <a
                     href="https://www.youronlinechoices.com/"
@@ -779,7 +779,7 @@ const Datenschutz = () => {
                   >
                     https://www.youronlinechoices.com/
                   </a>
-                </span>{" "}
+                </span>
                 erklärt werden.
               </span>
             </p>
@@ -1427,7 +1427,7 @@ const Datenschutz = () => {
                     Messung von Nutzerströmen; Dienstanbieter: Google Ireland
                     Limited, Gordon House, Barrow Street, Dublin 4, Irland;
                     Rechtsgrundlagen: Einwilligung (Art. 6 Abs. 1 S. 1 lit. a)
-                    DSGVO); Website:{" "}
+                    DSGVO); Website:
                     <span>
                       <a
                         href="https://marketingplatform.google.com/intl/de/about/analytics/"
@@ -1437,7 +1437,7 @@ const Datenschutz = () => {
                         https://marketingplatform.google.com/intl/de/about/analytics/
                       </a>
                     </span>
-                    ; Datenschutzerklärung:{" "}
+                    ; Datenschutzerklärung:
                     <span>
                       <a
                         href="https://policies.google.com/privacy"
@@ -1447,7 +1447,7 @@ const Datenschutz = () => {
                         https://policies.google.com/privacy
                       </a>
                     </span>
-                    ; Auftragsverarbeitungsvertrag:{" "}
+                    ; Auftragsverarbeitungsvertrag:
                     <span>
                       <a
                         href="https://business.safety.google/adsprocessorterms"
@@ -1458,7 +1458,7 @@ const Datenschutz = () => {
                       </a>
                     </span>
                     ; Standardvertragsklauseln (Gewährleistung Datenschutzniveau
-                    bei Verarbeitung in Drittländern):{" "}
+                    bei Verarbeitung in Drittländern):
                     <span>
                       <a
                         href="https://business.safety.google/adsprocessorterms"
@@ -1468,7 +1468,7 @@ const Datenschutz = () => {
                         https://business.safety.google/adsprocessorterms
                       </a>
                     </span>
-                    ; Widerspruchsmöglichkeit (Opt-Out): Opt-Out-Plugin:{" "}
+                    ; Widerspruchsmöglichkeit (Opt-Out): Opt-Out-Plugin:
                     <span>
                       <a
                         href="https://tools.google.com/dlpage/gaoptout?hl=de"
@@ -1478,7 +1478,7 @@ const Datenschutz = () => {
                         https://tools.google.com/dlpage/gaoptout?hl=de
                       </a>
                     </span>
-                    , Einstellungen für die Darstellung von Werbeeinblendungen:{" "}
+                    , Einstellungen für die Darstellung von Werbeeinblendungen:
                     <span>
                       <a
                         href="https://adssettings.google.com/authenticated"
@@ -1488,7 +1488,7 @@ const Datenschutz = () => {
                         https://adssettings.google.com/authenticated
                       </a>
                     </span>
-                    ; Weitere Informationen:{" "}
+                    ; Weitere Informationen:
                     <span>
                       <a
                         href="https://privacy.google.com/businesses/adsservices"
@@ -1497,7 +1497,7 @@ const Datenschutz = () => {
                       >
                         https://privacy.google.com/businesses/adsservices
                       </a>
-                    </span>{" "}
+                    </span>
                     (Arten der Verarbeitung sowie der verarbeiteten Daten).
                   </span>
                 </p>
@@ -1742,7 +1742,7 @@ const Datenschutz = () => {
                     Instagram: Soziales Netzwerk; Dienstanbieter: Meta Platforms
                     Irland Limited, 4 Grand Canal Square, Grand Canal Harbour,
                     Dublin 2, Irland; Rechtsgrundlagen: Berechtigte Interessen
-                    (Art. 6 Abs. 1 S. 1 lit. f) DSGVO); Website:{" "}
+                    (Art. 6 Abs. 1 S. 1 lit. f) DSGVO); Website:
                     <span>
                       <a
                         href="https://www.instagram.com"
@@ -1752,7 +1752,7 @@ const Datenschutz = () => {
                         https://www.instagram.com
                       </a>
                     </span>
-                    ; Datenschutzerklärung:{" "}
+                    ; Datenschutzerklärung:
                     <span>
                       <a
                         href="https://instagram.com/about/legal/privacy"
@@ -1772,7 +1772,7 @@ const Datenschutz = () => {
                     Pinterest: Soziales Netzwerk; Dienstanbieter: Pinterest
                     Europe Limited, 2nd Floor, Palmerston House, Fenian Street,
                     Dublin 2, Irland; Rechtsgrundlagen: Berechtigte Interessen
-                    (Art. 6 Abs. 1 S. 1 lit. f) DSGVO); Website:{" "}
+                    (Art. 6 Abs. 1 S. 1 lit. f) DSGVO); Website:
                     <span>
                       <a
                         href="https://www.pinterest.com"
@@ -1782,7 +1782,7 @@ const Datenschutz = () => {
                         https://www.pinterest.com
                       </a>
                     </span>
-                    ; Datenschutzerklärung:{" "}
+                    ; Datenschutzerklärung:
                     <span>
                       <a
                         href="https://about.pinterest.com/de/privacy-policy"
@@ -1793,7 +1793,7 @@ const Datenschutz = () => {
                       </a>
                     </span>
                     ; Weitere Informationen: Pinterest Anhang zum Datenaustausch
-                    (ANHANG A):{" "}
+                    (ANHANG A):
                     <span>
                       <a
                         href="https://business.pinterest.com/de/pinterest-advertising-services-agreement/"
