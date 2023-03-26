@@ -1,13 +1,16 @@
-import { useEffect } from "react";
+import dynamic from "next/dynamic";
 
-import MuxPlayer from "@mux/mux-player-react";
+const DynamicMuxPlayer = dynamic(() => import("@mux/mux-player-react"), {
+  loading: () => <p>Loading...</p>,
+});
 
 export default function Video(props) {
   const { value } = props;
   return (
-    <MuxPlayer
+    <DynamicMuxPlayer
       playbackId={value.video.asset.playbackId}
       metadata={{ video_title: value.title }}
+      streamType="on-demand"
     />
   );
 }
