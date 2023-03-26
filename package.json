@@ -19,7 +19,6 @@
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/gtag.js": "^0.0.12",
     "airtable": "^0.11.6",
-    "classnames": "^2.3.2",
     "cookies-next": "^2.1.1",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",

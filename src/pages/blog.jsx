@@ -4,7 +4,6 @@ import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { configQuery, postqueryBlogs } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
-import classNames from "classnames";
 import { motion } from "framer-motion";
 
 import BlogList from "@/components/BlogList";
@@ -60,10 +59,9 @@ const Blog = ({ posts, siteConfig, preview }) => {
             if (!categoryFilter && item === filters[0]) isActive = true;
             return (
               <div
-                className={classNames({
-                  "p-2 mr-4 cursor-pointer transition-all": true,
-                  "bg-f-red text-white rounded-full": isActive,
-                })}
+                className={`p-2 mr-4 cursor-pointer transition-all  + ${
+                  isActive && "bg-f-red text-white rounded-full"
+                }`}
                 key={item}
                 onClick={() => {
                   if (item === filters[0]) {

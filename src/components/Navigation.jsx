@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 
 import { Menu, Transition } from "@headlessui/react";
-import cn from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -42,9 +41,9 @@ const Navigation = () => {
         </Link>
         <MobileMenu />
         <div
-          className={cn({
-            "w-full lg:block lg:w-auto  lg:static absolute left-0 top-[50px] shadow-sm lg:shadow-none  transition-all opacity-1 hidden": true,
-          })}
+          className={
+            "w-full lg:block lg:w-auto  lg:static absolute left-0 top-[50px] shadow-sm lg:shadow-none  transition-all opacity-1 hidden"
+          }
           id="navbar-default"
         >
           <ul className="flex p-4 mt-4 border border-gray-100 rounded-lg lg:flex-wrap bg-f-offwhite lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:border-0 lg:bg-white ">
