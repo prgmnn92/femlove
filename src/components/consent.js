@@ -38,6 +38,7 @@ function Consent() {
             closeP();
           }}
           className="absolute top-2 right-2"
+          aria-label="close cookie banner"
         >
           <XMarkIcon color="black" className="w-[22px] h-[22px]" />
         </button>

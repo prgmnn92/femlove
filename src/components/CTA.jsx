@@ -75,27 +75,27 @@ const CTA = () => {
                   className="text-sm font-medium leading-7 text-gray-600"
                 >
                   Vorname
+                  <Input
+                    type="text"
+                    id="name-cta"
+                    name="name"
+                    onChange={newsletterHandler}
+                    value={name}
+                  />
                 </label>
-                <Input
-                  type="text"
-                  id="name-cta"
-                  name="name"
-                  onChange={newsletterHandler}
-                  value={name}
-                />
                 <label
                   htmlFor="email"
                   className="text-sm font-medium leading-7 text-gray-600"
                 >
                   Email
+                  <Input
+                    type="email"
+                    id="email-cta"
+                    name="email"
+                    onChange={newsletterHandler}
+                    value={email}
+                  />
                 </label>
-                <Input
-                  type="email"
-                  id="email-cta"
-                  name="email"
-                  onChange={newsletterHandler}
-                  value={email}
-                />
               </div>
               <div className="pt-4">
                 <Button

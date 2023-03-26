@@ -78,7 +78,10 @@ function MobileMenu() {
     <>
       <Menu as="div" className="relative inline-block text-left lg:hidden">
         <div>
-          <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium rounded-md text-f-green bg-f-green bg-opacity-5 hover:bg-opacity-20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button
+            aria-label="mobile menu"
+            className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium rounded-md text-f-green bg-f-green bg-opacity-5 hover:bg-opacity-20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+          >
             <svg
               className="w-6 h-6"
               aria-hidden="true"
