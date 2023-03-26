@@ -1,3 +1,8 @@
+User-agent: Googlebot
+Disallow: /amp/
+
 # Allow all crawlers
 User-agent: *
 Allow: /
+
+Sitemap: https://femlove.blog/sitemap.xml
