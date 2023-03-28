@@ -49,7 +49,7 @@ const ÜberMich = ({ siteConfig }) => {
             className="flex flex-col flex-wrap md:mb-10 lg:w-1/2 lg:text-left"
           >
             <p className="pb-3 font-semibold">
-              Holistic Health & Wellness Coach i.A. ​
+              Holistic Health & Wellness Coach
             </p>
             <p>
               Ich bin 28 Jahre alt, liebe es zu reisen, in der Natur zu sein,

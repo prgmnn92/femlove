@@ -23,6 +23,10 @@
       font-family: 'Roxborough-CF', system-ui, sans-serif;
   }
 
+  video {
+    max-height: 50vh;
+  }
+
   /* Text inside of the blog content page */
   .block-text  a {
     @apply text-blue-600 underline;
@@ -37,6 +41,9 @@
   .block-text  img {
     @apply mx-auto my-8;
   } 
+  .block-text li:last-child {
+   @apply mb-8
+  }
   /* .block-text  p {
     @apply mb-4;
   }  */
