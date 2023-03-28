@@ -39,7 +39,7 @@
   } 
 
   .block-text  img {
-    @apply mx-auto my-8;
+    @apply mx-auto my-8 max-h-[400px] object-contain;
   } 
   .block-text li:last-child {
    @apply mb-8
