@@ -4,6 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {muxInput} from 'sanity-plugin-mux-input'
 import {defaultDocumentNode} from './src/defaultDocumentNode'
+import {resolveProductionUrl} from './resolveProductionUrl'
 
 export default defineConfig({
   name: 'default',
@@ -22,5 +23,8 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
+  },
+  document: {
+    productionUrl: resolveProductionUrl,
   },
 })
