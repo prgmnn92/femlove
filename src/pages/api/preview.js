@@ -15,7 +15,7 @@ function redirectToPreview(res, Location) {
 }
 
 export default async function preview(req, res) {
-  const secret = 12345;
+  const secret = "12345";
   // Only require a secret when in production
   if (!secret && process.env.NODE_ENV === "production") {
     throw new TypeError(`Missing SANITY_STUDIO_PREVIEW_SECRET`);
