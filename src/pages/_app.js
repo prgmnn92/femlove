@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        {!isProduction && (
+        {isProduction && (
           <>
             <script
               async
