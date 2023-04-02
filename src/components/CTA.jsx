@@ -45,7 +45,7 @@ const CTA = () => {
   };
   return (
     <section>
-      <Container className="px-5 py-24">
+      <Container className="px-5 pt-24 pb-12">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

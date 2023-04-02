@@ -30,13 +30,17 @@ const BlogPreview = ({ posts }) => {
               Aktuelle Beiträge
             </h2>
             <p className="pl-0 text-base leading-relaxed sm:w-3/5 sm:pl-10">
-              In meinen Beiträgen dreht es sich alles um ein ganzheitlich
-              gesundes und zyklusgerechtes Leben. Der Zyklus steht dabei im
-              Fokus. Es ist nämlich wichtig, unseren Körper und dessen
-              Funktionen zu verstehen. Dies führt eben auch dazu, dass wir uns
-              selbst besser annehmen und lieben. Ich möchte dich ermutigen,
-              stolz auf deinen Körper und deinen Zyklus zu sein und zu lernen,
-              den Zyklus für dich zu nutzen, statt ihn zu verteufeln.
+              In meinen Beiträgen lernst du alles, was du für ein ganzheitlich
+              gesundes und zyklusbewusstes Leben brauchst - ich teile mein
+              Wissen, meine Erfahrungen wie auch wertvolle Tipps & Tricks.
+              <br />
+              Mein Ziel ist es, dass du mit Hilfe eines ganzheitlichen Ansatzes
+              ein gesundes & ausgeglichenes Leben führen kannst, dich selbst
+              besser kennenlernst und Beschwerden gelindert werden (ciao PMS &
+              Co.) Warum ich dabei den weiblichen Zyklus einbeziehe? Er macht
+              uns als Frauen aus und hat einen großen Einfluss auf unser Leben.
+              Jede Frau soll die Chance haben, sich und ihren Zyklus
+              kennenzulernen. ❤️
             </p>
           </motion.div>
         </div>
