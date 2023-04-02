@@ -1,22 +1,32 @@
+/* eslint-disable @next/next/next-script-for-ga */
 import "../styles/globals.css";
+import { useState } from "react";
+
 import { getCookie } from "cookies-next";
-import Script from "next/script";
+import Head from "next/head";
+
+import Consent from "@/components/consent";
 
 const isProduction = process.env.NODE_ENV === "production";
 
 export default function App({ Component, pageProps }) {
-  const consent = getCookie("localConsent");
+  const [consent, setConsent] = useState(true);
+
+  const consentCookie = getCookie("localConsent");
   return (
     <>
-      {isProduction && (
-        <>
-          <Script
-            async
-            strategy="afterInteractive"
-            src="https://www.googletagmanager.com/gtag/js?id=G-1B3C3W4V0P"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
+      <Head>
+        {!isProduction && (
+          <>
+            <script
+              async
+              // strategy="beforeInteractive"
+              src="https://www.googletagmanager.com/gtag/js?id=G-1B3C3W4V0P"
+            />
+            <script
+              id="google-analytics"
+              dangerouslySetInnerHTML={{
+                __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
@@ -26,25 +36,29 @@ export default function App({ Component, pageProps }) {
               });
    
               gtag('config', 'G-1B3C3W4V0P');
-          `}
-          </Script>
-          {consent === true && (
-            <Script
-              id="consupd"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
+          `,
+              }}
+              // strategy="beforeInteractive"
+            ></script>
+            {(consent === true || consentCookie === true) && (
+              <script
+                id="consupd"
+                // strategy="beforeInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `
             gtag('consent', 'update', {
               'ad_storage': 'granted',
               'analytics_storage': 'granted'
             });
           `,
-              }}
-            />
-          )}
-        </>
-      )}
+                }}
+              />
+            )}
+          </>
+        )}
+      </Head>
       <Component {...pageProps} />;
+      <Consent consent={consent} setConsent={setConsent} />
     </>
   );
 }

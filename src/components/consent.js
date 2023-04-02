@@ -5,8 +5,7 @@ import { setCookie, hasCookie } from "cookies-next";
 
 import Button from "./Button";
 
-function Consent() {
-  const [consent, setConsent] = useState(true);
+function Consent({ setConsent, consent }) {
   useEffect(() => {
     setConsent(hasCookie("localConsent"));
   }, []);
@@ -14,6 +13,7 @@ function Consent() {
   const acceptCookie = () => {
     setConsent(true);
     setCookie("localConsent", "true", { maxAge: 60 * 60 * 24 * 365 });
+    // window.location.reload();
   };
   const closeP = () => {
     setConsent(true);

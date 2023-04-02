@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
 
-import Consent from "./consent";
 import Footer from "./Footer";
 import Modal from "./Modal";
 import Navigation from "./Navigation";
@@ -67,7 +66,6 @@ const Layout = (props) => {
         </div>
         <Footer {...props} />
       </div>
-      <Consent />
     </>
   );
 };
