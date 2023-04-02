@@ -1,8 +1,7 @@
 import React, { lazy } from "react";
 
-import GetImage from "@lib/getImage";
 import { singlequery, pathquery, configQuery } from "@lib/groq";
-import { sanityClient, getClient } from "@lib/sanity";
+import { sanityClient, getClient, urlFor } from "@lib/sanity";
 import ErrorPage from "next/error";
 import { previewData } from "next/headers";
 import { useRouter } from "next/router";
@@ -61,7 +60,7 @@ const Post = (props) => {
               description: post.excerpt || "",
               images: [
                 {
-                  url: GetImage(post?.mainImage).src || ogimage,
+                  url: urlFor(post?.mainImage).url() || "",
                   width: 800,
                   height: 600,
                   alt: "",
