@@ -135,8 +135,8 @@ function Quote() {
       </div>
       <div className="relative z-10 max-w-2xl mx-auto lg:max-w-4xl">
         <figure className="mt-10">
-          <blockquote className="text-xl italic font-semibold leading-8 text-center text-gray-900 sm:text-2xl sm:leading-9 max-w-[700px] mx-auto">
-            <p>
+          <blockquote className="text-xl italic font-medium leading-8 text-center text-gray-900 sm:text-2xl sm:leading-9 max-w-[700px] mx-auto">
+            <p style={{ fontFamily: "Roxborough" }}>
               "To be beautiful means to be yourself. You don't need to be
               accepted by others. You need to accept yourself."
             </p>
