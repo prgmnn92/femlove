@@ -38,7 +38,7 @@ const BlogList = ({ posts, categoryFilter, searchPhrase }) => {
           <BlogCard
             key={post._id}
             post={post}
-            className="mb-6 md:w-1/3 sm:mb-0"
+            className="mb-6 md:w-1/3 sm:mb-4"
             category={post.categories}
           />
         ))}
