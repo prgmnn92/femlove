@@ -96,7 +96,7 @@ export default function Home({ posts, siteConfig }) {
                 </>
               )} */}
               <div
-                className="w-full left-[-12px] relative"
+                className="relative w-full"
                 dangerouslySetInnerHTML={{
                   __html: `
                   <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
