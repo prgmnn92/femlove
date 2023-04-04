@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Button from "./Button";
 import Container from "./Container";
 import Input from "./Input";
-import ThankYou from "./ThankYou";
 
 const CTA = () => {
   const [email, setEmail] = useState("");
