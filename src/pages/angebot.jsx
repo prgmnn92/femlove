@@ -21,37 +21,6 @@ const Angebot = ({ siteConfig }) => {
           <HeadingH1>Mein Angebot</HeadingH1>
         </Container>
       </section>
-      <section>
-        <Container>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: 0.15 }}
-            delay={0.1}
-            className="flex flex-wrap w-full p-6 mb-8 bg-white shadow lg:p-8"
-          >
-            <div className="w-full pb-6 lg:w-1/3">
-              <h2 className="text-2xl lg:text-4xl">
-                Du musst den Weg nicht alleine gehen.
-              </h2>
-            </div>
-            <div className="w-full lg:w-2/3 lg:pl-4">
-              <p>
-                Plötzlich merkst du, dass der weibliche Zyklus einen großen
-                Einfluss auf deine körperliche und mentale Verfassung hat. ✨ Du
-                möchtest ihn bestmöglich in deinem Leben berücksichtigen und
-                nicht mehr "einfach die Tage haben". Aber da gibt es so viel zu
-                berücksichtigen; WOW. 🤯
-              </p>
-              <p>
-                Das kann überfordernd sein - I FEEL YOU. 💖 Deshalb stehe ich
-                dir zur Seite, denn du musst diesen Weg in ein gesundes und
-                zyklusgerechtes Leben nicht alleine gehen.
-              </p>
-            </div>
-          </motion.div>
-        </Container>
-      </section>
       <WorkTogether />
       <StepsView />
       <CTA />
@@ -71,34 +40,61 @@ const WorkTogether = () => {
         className="container flex flex-wrap items-center px-5 py-8 mx-auto md:py-24"
       >
         <div className="pr-0 lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0">
-          <h2 className="text-3xl font-medium text-gray-900 title-font">
-            So kannst du mit mir zusammenarbeiten
+          <h2 className="pb-6 text-3xl font-medium text-gray-900 title-font">
+            🌸 Willkommen bei meinem 1:1 Coaching für ganzheitliche Gesundheit
+            für Frauen! 🌸
           </h2>
-          <p className="mt-4 text-lg leading-relaxed">Wenn du:</p>
-          <ul className="max-w-2xl text-lg list-disc">
-            <li className="pb-1 ml-6 lg:ml-3">
-              gerade erst deinen Zyklus kennenlernst und so viel mehr darüber
-              lernen möchtest,
-            </li>
-            <li className="pb-1 ml-6 lg:ml-3">
-              deinen Zyklus zwar schon kennst, es dir jedoch schwer fällt
-              langfristige Veränderungen in Bezug auf Bewegung, Ernährung und
-              Selbstfürsorge - und dann auch noch zyklusgerecht - in deinen
-              Alltag zu integrieren,
-            </li>
-            <li className="pb-1 ml-6 lg:ml-3">
-              einfach Bock hast. dein Leben zyklusgerechter zu gestalten, um das
-              Beste aus dir und deiner Superpower herauszuholen,
-            </li>
-            <li className="pb-1 ml-6 lg:ml-3">
-              die Pille absetzen möchtest und dich fragst wie du deinen Körper
-              in der Zeit nach dem Absetzen ideal unterstützen kannst,
-            </li>
-            <li className="pb-1 ml-6 lg:ml-3">
-              dir noch nicht sicher bist, wie die Zusammenarbeit konkret mit mir
-              aussieht und mich einfach erstmal besser kennenlernen möchtest.
-            </li>
-          </ul>
+          <p className="pb-2">
+            Ich bin deine Holistic Health & Wellness Coachin und ich helfe die,
+            deine Gesundheit auf ganzheitliche Weise zu verbessern. Ich
+            berücksichtige dabei speziell den weiblichen Zyklus und zeige dir,
+            wie du deine Ernährung, Bewegung, deine Selbstfürsorge wie auch dein
+            Stressmanagement anpassen kannst, um das Beste aus dir und deinem
+            Körper herauszuholen.
+          </p>
+          <p className="pb-6">
+            Mit meinem Coaching wirst du nicht nur deine Gesundheit verbessern,
+            sondern auch ein tieferes Verständnis & Bewusstsein für deinen
+            Körper und seine Bedürfnisse entwickeln.
+          </p>
+          <p className="pb-2 font-semibold">
+            Hier sind einige Vorteile, die du durch mein Coaching erreichen
+            kannst:
+          </p>
+          <p className="pb-2">
+            💪 Mehr Energie und Vitalität durch eine ganzheitliche
+            Herangehensweise an deine Gesundheit
+          </p>
+          <p className="pb-2">🍎 Bessere Ernährungsgewohnheiten</p>
+          <p className="pb-2">
+            😌 Reduzierter Stress durch Entspannungsübungen und
+            Achtsamkeitstraining
+          </p>
+          <p className="pb-2">
+            💜 Verbesserte Beziehungen durch ein besseres Verständnis für deine
+            eigenen Bedürfnisse und Grenzen
+          </p>
+          <p className="pb-2">
+            💪 Mehr Selbstvertrauen und Selbstwertgefühl durch die Verfolgung
+            deiner eigenen Ziele
+          </p>
+          <p className="pb-6">✨ Besseres Bewusstsein für deinen Zyklus</p>
+          <p className="pb-2">
+            Wenn du bereit bist, dein Leben auf ganzheitliche Weise zu
+            verbessern und deinen weiblichen Zyklus zu nutzen, um deine
+            Gesundheit zu optimieren, dann lass uns zusammenarbeiten!
+          </p>
+          <p className="pb-2">
+            Ich biete ein kostenfreies Erstgespräch an, damit wir uns erst
+            einmal beschnuppern können. Wir schauen gemeinsam, ob und wie ich
+            dich auf deinem Weg in ein gesünderes & ausgeglicheneres Leben
+            unterstützen kann.
+          </p>
+          <p className="pb-2">
+            Melde dich jetzt an und lass uns gemeinsam deine Gesundheit und dein
+            Wohlbefinden auf ein neues Level heben! 🔥
+          </p>
+
           <div className="pt-6">
             <Button className={"bg-f-main text-white"} onClick={openModal}>
               Kostenloses Kennenlerngespräch
