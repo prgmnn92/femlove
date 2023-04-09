@@ -1,4 +1,4 @@
-import { addContactRecord, getMinifiedRecords } from "@lib/airtable";
+import { contactTable, getMinifiedRecords } from "@lib/airtable";
 
 const createContactEntry = async (req, res) => {
   if (req.method === "POST") {
@@ -10,7 +10,7 @@ const createContactEntry = async (req, res) => {
       if (email) {
         //create a record
         console.log(email);
-        await addContactRecord(name, email, message);
+        // await addContactRecord(name, email, message);
         const createRecords = await contactTable.create([
           {
             fields: {
@@ -32,7 +32,7 @@ const createContactEntry = async (req, res) => {
         res.json({ message: "email is missing" });
       }
     } catch (err) {
-      console.error("Error creating a message", err);
+      console.error("Error creating a message", err.message);
       res.status(500);
       res.json({ message: "Error creating a message", err });
     }
