@@ -1,3 +1,5 @@
+import { appointmentTable, getMinifiedRecords } from "@lib/airtable";
+
 const createAppointmentEntry = async (req, res) => {
   if (req.method === "POST") {
     //find a record
