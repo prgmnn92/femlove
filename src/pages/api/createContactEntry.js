@@ -1,6 +1,6 @@
 import { addContactRecord, getMinifiedRecords } from "@lib/airtable";
 
-const createNewsletterEntry = async (req, res) => {
+const createContactEntry = async (req, res) => {
   if (req.method === "POST") {
     //find a record
 
@@ -39,4 +39,4 @@ const createNewsletterEntry = async (req, res) => {
   }
 };
 
-export default createNewsletterEntry;
+export default createContactEntry;
