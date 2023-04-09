@@ -9,7 +9,7 @@ const createAppointmentEntry = async (req, res) => {
     try {
       if (email) {
         //create a record
-        topic = checkboxes
+        let topic = checkboxes
           .map((item) => (item.checked ? item.name : ""))
           .filter((item) => !!item);
 
@@ -35,7 +35,7 @@ const createAppointmentEntry = async (req, res) => {
         res.json({ message: "email is missing" });
       }
     } catch (err) {
-      console.error("Error creating a message", err);
+      console.error("Error creating a message", err.message);
       res.status(500);
       res.json({ message: "Error creating a message", err });
     }
