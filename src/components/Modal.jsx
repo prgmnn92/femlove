@@ -47,10 +47,10 @@ export default function Modal({ isOpen, closeModal }) {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    handleCreateAppointment(email, name, message, checkboxes);
+    await handleCreateAppointment(email, name, message, checkboxes);
 
     setName("");
     setEmail("");
