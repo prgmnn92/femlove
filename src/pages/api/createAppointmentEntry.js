@@ -1,5 +1,3 @@
-import { addRecord } from "@lib/airtable";
-
 const createAppointmentEntry = async (req, res) => {
   if (req.method === "POST") {
     //find a record
@@ -9,11 +7,26 @@ const createAppointmentEntry = async (req, res) => {
     try {
       if (email) {
         //create a record
+        topic = checkboxes
+          .map((item) => (item.checked ? item.name : ""))
+          .filter((item) => !!item);
 
-        addRecord(email, name, message, checkboxes);
+        const createRecords = await appointmentTable.create([
+          {
+            fields: {
+              Name: name,
+              Email: email,
+              Nachricht: message,
+              Topic: topic,
+            },
+          },
+        ]);
+
+        const records = getMinifiedRecords(createRecords);
 
         res.json({
           message: "Succesfully send",
+          ...records,
         });
       } else {
         res.status(400);

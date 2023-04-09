@@ -4,45 +4,9 @@ import { motion } from "framer-motion";
 
 // import Button from "./Button";
 import Container from "./Container";
-import Input from "./Input";
-const CTAForm = lazy(() => import("./convertkit/CTAForm"));
+import CTAForm from "./convertkit/CTAForm";
 
 const CTA = () => {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
-
-  const newsletterHandler = (e) => {
-    console.log(e.target.name);
-    if (e.target.name == "email") setEmail(e.target.value);
-    if (e.target.name == "name") setName(e.target.value);
-  };
-  const handleSubmit = () => {
-    handleCreateNewsletter(email, name);
-    setEmail("");
-    setName("");
-  };
-
-  const handleCreateNewsletter = async (email) => {
-    try {
-      const response = await fetch("/api/createNewsletterEntry", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          name,
-        }),
-      });
-
-      const newsletterEntry = await response.json();
-      console.log(newsletterEntry);
-      setNewsletterSubmitted(true);
-    } catch (error) {
-      console.log("Error creating appointment", error);
-    }
-  };
   return (
     <section>
       <Container className="px-5 pt-24 pb-12">
@@ -66,49 +30,6 @@ const CTA = () => {
           className="flex flex-col w-full px-8 mx-auto space-y-4 lg:w-2/3 sm:space-y-0 sm:px-0"
         >
           <CTAForm />
-          {/* {newsletterSubmitted ? (
-            <ThankYou isNewsletter={true} />
-          ) : (
-            <>
-              <div className="relative flex-grow w-full">
-                <label
-                  htmlFor="name"
-                  className="text-sm font-medium leading-7 text-gray-600"
-                >
-                  Vorname
-                  <Input
-                    type="text"
-                    id="name-cta"
-                    name="name"
-                    onChange={newsletterHandler}
-                    value={name}
-                  />
-                </label>
-                <label
-                  htmlFor="email"
-                  className="text-sm font-medium leading-7 text-gray-600"
-                >
-                  Email
-                  <Input
-                    type="email"
-                    id="email-cta"
-                    name="email"
-                    onChange={newsletterHandler}
-                    value={email}
-                  />
-                </label>
-              </div>
-              <div className="pt-4">
-                <Button
-                  type="submit"
-                  className="w-full text-lg text-white border-0 rounded md:w-auto bg-f-main focus:outline-none"
-                  onClick={handleSubmit}
-                >
-                  Abonnieren
-                </Button>
-              </div>
-            </>
-          )} */}
         </motion.div>
       </Container>
     </section>

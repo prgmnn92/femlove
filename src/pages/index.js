@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { lazy, useState } from "react";
+import { useState } from "react";
 
 import { configQuery, postqueryHome } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
@@ -10,42 +10,13 @@ import AboutMe from "@/components/AboutMe";
 import BlogPreview from "@/components/BlogPreview";
 import Button from "@/components/Button";
 import Container from "@/components/Container";
+import HeroForm from "@/components/convertkit/HeroForm";
 import CTA from "@/components/CTA";
 import Input from "@/components/Input";
 import Layout from "@/components/Layout";
 import ThankYou from "@/components/ThankYou";
-// import HeroForm from "@/components/convertkit/HeroForm";
-const HeroForm = lazy(() => import("@/components/convertkit/HeroForm"));
 
 export default function Home({ posts, siteConfig }) {
-  const [email, setEmail] = useState("");
-  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
-  const newsletterHandler = (e) => {
-    setEmail(e.target.value);
-  };
-  const handleSubmit = () => {
-    handleCreateNewsletter(email);
-    setEmail("");
-  };
-
-  const handleCreateNewsletter = async (email) => {
-    try {
-      const response = await fetch("/api/createNewsletterEntry", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-        }),
-      });
-      setNewsletterSubmitted(true);
-      const newsletterEntry = await response.json();
-      console.log(newsletterEntry);
-    } catch (error) {
-      console.log("Error creating appointment", error);
-    }
-  };
   return (
     <>
       <Layout {...siteConfig}>
@@ -68,51 +39,9 @@ export default function Home({ posts, siteConfig }) {
               Hol dir Femlove direkt in dein Postfach. 🚀
             </p>
             <div className="flex flex-col items-stretch w-full space-y-4 sm:items-end lg:w-2/3 sm:flex-row sm:space-x-4 sm:space-y-0 sm:px-0">
-              {/* {newsletterSubmitted ? (
-                <ThankYou isNewsletter={true} />
-              ) : (
-                <>
-                  <div className="relative flex-grow w-full">
-                    <label
-                      htmlFor="email"
-                      className="text-sm font-medium leading-7 text-gray-600"
-                    >
-                      Email
-                    </label>
-                    <Input
-                      className={"lg:min-w-[240px]"}
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={email}
-                      onChange={newsletterHandler}
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    className="px-8 py-2 text-lg text-white border-0 rounded bg-f-main focus:outline-none"
-                    onClick={handleSubmit}
-                  >
-                    Abonnieren
-                  </Button>
-                </>
-              )} */}
               <HeroForm />
             </div>
           </motion.div>
-          {/* <script
-          async
-          data-uid="ce9e319eaf"
-          src="https://femlove-by-franzi.ck.page/ce9e319eaf/index.js"
-        ></script> */}
-          {/* <div
-            className="absolute"
-            dangerouslySetInnerHTML={{
-              __html: `
-          <script async data-uid="ce9e319eaf" src="https://femlove-by-franzi.ck.page/ce9e319eaf/index.js"></script>
-          `,
-            }}
-          /> */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
