@@ -10,7 +10,7 @@ const createNewsletterEntry = async (req, res) => {
       if (email) {
         //create a record
 
-        addContactRecord(name, email, message);
+        await addContactRecord(name, email, message);
 
         res.json({
           message: "Succesfully send",
