@@ -103,7 +103,7 @@ export default function Modal({ isOpen, closeModal }) {
                     helfen kann, sie zu erreichen. Buche jetzt dein kostenloses
                     Kennenlerngespräch!
                   </p>
-                  <form>
+                  <form netlify method="POST" name="kennelerngespraech">
                     <div className="relative flex-grow w-full pb-2">
                       <label
                         htmlFor="vorname"

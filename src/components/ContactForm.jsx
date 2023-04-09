@@ -84,6 +84,9 @@ const ContactForm = () => {
       delay={0.1}
     >
       <form
+        method="POST"
+        name="kontakt"
+        netlify
         className="grid max-w-md gap-4 mx-auto"
         onSubmit={(e) => handleSubmit(e)}
       >
