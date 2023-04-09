@@ -1,4 +1,4 @@
-import { addContactRecord } from "@lib/airtable";
+import { addContactRecord, getMinifiedRecords } from "@lib/airtable";
 
 const createNewsletterEntry = async (req, res) => {
   if (req.method === "POST") {
@@ -11,9 +11,21 @@ const createNewsletterEntry = async (req, res) => {
         //create a record
         console.log(email);
         await addContactRecord(name, email, message);
+        const createRecords = await contactTable.create([
+          {
+            fields: {
+              name: name,
+              email: email,
+              message: message,
+            },
+          },
+        ]);
+
+        const records = getMinifiedRecords(createRecords);
 
         res.json({
           message: "Succesfully send",
+          ...records,
         });
       } else {
         res.status(400);
