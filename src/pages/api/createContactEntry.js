@@ -9,7 +9,7 @@ const createNewsletterEntry = async (req, res) => {
     try {
       if (email) {
         //create a record
-
+        console.log(email);
         await addContactRecord(name, email, message);
 
         res.json({

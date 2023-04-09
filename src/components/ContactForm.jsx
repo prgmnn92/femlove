@@ -48,7 +48,7 @@ const ContactForm = () => {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     // Validierung
@@ -67,7 +67,7 @@ const ContactForm = () => {
 
     if (Object.keys(errors).length === 0) {
       // Hier könntest du z.B. den Formular-Inhalt an einen Server senden
-      handleCreateContactEntry(name, email, message);
+      await handleCreateContactEntry(name, email, message);
       setName("");
       setEmail("");
       setMessage("");
