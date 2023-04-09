@@ -86,7 +86,7 @@ const ContactForm = () => {
       <form
         method="POST"
         name="kontakt"
-        netlify
+        netlify="true"
         className="grid max-w-md gap-4 mx-auto"
         onSubmit={(e) => handleSubmit(e)}
       >
