@@ -1,8 +1,5 @@
 import React from "react";
 
-import Container from "@/components/Container";
-import Layout from "@/components/Layout";
-
 const Test = () => {
   return (
     <div className="flex min-h-full">
@@ -18,7 +15,8 @@ const Test = () => {
             <div className="mt-6">
               <form
                 name="contact"
-                method="POST"
+                method="post"
+                action="/"
                 data-netlify="true"
                 className="space-y-6"
               >
