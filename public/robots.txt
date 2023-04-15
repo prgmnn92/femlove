@@ -1,5 +1,6 @@
 User-agent: Googlebot
 Disallow: /amp/
+Disallow: /test
 
 # Allow all crawlers
 User-agent: *
