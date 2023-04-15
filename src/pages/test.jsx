@@ -20,6 +20,7 @@ const Test = () => {
                 data-netlify="true"
                 className="space-y-6"
               >
+                <input type="hidden" name="form-name" value="contact" />
                 <div>
                   <div className="space-y-1">
                     <label
