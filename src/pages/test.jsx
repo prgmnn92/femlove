@@ -7,7 +7,7 @@ const Test = () => {
         <div className="w-full max-w-sm mx-auto lg:w-96">
           <div>
             <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">
-              Newsletter
+              Newsletter TEst
             </h2>
           </div>
 
