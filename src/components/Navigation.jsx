@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 
 import { Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
@@ -27,8 +27,31 @@ const NavLink = ({ href, children }) => {
 };
 
 const Navigation = () => {
+  const [navIsTop, setNavIsTop] = useState(true);
+
+  useEffect(() => {
+    function navTransition() {
+      if (window.pageYOffset >= 50) {
+        setNavIsTop(false);
+      } else {
+        setNavIsTop(true);
+      }
+    }
+
+    document.addEventListener("scroll", navTransition);
+
+    return () => {
+      document.removeEventListener("scroll", navTransition);
+    };
+  }, []);
+
   return (
-    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded sticky top-0 left-0 right-0 z-50">
+    <nav
+      className={
+        "bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded sticky top-0 left-0 right-0 z-50 transition-all " +
+        (navIsTop ? "py-4" : "py-2.5 shadow-md")
+      }
+    >
       <Container className="relative flex flex-wrap items-center justify-between">
         <Link href={"/"}>
           <Image
@@ -56,7 +79,7 @@ const Navigation = () => {
               <Link
                 href={"https://femlove-by-franzi.ck.page/newsletter"}
                 className={
-                  "bg-f-main text-md text-white lg:ml-2 rounded-full font-semibold px-7 py-2 hover:brightness-105 transition-all"
+                  "flex-none rounded-md bg-f-red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-f-red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-f-red transition-all"
                 }
                 target="_blank"
                 rel="noreferrer"
