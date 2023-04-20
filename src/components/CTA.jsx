@@ -26,7 +26,7 @@ const CTA = () => {
               data-netlify="true"
               className="flex max-w-md mt-6 gap-x-4"
             >
-              <input type="hidden" name="form-name" value="cta-form" />
+              <input type="hidden" name="form-name" value="cta-form" />˚
               <label htmlFor="email-address" className="sr-only">
                 Email address
               </label>
