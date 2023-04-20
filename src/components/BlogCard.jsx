@@ -1,59 +1,81 @@
 import { urlFor } from "@lib/sanity";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-const BlogCard = ({ className, post, category }) => {
+const BlogCard = ({ index, post, category }) => {
+  index = index + 1;
+
+  let corner =
+    index % 2 === 0
+      ? "rounded-b-[50px] rounded-tr-[50px] hover:rounded-tl-[50px]  hover:rounded-tr-none"
+      : "rounded-b-[50px] rounded-tl-[50px] hover:rounded-tr-[50px]  hover:rounded-tl-none";
+
   return (
-    <div className={className + " md:p-2"}>
-      <motion.div
-        whileHover={{ scale: 1.02 }}
-        transition={{ duration: 0.2 }}
-        className={" bg-f-offwhite shadow rounded h-full"}
+    <article
+      key={post.id}
+      className="flex flex-col items-start justify-between"
+    >
+      <div
+        className={`relative w-full transition-all overflow-hidden ${corner} duration-300 border-2 border-black/5`}
       >
         <Link href={"/post/" + post.slug.current}>
-          <div className="h-64 overflow-hidden rounded-lg max-h-52">
-            <Image
-              alt="content"
-              className="object-cover object-center w-full h-full "
-              src={urlFor(post.mainImage).url()}
-              width={1200}
-              height={400}
-            />
-          </div>
-          <div className="px-6 py-3">
-            {category.map((item) => (
-              <div
-                className="inline px-3 py-2 lg:text-xs font-bold text-white rounded-full bg-f-green text-[8px] mr-2"
-                key={item.title}
-              >
-                {item.title}
-              </div>
-            ))}
-            <h2 className="mt-3 text-lg font-semibold text-gray-900 title-font">
-              {post.title}
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed opacity-75 line-clamp-2">
-              {post.shortDescription}
-            </p>
-            <div className="inline-flex items-center mt-3 text-f-green">
-              Erfahre Mehr
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </div>
-          </div>
+          <Image
+            src={urlFor(post.mainImage).url()}
+            className={`aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2] hover:scale-110 transition-all duration-300`}
+            alt=""
+            width={1200}
+            height={400}
+          />
         </Link>
-      </motion.div>
-    </div>
+        {/* <div
+          className={`absolute  inset-0 ring-1 ring-inset ring-gray-600/10`}
+        /> */}
+      </div>
+      <div className="max-w-xl">
+        <div className="flex items-center mt-8 text-xs gap-x-4">
+          <time dateTime={post._createdAt} className="text-gray-500">
+            {new Intl.DateTimeFormat("en-US", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            }).format(new Date(post._createdAt))}
+          </time>
+          <Link
+            href={"/post/" + post.slug.current}
+            className="relative z-10 rounded-full bg-f-green/20 px-3 py-1.5 font-medium text-gray-700 hover:bg-f-green/40"
+          >
+            {category[0].title}
+          </Link>
+        </div>
+        <div className="relative group">
+          <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+            <Link href={"/post/" + post.slug.current}>
+              <span className="absolute inset-0" />
+              {post.title}
+            </Link>
+          </h3>
+          <p className="mt-5 text-sm leading-6 text-gray-600 line-clamp-3">
+            {post.description}
+          </p>
+        </div>
+        {/* <div className="relative flex items-center mt-8 gap-x-4">
+        <img
+          src={post.author.imageUrl}
+          alt=""
+          className="w-10 h-10 bg-gray-100 rounded-full"
+        />
+        <div className="text-sm leading-6">
+          <p className="font-semibold text-gray-900">
+            <a href={post.author.href}>
+              <span className="absolute inset-0" />
+              {post.author.name}
+            </a>
+          </p>
+          <p className="text-gray-600">{post.author.role}</p>
+        </div>
+      </div> */}
+      </div>
+    </article>
   );
 };
 

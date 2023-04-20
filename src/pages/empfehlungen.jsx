@@ -2,7 +2,6 @@ import React from "react";
 
 import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 import Container from "@/components/Container";
@@ -12,18 +11,12 @@ import Layout from "@/components/Layout";
 
 const EmpfehlungsCard = ({ title, children }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.2, delay: 0.15 }}
-      delay={0.1}
-      className="flex flex-wrap w-full p-6 mb-8 bg-white shadow lg:p-8"
-    >
+    <div className="flex flex-wrap w-full p-6 mb-8 shadow bg-f-red/10 rounded-b-3xl rounded-tl-3xl lg:p-8">
       <div className="w-full pb-6 lg:w-1/3">
         <h2 className="text-2xl lg:text-4xl">{title}</h2>
       </div>
       <div className="w-full lg:w-2/3 lg:pl-4">{children}</div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -143,13 +136,13 @@ const Empfehlungen = ({ siteConfig }) => {
             </ul>
           </EmpfehlungsCard>
           <p className="max-w-[1200px] text-xs">
-            *Kennzeichnungspflichtige Werbung (bei Verwendung eines Rabattcodes
-            oder Links auf dieser Seite wird je nach Erfolg eine kleine
-            Provision an mich ausgezahlt). Damit kann meine Arbeit an femlove
-            finanziell unterstützt werden. Für dich entstehen durch die
-            Verwendung der Links keine Nachteile. Die auf dieser Seite erwähnten
-            Produkte habe ich mir alle selbst gekauft und empfehle sie aus
-            Überzeugung.
+            Bei den Links handelt es sich um kennzeichnungspflichtige Werbung
+            (bei Verwendung eines Rabattcodes oder Links auf dieser Seite wird
+            je nach Erfolg eine kleine Provision an mich ausgezahlt). Damit kann
+            meine Arbeit an femlove finanziell unterstützt werden. Für dich
+            entstehen durch die Verwendung der Links keine Nachteile. Die auf
+            dieser Seite erwähnten Produkte habe ich mir alle selbst gekauft und
+            empfehle sie aus Überzeugung.
           </p>
         </Container>
       </section>

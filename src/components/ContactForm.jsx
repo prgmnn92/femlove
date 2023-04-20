@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import { motion } from "framer-motion";
-
 import Button from "./Button";
 
 const ErrorIcon = () => (
@@ -77,12 +75,7 @@ const ContactForm = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.2, delay: 0.15 }}
-      delay={0.1}
-    >
+    <div>
       <form
         method="POST"
         name="kontakt"
@@ -145,7 +138,7 @@ const ContactForm = () => {
           </Button>
         </div>
       </form>
-    </motion.div>
+    </div>
   );
 };
 

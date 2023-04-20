@@ -4,7 +4,6 @@ import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { configQuery, postqueryBlogs } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
-import { motion } from "framer-motion";
 
 import BlogList from "@/components/BlogList";
 import Container from "@/components/Container";
@@ -32,27 +31,15 @@ const Blog = ({ posts, siteConfig, preview }) => {
     <Layout {...siteConfig}>
       <Container className="px-4 py-8 lg:py-12">
         <HeadingH1>Alle Beiträge</HeadingH1>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.2, delay: 0.15 }}
-          delay={0.1}
-          className="my-2"
-        >
+        <div className="my-2">
           <Input
             value={searchPhrase}
             onChange={(e) => setSearchPhrase(e.target.value)}
             placeholder="Search..."
             className="max-w-sm"
           />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.2, delay: 0.15 }}
-          delay={0.1}
-          className="flex-wrap hidden pb-8 md:flex"
-        >
+        </div>
+        <div className="flex-wrap hidden pb-8 md:flex">
           {filters?.map((item) => {
             let isActive = categoryFilter == item;
             // Set all to active if nothing is selected
@@ -75,20 +62,14 @@ const Blog = ({ posts, siteConfig, preview }) => {
               </div>
             );
           })}
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.2, delay: 0.15 }}
-          delay={0.1}
-          className="block pb-8 md:hidden"
-        >
+        </div>
+        <div className="relative z-50 block pb-8 md:hidden">
           <FilterDropdown
             filters={filters}
             handleCategoryFilter={setCategoryFilter}
             categoryFilter={categoryFilter}
           />
-        </motion.div>
+        </div>
         {preview ? (
           <PreviewSuspense fallback="Loading...">
             <PreviewBlogList

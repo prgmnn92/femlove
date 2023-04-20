@@ -3,8 +3,6 @@ import React, { useContext } from "react";
 
 import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
-import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 
 import Button from "@/components/Button";
@@ -30,28 +28,16 @@ const ÜberMich = ({ siteConfig }) => {
       </section>
       <section>
         <Container className="flex flex-wrap pb-8">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: 0.15 }}
-            delay={0.1}
-            className="w-full pb-8 mb-10 overflow-hidden lg:w-1/2 lg:mb-0 lg:text-lg lg:pr-12"
-          >
+          <div className="w-full pb-8 mb-10 lg:w-1/2 lg:mb-0 lg:text-lg lg:pr-12">
             <Image
               alt="feature"
-              className="object-cover object-center w-full h-full"
-              src="/images/femlove_me.webp"
+              className="object-contain object-center w-full sticky top-[120px]"
+              src="/images/me.webp"
               width={500}
               height={700}
             />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: 0.15 }}
-            delay={0.1}
-            className="flex flex-col flex-wrap md:mb-10 lg:w-1/2 lg:text-left"
-          >
+          </div>
+          <div className="flex flex-col flex-wrap md:mb-10 lg:w-1/2 lg:text-left">
             <p className="pb-6">
               Ich bin 28 Jahre alt und freue mich aktuell sehr auf meine
               Hochzeit im Juni. I am so excited! 👰💍
@@ -101,16 +87,10 @@ const ÜberMich = ({ siteConfig }) => {
               leiten zu lassen. Mein Leben zu leben. Erfüllt und ausgeglichen.
               😌
             </p>
-          </motion.div>
+          </div>
         </Container>
         <Container className="flex flex-wrap">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: 0.15 }}
-            delay={0.1}
-            className="flex flex-col flex-wrap mb-10 lg:w-1/2 lg:pr-12 lg:text-left"
-          >
+          <div className="flex flex-col flex-wrap mb-10 lg:w-1/2 lg:pr-12 lg:text-left">
             <p className="pb-6">
               Meine Leidenschaft für ganzheitliche Gesundheit und den weiblichen
               Zyklus:
@@ -198,8 +178,10 @@ const ÜberMich = ({ siteConfig }) => {
               Kennenlerngespräch an:
             </p>
             <p className="pb-6">
-              {" "}
-              <Button className={"bg-f-main text-white"} onClick={openModal}>
+              <Button
+                className={"bg-f-main text-white"}
+                onClick={() => openModal()}
+              >
                 Kostenloses Kennenlerngespräch
               </Button>
             </p>
@@ -208,26 +190,21 @@ const ÜberMich = ({ siteConfig }) => {
               meinem 1:1 Coaching unterstützen kann.
             </p>
             <p className="pb-6">Ich freue mich! 🔥</p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: 0.15 }}
-            delay={0.1}
-            className="w-full pb-8 mb-10 overflow-hidden lg:w-1/2 lg:mb-0 lg:text-lg"
-          >
+          </div>
+          <div className="relative w-full pb-8 mb-10 lg:w-1/2 lg:mb-0 lg:text-lg">
             {/* <ReactPlayer
               url="https://www.youtube.com/watch?v=5ah_cRdRSTM&t=6s"
               width="100%"
               height="100%"
             /> */}
             <Image
-              src={"/images/free-women.webp"}
-              width={800}
+              src={"/images/ueber_mich_2.webp"}
+              width={700}
               height={500}
               alt="free women"
+              className="sticky top-[120px] max-w-[480px]"
             />
-          </motion.div>
+          </div>
         </Container>
       </section>
       <CTA />

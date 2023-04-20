@@ -3,7 +3,6 @@ import React from "react";
 import { ArrowLongLeftIcon } from "@heroicons/react/20/solid";
 import { PortableText, urlFor } from "@lib/sanity";
 import { getImageDimensions } from "@sanity/asset-utils";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
@@ -14,12 +13,7 @@ const BlogPost = ({ post }) => {
   return (
     <article>
       <Container className={"block-text py-16 pt-20 max-w-3xl"}>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.2, delay: 0.15 }}
-          delay={0.1}
-        >
+        <div>
           <div className="mb-4 cursor-pointer" onClick={() => router.back()}>
             <ArrowLongLeftIcon width={24} height={24} />
           </div>
@@ -43,7 +37,7 @@ const BlogPost = ({ post }) => {
             Affiliate-Links, für die ich je nach Erfolg eine kleine Provision
             erhalte.
           </p>
-        </motion.div>
+        </div>
       </Container>
     </article>
   );

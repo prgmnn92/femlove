@@ -3,15 +3,14 @@ import { useState } from "react";
 
 import { configQuery, postqueryHome } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
-import AboutMe from "@/components/AboutMe";
+import AboutMe2 from "@/components/AboutMe2";
 import BlogPreview from "@/components/BlogPreview";
 import Button from "@/components/Button";
 import Container from "@/components/Container";
-import HeroForm from "@/components/convertkit/HeroForm";
 import CTA from "@/components/CTA";
+import HeroForm from "@/components/HeroForm";
 import Input from "@/components/Input";
 import Layout from "@/components/Layout";
 import ThankYou from "@/components/ThankYou";
@@ -21,17 +20,11 @@ export default function Home({ posts, siteConfig }) {
     <>
       <Layout {...siteConfig}>
         <Container className="grid px-4 py-8 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: 0.15 }}
-            delay={0.1}
-            className="mr-auto place-self-center lg:col-span-7"
-          >
-            <h1 className="max-w-md mb-4 text-4xl leading-none tracking-tight md:text-5xl xl:text-6xl ">
+          <div className="mr-auto place-self-center lg:col-span-7">
+            <h1 className="max-w-md mb-4 text-4xl leading-none tracking-tight fontbold md:text-7xl xl:text-7xl ">
               Ganzheitliche Gesundheit für Frauen.
             </h1>
-            <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl ">
+            <p className="max-w-xl mb-2 font-light md:text-lg lg:text-xl">
               Femlove ist ein Blog, bei dem sich alles rund um ganzheitliche
               Gesundheit und den weiblichen Zyklus dreht. 🫶
               <br />
@@ -41,24 +34,20 @@ export default function Home({ posts, siteConfig }) {
             <div className="flex flex-col items-stretch w-full space-y-4 sm:items-end lg:w-2/3 sm:flex-row sm:space-x-4 sm:space-y-0 sm:px-0">
               <HeroForm />
             </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: 0.05 }}
-            className="hidden lg:mt-0 lg:col-span-5 lg:flex"
-          >
+          </div>
+          <div className="order-first pb-4 lg:order-last lg:mt-0 lg:col-span-5 lg:flex lg:pb-0">
             <Image
-              src="/images/woman.webp"
+              src="/images/hero_image.webp"
               alt="mockup"
-              width={400}
+              className="object-contain"
+              width={700}
               height={600}
               priority={true}
             />
-          </motion.div>
+          </div>
         </Container>
+        <AboutMe2 />
         <BlogPreview posts={posts} />
-        <AboutMe />
         <CTA />
         <Quote />
       </Layout>

@@ -3,7 +3,6 @@ import React, { useContext } from "react";
 
 import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 import Button from "@/components/Button";
@@ -32,15 +31,9 @@ const WorkTogether = () => {
   const openModal = useContext(ModalContext);
   return (
     <section className="text-gray-600 body-font">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.2, delay: 0.15 }}
-        delay={0.1}
-        className="container flex flex-wrap items-center px-5 py-8 mx-auto md:py-24"
-      >
+      <div className="container flex flex-wrap items-center px-5 py-8 mx-auto md:py-24">
         <div className="pr-0 lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0">
-          <h2 className="pb-6 text-3xl font-medium text-gray-900 title-font">
+          <h2 className="pb-6 text-4xl font-bold text-gray-900 title-font">
             🌸 Willkommen bei meinem 1:1 Coaching für ganzheitliche Gesundheit
             für Frauen! 🌸
           </h2>
@@ -110,7 +103,7 @@ const WorkTogether = () => {
             height={500}
           />
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
@@ -118,17 +111,11 @@ const WorkTogether = () => {
 const StepsView = () => (
   <section className="text-gray-600 body-font">
     <Container className="flex flex-wrap px-5 py-8 md:py-24">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.2, delay: 0.15 }}
-        delay={0.1}
-        className="relative flex pt-10 pb-20 mx-auto sm:items-center md:w-2/3"
-      >
+      <div className="relative flex pt-10 pb-20 mx-auto sm:items-center md:w-2/3">
         <div className="absolute inset-0 flex items-center justify-center w-6 h-full">
           <div className="w-1 h-full pointer-events-none bg-f-green bg-opacity-20"></div>
         </div>
-        <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-6 h-6 mt-10 text-sm font-medium text-white rounded-full bg-f-green sm:mt-0 title-font">
+        <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-6 h-6 mt-10 text-sm font-bold text-white rounded-full bg-f-green sm:mt-0 title-font">
           1
         </div>
         <div className="flex flex-col items-start flex-grow pl-6 md:pl-8 sm:items-center sm:flex-row">
@@ -146,7 +133,7 @@ const StepsView = () => (
             </svg>
           </div>
           <div className="flex-grow mt-6 sm:pl-6 sm:mt-0">
-            <h2 className="mb-1 text-xl font-medium text-gray-900 title-font">
+            <h2 className="mb-1 text-xl font-bold text-gray-900 title-font">
               Kostenloses Kennenlerngespräch (online)
             </h2>
             <p className="leading-relaxed">
@@ -158,18 +145,12 @@ const StepsView = () => (
             </p>
           </div>
         </div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.2, delay: 0.15 }}
-        delay={0.1}
-        className="relative flex pb-20 mx-auto sm:items-center md:w-2/3"
-      >
+      </div>
+      <div className="relative flex pb-20 mx-auto sm:items-center md:w-2/3">
         <div className="absolute inset-0 flex items-center justify-center w-6 h-full">
           <div className="w-1 h-full pointer-events-none bg-f-green bg-opacity-20"></div>
         </div>
-        <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-6 h-6 mt-10 text-sm font-medium text-white rounded-full bg-f-green sm:mt-0 title-font">
+        <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-6 h-6 mt-10 text-sm font-bold text-white rounded-full bg-f-green sm:mt-0 title-font">
           2
         </div>
         <div className="flex flex-col items-start flex-grow pl-6 md:pl-8 sm:items-center sm:flex-row">
@@ -187,7 +168,7 @@ const StepsView = () => (
             </svg>
           </div>
           <div className="flex-grow mt-6 sm:pl-6 sm:mt-0">
-            <h2 className="mb-1 text-xl font-medium text-gray-900 title-font">
+            <h2 className="mb-1 text-xl font-bold text-gray-900 title-font">
               It's a Match? Weitere Zusammenarbeit
             </h2>
             <p className="leading-relaxed">
@@ -200,18 +181,12 @@ const StepsView = () => (
             </p>
           </div>
         </div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.2, delay: 0.15 }}
-        delay={0.1}
-        className="relative flex pb-20 mx-auto sm:items-center md:w-2/3"
-      >
+      </div>
+      <div className="relative flex pb-20 mx-auto sm:items-center md:w-2/3">
         <div className="absolute inset-0 flex items-center justify-center w-6 h-full">
           <div className="w-1 h-full pointer-events-none bg-f-green bg-opacity-20"></div>
         </div>
-        <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-6 h-6 mt-10 text-sm font-medium text-white rounded-full bg-f-green sm:mt-0 title-font">
+        <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-6 h-6 mt-10 text-sm font-bold text-white rounded-full bg-f-green sm:mt-0 title-font">
           3
         </div>
         <div className="flex flex-col items-start flex-grow pl-6 md:pl-8 sm:items-center sm:flex-row">
@@ -230,7 +205,7 @@ const StepsView = () => (
             </svg>
           </div>
           <div className="flex-grow mt-6 sm:pl-6 sm:mt-0">
-            <h2 className="mb-1 text-xl font-medium text-gray-900 title-font">
+            <h2 className="mb-1 text-xl font-bold text-gray-900 title-font">
               Langfristiger Support
             </h2>
             <p className="leading-relaxed">
@@ -244,7 +219,7 @@ const StepsView = () => (
             </p>
           </div>
         </div>
-      </motion.div>
+      </div>
     </Container>
   </section>
 );
