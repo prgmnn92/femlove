@@ -6,12 +6,7 @@ export default function Document() {
       <Head>
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-      <body
-        style={{
-          backgroundColor:
-            "linear-gradient(0deg, rgb(238, 210, 204), rgb(255, 255, 255))",
-        }}
-      >
+      <body>
         <Main />
         <NextScript />
       </body>
