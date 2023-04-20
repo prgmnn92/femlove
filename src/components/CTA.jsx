@@ -24,9 +24,9 @@ const CTA = () => {
               method="post"
               action="/"
               data-netlify="true"
-              className="flex max-w-md mt-6 gap-x-4"
+              className="flex flex-col max-w-md mt-6 lg:flex-row gap-x-4"
             >
-              <input type="hidden" name="form-name" value="cta-form" />˚
+              <input type="hidden" name="form-name" value="cta-form" />
               <label htmlFor="email-address" className="sr-only">
                 Email address
               </label>
@@ -36,8 +36,8 @@ const CTA = () => {
                 type="email"
                 autoComplete="email"
                 required
-                className="lg:min-w-[230px] min-h-[42px] flex-auto rounded-md border-2 border-none bg-white px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black/10 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6 placeholder-black/40"
-                placeholder="Deine email"
+                className="lg:min-w-[230px] lg:mb-0 mb-2 min-h-[42px] flex-auto rounded-md border-2 border-none bg-white px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black/10 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6 placeholder-black/40"
+                placeholder="Deine E-Mail"
               />
               <Button type="submit">Abonnieren</Button>
             </form>
