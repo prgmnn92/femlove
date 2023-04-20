@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         "f-green": "#76998C",
         "f-red": "#DD9D90",
+        "f-red-light": "#F2AC9E",
         "f-pink": "#E9D3CD",
         "f-offwhite": "#FAF7F4",
         "f-brown": "#996A42",
