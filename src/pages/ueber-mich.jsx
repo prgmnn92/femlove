@@ -178,10 +178,7 @@ const ÜberMich = ({ siteConfig }) => {
               Kennenlerngespräch an:
             </p>
             <p className="pb-6">
-              <Button
-                className={"bg-f-main text-white"}
-                onClick={() => openModal()}
-              >
+              <Button className={"bg-f-main text-white"} onClick={openModal}>
                 Kostenloses Kennenlerngespräch
               </Button>
             </p>
