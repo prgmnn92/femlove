@@ -1,9 +1,11 @@
 import {defineField, defineType} from 'sanity'
+import {EyeOpenIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'siteconfig',
   type: 'document',
   title: 'SEO Site Settings',
+  icon: EyeOpenIcon,
   __experimental_actions: [/* "create", "delete", */ 'update', 'publish'],
   fieldsets: [
     {
