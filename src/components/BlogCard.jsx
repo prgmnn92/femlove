@@ -27,13 +27,10 @@ const BlogCard = ({ index, post, category }) => {
             height={400}
           />
         </Link>
-        {/* <div
-          className={`absolute  inset-0 ring-1 ring-inset ring-gray-600/10`}
-        /> */}
       </div>
       <div className="max-w-xl">
         <div className="flex items-center mt-8 text-xs gap-x-4">
-          <time dateTime={post._createdAt} className="text-gray-500">
+          <time hidden dateTime={post._createdAt} className="text-gray-500">
             {new Intl.DateTimeFormat("en-US", {
               month: "short",
               day: "numeric",
@@ -58,22 +55,6 @@ const BlogCard = ({ index, post, category }) => {
             {post.description}
           </p>
         </div>
-        {/* <div className="relative flex items-center mt-8 gap-x-4">
-        <img
-          src={post.author.imageUrl}
-          alt=""
-          className="w-10 h-10 bg-gray-100 rounded-full"
-        />
-        <div className="text-sm leading-6">
-          <p className="font-semibold text-gray-900">
-            <a href={post.author.href}>
-              <span className="absolute inset-0" />
-              {post.author.name}
-            </a>
-          </p>
-          <p className="text-gray-600">{post.author.role}</p>
-        </div>
-      </div> */}
       </div>
     </article>
   );
