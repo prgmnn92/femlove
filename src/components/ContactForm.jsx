@@ -25,7 +25,7 @@ function ContactForm() {
           </div>
         </div>
         <form
-          action="/kontakt"
+          action="/"
           method="post"
           data-netlify="true"
           name="contact-page-form"
