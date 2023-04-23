@@ -26,7 +26,7 @@ function ContactForm() {
         </div>
         <form
           action="/kontakt"
-          method="POST"
+          method="post"
           data-netlify="true"
           name="contact-page-form"
           className="px-6 pt-20 pb-24 sm:pb-32 lg:px-8 lg:py-48"
