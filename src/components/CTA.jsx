@@ -54,21 +54,6 @@ const CTA = () => {
         </div>
       </div>
     </div>
-    // <section>
-    //   <Container className="px-5 pt-24 pb-12">
-    //     <div className="flex flex-col w-full mb-12 text-center">
-    //       <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-4xl title-font">
-    //         Femlove Newsletter
-    //       </h2>
-    //       <p className="mx-auto text-base leading-relaxed lg:w-2/3">
-    //         Tipps & News direkt in deinem Postfach.
-    //       </p>
-    //     </div>
-    //     <div className="flex flex-col w-full px-8 mx-auto space-y-4 lg:w-2/3 sm:space-y-0 sm:px-0">
-    //       <CTAForm />
-    //     </div>
-    //   </Container>
-    // </section>
   );
 };
 

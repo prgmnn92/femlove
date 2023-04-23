@@ -189,11 +189,6 @@ const ÜberMich = ({ siteConfig }) => {
             <p className="pb-6">Ich freue mich! 🔥</p>
           </div>
           <div className="relative w-full pb-8 mb-10 lg:w-1/2 lg:mb-0 lg:text-lg">
-            {/* <ReactPlayer
-              url="https://www.youtube.com/watch?v=5ah_cRdRSTM&t=6s"
-              width="100%"
-              height="100%"
-            /> */}
             <Image
               src={"/images/ueber_mich_2.webp"}
               width={700}
