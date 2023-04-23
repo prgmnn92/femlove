@@ -1,145 +1,117 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Button from "./Button";
 
-const ErrorIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={1.5}
-    stroke="currentColor"
-    className="inline w-5 h-5 mr-2"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-    />
-  </svg>
-);
-
-const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState({});
-
-  const handleCreateContactEntry = async (name, email, message) => {
-    try {
-      const response = await fetch("/api/createContactEntry", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-        }),
-      });
-
-      const contactEntry = await response.json();
-      console.log(contactEntry);
-    } catch (error) {
-      console.log("Error creating appointment", error);
-    }
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    // Validierung
-    const errors = {};
-    if (!name) {
-      errors.name = "Bitte gib deinen Namen ein";
-    }
-    if (!email) {
-      errors.email = "Bitte gib deine E-Mail-Adresse ein";
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      errors.email = "Bitte gib eine gültige E-Mail-Adresse ein";
-    }
-    if (!message) {
-      errors.message = "Bitte gib eine Nachricht ein";
-    }
-
-    if (Object.keys(errors).length === 0) {
-      // Hier könntest du z.B. den Formular-Inhalt an einen Server senden
-      handleCreateContactEntry(name, email, message);
-      setName("");
-      setEmail("");
-      setMessage("");
-    } else {
-      setErrors(errors);
-    }
-  };
-
+function ContactForm() {
   return (
-    <div>
-      <form
-        method="POST"
-        name="kontakt"
-        netlify="true"
-        className="grid max-w-md gap-4 mx-auto"
-        onSubmit={(e) => handleSubmit(e)}
-      >
-        <div className="grid gap-1">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 "
-          />
-          {errors.name && (
-            <div className="flex items-center text-red-700">
-              <ErrorIcon />
-              <span>{errors.name}</span>
+    <div className="relative bg-white isolate">
+      <div className="grid grid-cols-1 mx-auto max-w-7xl lg:grid-cols-2">
+        <div className="relative px-6 pt-24 pb-20 sm:pt-32 lg:static lg:px-8 lg:py-48">
+          <div className="max-w-xl mx-auto lg:mx-0 lg:max-w-lg">
+            <div className="absolute inset-y-0 left-0 z-10 w-full overflow-hidden lg:w-1/2"></div>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900">
+              Teile deine Ideen mit mir – ich bin offen für Neues!
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Ich freue mich immer über Nachrichten und Anregungen von meinen
+              Besuchern. Egal, ob du mir Feedback zu meinem Blog geben möchtest,
+              eine Kooperationsanfrage hast oder einfach nur hallo sagen
+              möchtest – ich lese jede Nachricht persönlich und antworte so
+              schnell wie möglich. Wenn du also etwas auf dem Herzen hast oder
+              einfach nur plaudern möchtest, zögere nicht, mir zu schreiben. Ich
+              bin immer offen für neue Ideen und freue mich darauf, von dir zu
+              hören! 💕
+            </p>
+          </div>
+        </div>
+        <form
+          action="/kontakt"
+          method="POST"
+          data-netlify="true"
+          name="contact-page-form"
+          className="px-6 pt-20 pb-24 sm:pb-32 lg:px-8 lg:py-48"
+        >
+          <input type="hidden" name="form-name" value="contact-page-form" />
+          <div className="max-w-xl mx-auto lg:mr-0 lg:max-w-lg">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              <div>
+                <label
+                  htmlFor="first-name"
+                  className="block text-sm font-semibold leading-6 text-gray-900"
+                >
+                  Vorname
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    autoComplete="given-name"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  htmlFor="last-name"
+                  className="block text-sm font-semibold leading-6 text-gray-900"
+                >
+                  Nachname
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    type="text"
+                    name="last-name"
+                    id="last-name"
+                    autoComplete="family-name"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold leading-6 text-gray-900"
+                >
+                  E-Mail
+                </label>
+                <div className="mt-2.5">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autoComplete="email"
+                    required
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold leading-6 text-gray-900"
+                >
+                  Nachricht
+                </label>
+                <div className="mt-2.5">
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows={4}
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    defaultValue={""}
+                  />
+                </div>
+              </div>
             </div>
-          )}
-        </div>
-        <div className="grid gap-1">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 "
-          />
-          {errors.email && (
-            <div className="flex items-center text-red-700">
-              <ErrorIcon />
-              <span>{errors.email}</span>
+            <div className="flex justify-end mt-8">
+              <Button type="submit">Sende Nachricht</Button>
             </div>
-          )}
-        </div>
-        <div className="grid gap-1">
-          <label htmlFor="message">Nachricht</label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(event) => setMessage(event.target.value)}
-            className={
-              "min-h-[150px] w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "
-            }
-          />
-          {errors.message && (
-            <div className="flex items-center text-red-700">
-              <ErrorIcon />
-              <span>{errors.message}</span>
-            </div>
-          )}
-        </div>
-        <div className="text-center">
-          <Button className={"bg-f-main text-white"} type="submit">
-            Abschicken
-          </Button>
-        </div>
-      </form>
+          </div>
+        </form>
+      </div>
     </div>
   );
-};
+}
 
 export default ContactForm;
