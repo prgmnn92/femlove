@@ -6,6 +6,7 @@ import { getCookie } from "cookies-next";
 import Head from "next/head";
 
 import Consent from "@/components/consent";
+import ModalForm from "@/components/ModalForm";
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -59,6 +60,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
       <Consent consent={consent} setConsent={setConsent} />
+      <ModalForm />
     </>
   );
 }
