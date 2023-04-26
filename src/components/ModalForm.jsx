@@ -8,7 +8,7 @@ export default function ModalForm() {
   useEffect(() => {
     let modalTimeout = setTimeout(() => {
       setVisible(true);
-    }, 10000);
+    }, 8000);
     return () => {
       clearTimeout(modalTimeout);
     };
