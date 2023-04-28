@@ -29,7 +29,7 @@ function ContactForm() {
           method="post"
           data-netlify="true"
           name="contact-page-form"
-          className="px-6 pt-20 pb-24 sm:pb-32 lg:px-8 lg:py-48"
+          className="px-6 pt-5 pb-24 md:pt-20 sm:pb-32 lg:px-8 lg:py-48"
         >
           <input type="hidden" name="form-name" value="contact-page-form" />
           <div className="max-w-xl mx-auto lg:mr-0 lg:max-w-lg">
