@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
 
 import { configQuery, postqueryHome } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
@@ -7,13 +6,11 @@ import Image from "next/image";
 
 import AboutMe2 from "@/components/AboutMe2";
 import BlogPreview from "@/components/BlogPreview";
-import Button from "@/components/Button";
 import Container from "@/components/Container";
 import CTA from "@/components/CTA";
 import HeroForm from "@/components/HeroForm";
-import Input from "@/components/Input";
 import Layout from "@/components/Layout";
-import ThankYou from "@/components/ThankYou";
+import ModalForm from "@/components/ModalForm";
 
 export default function Home({ posts, siteConfig }) {
   return (
@@ -50,6 +47,7 @@ export default function Home({ posts, siteConfig }) {
         <BlogPreview posts={posts} />
         <CTA />
         <Quote />
+        <ModalForm />
       </Layout>
     </>
   );
