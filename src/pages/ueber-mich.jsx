@@ -188,13 +188,13 @@ const ÜberMich = ({ siteConfig }) => {
             </p>
             <p className="pb-6">Ich freue mich! 🔥</p>
           </div>
-          <div className="relative w-full pb-8 mb-10 lg:w-1/2 lg:mb-0 lg:text-lg">
+          <div className="relative w-full pb-8 mb-2 lg:w-1/2 lg:mb-0 lg:text-lg">
             <Image
               src={"/images/ueber_mich_2.webp"}
               width={700}
               height={500}
               alt="free women"
-              className="sticky top-[120px] max-w-[480px]"
+              className="sticky top-[120px] lg:max-w-[480px] max-w-full"
             />
           </div>
         </Container>
