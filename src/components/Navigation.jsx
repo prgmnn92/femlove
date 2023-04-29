@@ -3,6 +3,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Container from "./Container";
 
@@ -16,9 +17,20 @@ const InPageLinks = [
 ];
 
 const NavLink = ({ href, children }) => {
+  const router = useRouter();
+  const [isActive, setActive] = useState(false);
+  useEffect(() => {
+    console.log(router);
+    if (router.pathname === href) {
+      setActive(true);
+    }
+  }, []);
+
   return (
     <Link
-      className="block py-2 pl-2 pr-3 font-medium text-center text-gray-700 transition-all rounded hover:text-f-green lg:hover:bg-transparent lg:border-0 lg:hover:text-f-green lg:p-0"
+      className={`relative block py-2 pl-2 pr-3 font-medium text-center text-gray-700 duration-500 rounded hover:text-f-red lg:hover:bg-transparent lg:border-0 lg:p-0 hover-underline ${
+        isActive ? "nav-link--is-active" : ""
+      }`}
       href={href}
     >
       {children}
