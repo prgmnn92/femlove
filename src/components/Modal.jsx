@@ -1,15 +1,15 @@
 import { Fragment, useState } from "react";
 
 import { Dialog, Transition } from "@headlessui/react";
-import slugify from "slugify";
 
+import Button from "./Button";
 import Input from "./Input";
-
 
 export default function Modal({ isOpen, closeModal }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [successVisible, setSuccessVisible] = useState(false);
   const [checkboxes, setCheckboxes] = useState([
     { name: "Zyklusgerechter Lebensstil", checked: false },
     { name: "PMS loswerden", checked: false },
@@ -55,15 +55,22 @@ export default function Modal({ isOpen, closeModal }) {
     setName("");
     setEmail("");
     setMessage("");
-    setCheckboxes([
-      { name: "Zyklusgerechter Lebensstil", checked: false },
-      { name: "PMS loswerden", checked: false },
-      { name: "Periodenschmerzen loswerden", checked: false },
-      { name: "Pille absetzen", checked: false },
-      { name: "Sonstiges", checked: false },
-    ]);
-    closeModal();
+    showSuccessMessage();
+    setTimeout(() => {
+      closeModal();
+    }, 4000);
   };
+
+  const showSuccessMessage = () => {
+    setSuccessVisible(true);
+  };
+
+  const successMessage = (
+    <div className="py-4">
+      Danke für deine Anfrage. Ich werde mich in den nächsten Tagen mit dir in
+      Verbindung setzen. 😊
+    </div>
+  );
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -96,97 +103,78 @@ export default function Modal({ isOpen, closeModal }) {
                     as="h3"
                     className="text-lg font-semibold leading-6 text-gray-900"
                   >
-                    Anfrage für ein kostenloses Kennenlerngespräch
+                    Anfrage für ein kostenloses Erstgespräch (online)
                   </Dialog.Title>
-                  <p className="pt-2 pb-4 text-sm opacity-75">
-                    Lass uns gemeinsam über deine Ziele sprechen und wie ich dir
-                    helfen kann, sie zu erreichen. Buche jetzt dein kostenloses
-                    Kennenlerngespräch!
-                  </p>
-                  <form netlify="true" method="POST" name="kennelerngespraech">
-                    <div className="relative flex-grow w-full pb-2">
-                      <label
-                        htmlFor="vorname"
-                        className="text-sm font-medium leading-7 text-gray-600"
+                  {successVisible ? (
+                    successMessage
+                  ) : (
+                    <>
+                      <p className="pt-2 pb-4 text-sm opacity-75">
+                        Lass uns in dem kostenlosen Erstgespräch ganz
+                        unverbindlich kennenlernen und gemeinsam herausfinden,
+                        wie ich dir auf dem Weg zu einem gesünderen,
+                        glücklicheren und erfüllteren Leben helfen kann. 🌸
+                      </p>
+                      <form
+                        netlify="true"
+                        method="POST"
+                        name="kennelerngespraech"
                       >
-                        Vorname
-                      </label>
-                      <Input
-                        type="vorname"
-                        id="vorname"
-                        name="vorname"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                      />
-                    </div>
-                    <div className="relative flex-grow w-full pb-2">
-                      <label
-                        htmlFor="email"
-                        className="text-sm font-medium leading-7 text-gray-600"
-                      >
-                        Email
-                      </label>
-                      <Input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
-                    <div className="relative flex-grow w-full pb-2">
-                      <label
-                        htmlFor="message"
-                        className="text-sm font-medium leading-7 text-gray-600"
-                      >
-                        Nachricht
-                      </label>
-                      <textarea
-                        className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 "
-                        type="text"
-                        id="message"
-                        name="message"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                      />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium leading-7 text-gray-600">
-                        Deine Anliegen (Mehrfachauswahl mögich):
-                      </label>
-                      {checkboxes.map((item, idx) => (
-                        <div
-                          key={slugify(item.name)}
-                          className="flex items-center mb-1"
-                        >
-                          <input
-                            id={slugify(item.name)}
-                            type="checkbox"
-                            checked={item.checked}
-                            onChange={(e) => handleCheckedState(e, idx)}
-                            value={item.name}
-                            className="w-4 h-4 rounded bg-rosa-100 border-rosa-300 text-rose-600 focus:ring-rose-500 focus:ring-2"
-                          />
+                        <div className="relative flex-grow w-full pb-2">
                           <label
-                            htmlFor={slugify(item.name)}
-                            className="ml-2 text-sm font-medium text-gray-900 "
+                            htmlFor="vorname"
+                            className="text-sm font-medium leading-7 text-gray-600"
                           >
-                            {item.name}
+                            Vorname
                           </label>
+                          <Input
+                            type="vorname"
+                            id="vorname"
+                            name="vorname"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                          />
                         </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-4">
-                      <button
-                        className="inline-flex justify-center px-4 py-2 text-sm font-medium border border-transparent rounded-md text-rose-900 bg-rose-100 hover:bg-rose-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:ring-offset-2"
-                        onClick={handleSubmit}
-                        type="submit"
-                      >
-                        Abschicken
-                      </button>
-                    </div>
-                  </form>
+                        <div className="relative flex-grow w-full pb-2">
+                          <label
+                            htmlFor="email"
+                            className="text-sm font-medium leading-7 text-gray-600"
+                          >
+                            Email
+                          </label>
+                          <Input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                          />
+                        </div>
+                        <div className="relative flex-grow w-full pb-2">
+                          <label
+                            htmlFor="message"
+                            className="text-sm font-medium leading-7 text-gray-600"
+                          >
+                            Nachricht
+                          </label>
+                          <textarea
+                            className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-f-green focus:bg-transparent focus:ring-2 focus:ring-indigo-200 placeholder:text-black/25"
+                            type="text"
+                            id="message"
+                            name="message"
+                            value={message}
+                            placeholder="Lass mich gerne schon wissen, was aktuell deine größte Herausforderung ist."
+                            onChange={(e) => setMessage(e.target.value)}
+                          />
+                        </div>
+                        <div className="mt-4">
+                          <Button onClick={handleSubmit} type="submit">
+                            Abschicken
+                          </Button>
+                        </div>
+                      </form>
+                    </>
+                  )}
                 </Dialog.Panel>
               </Transition.Child>
             </div>
