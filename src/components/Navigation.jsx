@@ -13,10 +13,15 @@ const InPageLinks = [
   { href: "/ueber-mich", name: "Über Mich" },
   { href: "/empfehlungen", name: "Empfehlungen" },
   { href: "/angebot", name: "Angebot" },
+  {
+    href: "https://femlove-by-franzi.ck.page/26b521630c",
+    name: "Für 0 Euro",
+    target: "_blank",
+  },
   { href: "/kontakt", name: "Kontakt" },
 ];
 
-const NavLink = ({ href, children }) => {
+const NavLink = ({ href, children, target }) => {
   const router = useRouter();
   const [isActive, setActive] = useState(false);
   useEffect(() => {
@@ -32,6 +37,7 @@ const NavLink = ({ href, children }) => {
         isActive ? "nav-link--is-active" : ""
       }`}
       href={href}
+      target={target}
     >
       {children}
     </Link>
@@ -60,7 +66,7 @@ const Navigation = () => {
   return (
     <nav
       className={
-        "bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded sticky top-0 left-0 right-0 z-50 transition-all " +
+        "bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded sticky top-0 left-0 right-0 z-[999999] transition-all " +
         (navIsTop ? "py-4" : "py-2.5 shadow-md")
       }
     >
@@ -84,7 +90,9 @@ const Navigation = () => {
           <ul className="flex p-4 mt-4 border border-gray-100 rounded-lg lg:flex-wrap bg-f-offwhite lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:border-0 lg:bg-white ">
             {InPageLinks.map((linkItem) => (
               <li key={linkItem.name}>
-                <NavLink href={linkItem.href}>{linkItem.name}</NavLink>
+                <NavLink href={linkItem.href} target={linkItem.target}>
+                  {linkItem.name}
+                </NavLink>
               </li>
             ))}
             <li className="pt-4 lg:pt-0">
