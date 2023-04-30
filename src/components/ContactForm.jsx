@@ -6,21 +6,15 @@ function ContactForm() {
   return (
     <div className="relative bg-white isolate">
       <div className="grid grid-cols-1 mx-auto max-w-7xl lg:grid-cols-2">
-        <div className="relative px-6 pt-24 pb-20 sm:pt-32 lg:static lg:px-8 lg:py-48">
+        <div className="relative px-6 pt-24 pb-10 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="max-w-xl mx-auto lg:mx-0 lg:max-w-lg">
             <div className="absolute inset-y-0 left-0 z-10 w-full overflow-hidden lg:w-1/2"></div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-              Teile deine Ideen mit mir – ich bin offen für Neues!
+              Du hast Fragen oder willst einfach nur etwas los werden?
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Ich freue mich immer über Nachrichten und Anregungen von meinen
-              Besuchern. Egal, ob du mir Feedback zu meinem Blog geben möchtest,
-              eine Kooperationsanfrage hast oder einfach nur hallo sagen
-              möchtest – ich lese jede Nachricht persönlich und antworte so
-              schnell wie möglich. Wenn du also etwas auf dem Herzen hast oder
-              einfach nur plaudern möchtest, zögere nicht, mir zu schreiben. Ich
-              bin immer offen für neue Ideen und freue mich darauf, von dir zu
-              hören! 💕
+              Dann schreibe mir eine Nachricht. Ich werde dir so schnell wie
+              möglich Antworten. Ich freue mich auf deine Nachricht. 🫶
             </p>
           </div>
         </div>
