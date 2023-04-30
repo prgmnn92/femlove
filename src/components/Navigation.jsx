@@ -153,7 +153,7 @@ function MobileMenu() {
             <div className="px-1 py-1 ">
               {InPageLinks.map((menuLink, id) => {
                 return (
-                  <Menu.Item key={id} className="px-2 py-2 text-center">
+                  <Menu.Item key={id} className="px-2 my-2 text-center">
                     <NavLink href={menuLink.href}>{menuLink.name}</NavLink>
                   </Menu.Item>
                 );

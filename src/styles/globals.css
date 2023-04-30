@@ -158,3 +158,10 @@ body {
   -webkit-transform: translatex(-50%);
   width: 20px !important; 
 }
+
+@media screen and (max-width: 800px) {
+  .nav-link--is-active:after {
+    bottom: 0px;
+  }
+  
+}
