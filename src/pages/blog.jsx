@@ -46,8 +46,10 @@ const Blog = ({ posts, siteConfig, preview }) => {
             if (!categoryFilter && item === filters[0]) isActive = true;
             return (
               <div
-                className={`p-2 mr-4 cursor-pointer transition-all  + ${
-                  isActive && "bg-f-red text-white rounded-full"
+                className={`p-2 mr-4 cursor-pointer transition-all font-medium rounded-full hover:bg-f-red  hover:text-white+ ${
+                  isActive
+                    ? "bg-f-red text-white "
+                    : "bg-f-red/70 text-white/80"
                 }`}
                 key={item}
                 onClick={() => {
