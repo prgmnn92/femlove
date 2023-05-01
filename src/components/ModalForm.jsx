@@ -65,9 +65,9 @@ function NewsletterSignUp({ setVisible }) {
           Bleib auf dem Laufenden!
         </h2>
         <p className="max-w-xl mx-auto mt-2 text-lg leading-8 text-center text-gray-300">
-          Erfahre regelmäßig Neues rund um das Thema Gesundheit und erhalte
-          wertvolle Ratschläge für dein Wohlbefinden - melde dich jetzt für
-          meinen Newsletter an!
+          Bleib immer up-to-date und werde Teil meiner Femlove-Community, um
+          exklusive Tipps für einen gesunden und zyklusbewussten Lebensstil zu
+          erhalten. 🔥
         </p>
         {showThankYou ? (
           <div className="pt-4 text-lg font-bold text-white">
