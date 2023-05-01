@@ -15,7 +15,7 @@ const ÜberMich = ({ siteConfig }) => {
     <Layout {...siteConfig}>
       <section>
         <Container className="px-4 py-8 lg:py-12">
-          <HeadingH1>Hi! Ich bin Franzi.</HeadingH1>
+          <HeadingH1>Hi, ich bin Franzi</HeadingH1>
         </Container>
       </section>
       <section>
@@ -30,54 +30,29 @@ const ÜberMich = ({ siteConfig }) => {
             />
           </div>
           <div className="flex flex-col flex-wrap md:mb-10 lg:w-1/2 lg:text-left">
-            <p className="pb-6">
-              Ich bin 28 Jahre alt und freue mich aktuell sehr auf meine
-              Hochzeit im Juni. I am so excited! 👰💍
-            </p>
-            <p className="pb-6">
-              Neben meinem 9-to-5-Job und der Arbeit an Femlove, bin ich
-              unheimlich gerne in Bewegung. Am liebsten draußen in der Natur
-              oder im Fitnessstudio. 🌳 💪🏼
-            </p>
-            <p className="pb-6">
-              Halbmarathon ✅, 100 km Rennradtour ✅, Liebe fürs Krafttraining
-              entdeckt ✅. You see? Ich bin ziemlich vielseitig und
-              begeisterungsfähig in Sachen Sport unterwegs. 🤍
-            </p>
-            <p className="pb-6">
-              Ansonsten verbringe ich aber auch einfach mal Zeit auf der Couch
-              mit einem guten Buch, denn lesen ist für mich ein Teil meiner
-              Selfcare-Routine. Love it. Was ich noch liebe? Essen. Genießen.
-              🥗🍎🍫🍕
-            </p>
-            <p className="pb-6">
-              Ich bin absolut reisebegeistert und freue mich schon riesig
-              darauf, im Juli mit meinem (zukünftigen) Mann auf eine sehr große
-              Reise zu gehen. Geplant ist etwa ein Jahr, aber wir sind total
-              offen und wollen schauen, was sich ergibt. Damit wird für uns
-              beide ein großer Traum wahr! 🌍 😍
-            </p>
-            <p className="pb-6">
-              Kleiner Side-Fact: Es vergeht eigentlich kein Tag, an dem ich
-              nichts zu lachen habe. Lachen ist doch das Herrlichste und die
-              beste Medizin! 😁
-            </p>
-            <p className="pb-6">
-              Ich liebe es mich persönlich weiterzuentwickeln und mich neuen
-              Herausforderungen zu stellen, um über mich hinauszuwachsen.
-              Außerhalb der Komfortzone gibt es nämlich viel zu entdecken. 🚀
-              Mein Journal ist mein treuer Begleiter durch die Hochs und Tiefs
-              des Lebens. Jep, denn auch ich habe meine Tiefs, Schwächen und
-              Herausforderungen, doch ich versuche stets, mit einem positiven
-              Mindset an die Dinge heranzugehen. Sie sind Teil des Lebens und es
-              liegt letztlich an uns, wie wir damit umgehen.
-            </p>
-            <p className="pb-6">
-              Meine wichtigsten Werte sind: Meine liebsten Menschen, Gesundheit,
-              Freiheit, Ehrlichkeit und Vertrauen. Und mich nicht mehr von
-              negativen Glaubenssätzen wie auch gesellschaftlichen Erwartungen
-              leiten zu lassen. Mein Leben zu leben. Erfüllt und ausgeglichen.
-              😌
+            <h2 className="pb-6 text-xl font-bold">
+              Ich helfe dir gesund, ausgeglichen und erfüllt zu leben. 🌟
+            </h2>
+            <p>🌸 28 Jahre alt</p>
+            <p>💍 Bride to be (im Juni ist es soweit)</p>
+            <p>💪 Fitness & Bewegung 💗</p>
+            <p>🌳 Natur = Entschleunigung pur</p>
+            <p>📖 Lesemaus</p>
+            <p>🍕 Food-Lover</p>
+            <p>🌎 Reisebegeistert: Biggest adventure startet im Juli</p>
+            <p>😀 Lachen ist die beste Medizin</p>
+            <p>🙌 Team: Positive & Growth Mindset</p>
+            <h3 className="pt-6 pb-3 text-lg font-bold">
+              Was mir besonders wichtig ist:
+            </h3>
+            ❤️ Meine liebsten Menschen.
+            <p>❤️ Gesundheit.</p>
+            <p>❤️ Freiheit.</p>
+            <p>❤️ Ehrlichkeit und Vertrauen.</p>
+            <p className="pt-3">
+              Und mich nicht mehr von negativen Glaubenssätzen und
+              gesellschaftlichen Erwartungen leiten lassen. Mein Leben zu leben.
+              Erfüllt und ausgeglichen. 😌
             </p>
           </div>
         </Container>
