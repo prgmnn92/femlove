@@ -25,7 +25,6 @@ const NavLink = ({ href, children, target }) => {
   const router = useRouter();
   const [isActive, setActive] = useState(false);
   useEffect(() => {
-    console.log(router);
     if (router.pathname === href) {
       setActive(true);
     }
@@ -166,10 +165,8 @@ function MobileMenu() {
                   className={
                     "bg-f-main text-white lg:ml-2 rounded-full font-semibold px-7 py-2 mx-auto hover:brightness-105 transition-all"
                   }
-                  // onClick={() => openModal()}
                   target="_blank"
                   rel="noreferrer"
-                  // ref={"noreferrer"}
                 >
                   Newsletter
                 </Link>

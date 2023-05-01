@@ -28,7 +28,7 @@ const Angebot = ({ siteConfig }) => {
 };
 
 const WorkTogether = () => {
-  const openModal = useContext(ModalContext);
+  const { setOpenModal } = useContext(ModalContext);
   return (
     <section className="text-gray-600 body-font">
       <div className="container flex flex-wrap items-center px-5 py-8 mx-auto md:py-24">
@@ -89,7 +89,10 @@ const WorkTogether = () => {
           </p>
 
           <div className="pt-6">
-            <Button className={"bg-f-main text-white"} onClick={openModal}>
+            <Button
+              className={"bg-f-main text-white"}
+              onClick={() => setOpenModal(true)}
+            >
               Kostenloses Kennenlerngespräch
             </Button>
           </div>

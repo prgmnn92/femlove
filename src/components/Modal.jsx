@@ -5,27 +5,13 @@ import { Dialog, Transition } from "@headlessui/react";
 import Button from "./Button";
 import Input from "./Input";
 
-export default function Modal({ isOpen, closeModal }) {
+export default function Modal({ isOpen, setOpenModal }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [successVisible, setSuccessVisible] = useState(false);
-  const [checkboxes, setCheckboxes] = useState([
-    { name: "Zyklusgerechter Lebensstil", checked: false },
-    { name: "PMS loswerden", checked: false },
-    { name: "Periodenschmerzen loswerden", checked: false },
-    { name: "Pille absetzen", checked: false },
-    { name: "Sonstiges", checked: false },
-  ]);
 
-  const handleCheckedState = (e, idx) => {
-    let newCheckboxes = [...checkboxes];
-    newCheckboxes[idx].checked = !checkboxes[idx].checked;
-
-    setCheckboxes(newCheckboxes);
-  };
-
-  const handleCreateAppointment = async (email, name, message, checkboxes) => {
+  const handleCreateAppointment = async (email, name, message) => {
     try {
       const response = await fetch("/api/createAppointmentEntry", {
         method: "POST",
@@ -36,7 +22,6 @@ export default function Modal({ isOpen, closeModal }) {
           email,
           name,
           message,
-          checkboxes,
         }),
       });
 
@@ -50,14 +35,14 @@ export default function Modal({ isOpen, closeModal }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await handleCreateAppointment(email, name, message, checkboxes);
+    await handleCreateAppointment(email, name, message);
 
     setName("");
     setEmail("");
     setMessage("");
     showSuccessMessage();
     setTimeout(() => {
-      closeModal();
+      setOpenModal(false);
     }, 4000);
   };
 
@@ -74,7 +59,11 @@ export default function Modal({ isOpen, closeModal }) {
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-50" onClose={closeModal}>
+        <Dialog
+          as="div"
+          className="relative z-50"
+          onClose={() => setOpenModal(false)}
+        >
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"

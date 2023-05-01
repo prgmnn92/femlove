@@ -1,24 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useContext } from "react";
+import React from "react";
 
 import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 import Image from "next/image";
 
-import Button from "@/components/Button";
 import Container from "@/components/Container";
 import CTA from "@/components/CTA";
 import HeadingH1 from "@/components/headings/HeadingH1";
 import Layout from "@/components/Layout";
-import { ModalContext } from "@/ModalContext";
-
-// const ReactPlayer = dynamic(() => import("react-player/youtube"), {
-//   ssr: false,
-// });
 
 const ÜberMich = ({ siteConfig }) => {
-  const openModal = useContext(ModalContext);
-
   return (
     <Layout {...siteConfig}>
       <section>
@@ -166,27 +158,6 @@ const ÜberMich = ({ siteConfig }) => {
               Zeitmangel etwas für ihre Gesundheit zu tun.
             </p>
             <p className="pb-6">BE YOU. DO YOU. FOR YOU. ❤️</p>
-            <p className="pb-6">So kannst du mit mir zusammenarbeiten:</p>
-            <p className="pb-6">
-              Bist du bereit für den DEEP DIVE und deine Gesundheit in die Hand
-              zu nehmen? Bist du bereit deine Gesundheit auf ein neues Level zu
-              bringen? Endlich deine Zyklusbeschwerden zu lindern?
-            </p>
-            <p className="pb-6">Dann lass uns 1:1 zusammenarbeiten. 🙌</p>
-            <p className="pb-6">
-              Melde dich hier für ein unverbindliches, kostenfreies
-              Kennenlerngespräch an:
-            </p>
-            <p className="pb-6">
-              <Button className={"bg-f-main text-white"} onClick={openModal}>
-                Kostenloses Kennenlerngespräch
-              </Button>
-            </p>
-            <p className="pb-6">
-              Dort lernen wir uns kennen und schauen, ob und wie ich dich in
-              meinem 1:1 Coaching unterstützen kann.
-            </p>
-            <p className="pb-6">Ich freue mich! 🔥</p>
           </div>
           <div className="relative w-full pb-8 mb-2 lg:w-1/2 lg:mb-0 lg:text-lg">
             <Image

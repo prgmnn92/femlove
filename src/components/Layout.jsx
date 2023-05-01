@@ -10,15 +10,8 @@ import { ModalContext } from "@/ModalContext";
 
 const Layout = (props) => {
   const { children } = props;
-  let [isOpen, setIsOpen] = useState(false);
+  let [isOpen, setOpenModal] = useState(false);
 
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
   //const ogimage = urlFor(props?.openGraphImage) ?? "";
 
   return (
@@ -45,22 +38,13 @@ const Layout = (props) => {
           ],
           site_name: props.title,
         }}
-        // twitter={{
-        //   handle: "@xyz",
-        //   site: "@xyz",
-        //   cardType: "summary_large_image"
-        // }}
       />
 
       <div className="flex flex-col min-h-screen antialiased">
         <div className="grow">
-          <Navigation
-            closeModal={closeModal}
-            openModal={openModal}
-            {...props}
-          />
-          <Modal isOpen={isOpen} closeModal={closeModal} />
-          <ModalContext.Provider value={openModal}>
+          <Navigation {...props} />
+          <Modal isOpen={isOpen} setOpenModal={setOpenModal} />
+          <ModalContext.Provider value={{ setOpenModal }}>
             <div>{children}</div>
           </ModalContext.Provider>
         </div>
