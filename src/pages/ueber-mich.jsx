@@ -33,6 +33,7 @@ const ÜberMich = ({ siteConfig }) => {
             <h2 className="pb-6 text-xl font-bold">
               Ich helfe dir gesund, ausgeglichen und erfüllt zu leben. 🌟
             </h2>
+            <h3 className="pb-3 text-lg font-bold">Facts über mich:</h3>
             <p>🌸 28 Jahre alt</p>
             <p>💍 Bride to be (im Juni ist es soweit)</p>
             <p>💪 Fitness & Bewegung 💗</p>
@@ -58,10 +59,10 @@ const ÜberMich = ({ siteConfig }) => {
         </Container>
         <Container className="flex flex-wrap">
           <div className="flex flex-col flex-wrap mb-10 lg:w-1/2 lg:pr-12 lg:text-left">
-            <p className="pb-6">
+            <h3 className="pb-6 text-lg font-bold">
               Meine Leidenschaft für ganzheitliche Gesundheit und den weiblichen
               Zyklus:
-            </p>
+            </h3>
 
             <p className="pb-6">
               Also... Bewegung gehörte für mich eigentlich schon seit der
@@ -117,13 +118,17 @@ const ÜberMich = ({ siteConfig }) => {
               (i.A.) 💫 + Zusatzmodul über Darmgesundheit (i.A.) 💫
               Autodidaktische Aneignung zum Thema Zyklus und Zyklusbewusstsein.
             </p>
-            <p className="pb-6">Meine Mission mit Femlove:</p>
+            <h3 className="pb-6 text-lg font-bold">
+              Meine Mission mit Femlove:
+            </h3>
             <p className="pb-6">
               All das führte mich letztendlich zu Femlove. Ich nutze Femlove als
               Blog und Ort, an dem ich mein Wissen, meine Erfahrungen, Tipps &
               Tricks mit dir teile. Denn...
             </p>
-            <p className="pb-6">Jede Frau - auch du - verdient es:</p>
+            <h3 className="pb-6 text-lg font-bold">
+              Jede Frau - auch du - verdient es:
+            </h3>
             <p className="pb-6">
               ✨ ganzheitlich gesund zu leben, ✨ sich selbst und ihren Zyklus
               besser kennenzulernen, ✨ zyklusgerecht- und bewusst zu leben, ✨
@@ -132,7 +137,7 @@ const ÜberMich = ({ siteConfig }) => {
               Augen zu verlieren, ✨ über sich hinauszuwachsen, ✨ trotz
               Zeitmangel etwas für ihre Gesundheit zu tun.
             </p>
-            <p className="pb-6">BE YOU. DO YOU. FOR YOU. ❤️</p>
+            <p className="pb-6 font-bold">BE YOU. DO YOU. FOR YOU. ❤️</p>
           </div>
           <div className="relative w-full pb-8 mb-2 lg:w-1/2 lg:mb-0 lg:text-lg">
             <Image
