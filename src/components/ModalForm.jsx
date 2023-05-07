@@ -16,7 +16,7 @@ export default function ModalForm() {
   return (
     <div
       id="portal"
-      className={`fixed  top-0 bottom-0 left-0 right-0  items-center justify-center z-[9999] transition-all ${
+      className={`fixed  top-0 bottom-0 left-0 right-0  items-center justify-center z-[999999] transition-all ${
         isVisible ? "flex opacity-1" : "hidden opacity-0"
       } `}
     >
@@ -56,7 +56,7 @@ function NewsletterSignUp({ setVisible }) {
     <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div className="relative px-6 py-24 overflow-hidden shadow-2xl bg-f-green isolate sm:rounded-3xl sm:px-24 xl:py-32">
         <div
-          className="absolute p-2 cursor-pointer top-4 right-4"
+          className="absolute p-2 cursor-pointer top-8 right-8 lg:top-4 lg:right-4"
           onClick={() => setVisible(false)}
         >
           <CloseIcon />
