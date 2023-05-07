@@ -24,28 +24,28 @@ function generateSiteMap(posts) {
      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
        <!--We manually set the two URLs we know already-->
        <url>
-         <loc>https://www.femlove.blog/</loc>
+         <loc>https://femlove.blog/</loc>
        </url>
        <url>
-         <loc>https://www.femlove.blog/blog</loc>
+         <loc>https://femlove.blog/blog</loc>
        </url>
        <url>
-         <loc>https://www.femlove.blog/angebot</loc>
+         <loc>https://femlove.blog/angebot</loc>
        </url>
        <url>
-         <loc>https://www.femlove.blog/empfehlungen</loc>
+         <loc>https://femlove.blog/empfehlungen</loc>
        </url>
        <url>
-         <loc>https://www.femlove.blog/ueber-mich</loc>
+         <loc>https://femlove.blog/ueber-mich</loc>
        </url>
        <url>
-         <loc>https://www.femlove.blog/kontakt</loc>
+         <loc>https://femlove.blog/kontakt</loc>
        </url>
        ${posts
          .map(({ slug }) => {
            return `
          <url>
-             <loc>${`https://www.femlove.blog/post/${slug.current}`}</loc>
+             <loc>${`https://femlove.blog/post/${slug.current}`}</loc>
          </url>
        `;
          })
