@@ -96,7 +96,7 @@ export async function getStaticProps({ params, preview = false }) {
       siteconfig: { ...config },
       preview,
     },
-    revalidate: 300,
+    revalidate: 320,
   };
 }
 
