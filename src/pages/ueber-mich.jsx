@@ -34,7 +34,7 @@ const ÜberMich = ({ siteConfig }) => {
               Ich helfe dir gesund, ausgeglichen und erfüllt zu leben. 🌟
             </h2>
             <h3 className="pb-3 text-lg font-bold">Facts über mich:</h3>
-            <p>🌸 28 Jahre alt</p>
+            <p>🌸 29 Jahre alt</p>
             <p>💍 Bride to be (im Juni ist es soweit)</p>
             <p>💪 Fitness & Bewegung 💗</p>
             <p>🌳 Natur = Entschleunigung pur</p>
