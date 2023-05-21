@@ -11,10 +11,7 @@ const BlogCard = ({ index, post, category }) => {
       : "rounded-b-[50px] rounded-tl-[50px] hover:rounded-tr-[50px]  hover:rounded-tl-none";
 
   return (
-    <article
-      key={post.id}
-      className="flex flex-col items-start justify-between"
-    >
+    <article key={post.id} className="flex flex-col items-start justify-start">
       <div
         className={`relative w-full transition-all overflow-hidden ${corner} duration-300 border-2 border-black/5`}
       >
