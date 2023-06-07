@@ -23,7 +23,7 @@ const Impressum = () => {
                 <br />
                 <span>
                   <span>
-                    Franziska Tischer <br />
+                    Franziska Pargmann <br />
                     Bahnhofstraße 12 <br />
                     38176 Wendeburg
                   </span>
@@ -57,7 +57,7 @@ const Impressum = () => {
                 <br />
                 <span>
                   <span>
-                    Franziska Tischer <br />
+                    Franziska Pargmann <br />
                     Bahnhofstr. 12 <br />
                     38176 Wendeburg
                   </span>

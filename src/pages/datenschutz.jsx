@@ -214,7 +214,7 @@ const Datenschutz = () => {
 
             <p>
               <span>
-                Franziska Tischer
+                Franziska Pargmann
                 <br />
                 Bahnhofstr. 12
                 <br />
