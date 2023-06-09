@@ -4,6 +4,7 @@ import React from "react";
 import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 import Image from "next/image";
+import Link from "next/link";
 
 import Container from "@/components/Container";
 import CTA from "@/components/CTA";
@@ -16,6 +17,9 @@ const ÜberMich = ({ siteConfig }) => {
       <section>
         <Container className="px-4 py-8 lg:py-12">
           <HeadingH1>Hi, ich bin Franzi</HeadingH1>
+          <p className="text-center">
+            Deine Holistic Health & Wellness Coachin
+          </p>
         </Container>
       </section>
       <section>
@@ -31,23 +35,29 @@ const ÜberMich = ({ siteConfig }) => {
           </div>
           <div className="flex flex-col flex-wrap md:mb-10 lg:w-1/2 lg:text-left">
             <h2 className="pb-6 text-xl font-bold">
-              Ich helfe dir gesund, ausgeglichen und erfüllt zu leben. 🌟
+              Mit mir bringst du deine ganzheitliche Gesundheit auf ein neues
+              Level. Ich helfe dir im Einklang mit deinem Zyklus zu leben,
+              Stress, PMS & Co. loszuwerden und so zu mehr Energie, Wohlbefinden
+              & Selbstbewusstsein zu gelangen. 🌟
             </h2>
-            <h3 className="pb-3 text-lg font-bold">Facts über mich:</h3>
+            <h3 className="pb-3 text-lg font-bold">
+              Damit du mich als Mensch hinter Femlove besser kennenlernst, hier
+              ein paar Fakten <strong>über mich:</strong>
+            </h3>
             <p>🌸 29 Jahre alt</p>
-            <p>💍 Bride to be (im Juni ist es soweit)</p>
-            <p>💪 Fitness & Bewegung 💗</p>
+            <p>🥰 Frisch verheiratet</p>
+            <p>💪 Fitness & Bewegung = 💗</p>
             <p>🌳 Natur = Entschleunigung pur</p>
             <p>📖 Lesemaus</p>
             <p>🍕 Food-Lover</p>
-            <p>🌎 Reisebegeistert: Biggest adventure startet im Juli</p>
+            <p>🌎 Reisebegeistert</p>
             <p>😀 Lachen ist die beste Medizin</p>
             <p>🙌 Team: Positive & Growth Mindset</p>
             <h3 className="pt-6 pb-3 text-lg font-bold">
               Was mir besonders wichtig ist:
             </h3>
             ❤️ Meine liebsten Menschen.
-            <p>❤️ Gesundheit.</p>
+            <p>❤️ Ganzheitliche Gesundheit.</p>
             <p>❤️ Freiheit.</p>
             <p>❤️ Ehrlichkeit und Vertrauen.</p>
             <p className="pt-3">
@@ -59,85 +69,126 @@ const ÜberMich = ({ siteConfig }) => {
         </Container>
         <Container className="flex flex-wrap">
           <div className="flex flex-col flex-wrap mb-10 lg:w-1/2 lg:pr-12 lg:text-left">
-            <h3 className="pb-6 text-lg font-bold">
-              Meine Leidenschaft für ganzheitliche Gesundheit und den weiblichen
-              Zyklus:
-            </h3>
+            <h3 className="pb-6 text-lg font-bold">Wie ich zu Femlove kam:</h3>
 
             <p className="pb-6">
-              Also... Bewegung gehörte für mich eigentlich schon seit der
-              Kindheit zum Leben. Dass die Ernährung auch eine wichtige Rolle
-              spielt, habe ich spätestens in meiner Ausbildung vor 10 Jahren
-              gecheckt (Ich sage nur: Büro, Schoko und alleine wohnen). Ich habe
-              mich immer mal in Sachen Ernährung ausprobiert, damals noch
-              ziemlich blind und dem Trend folgend. Heute intuitiver,
-              natürlicher und meinen Bedürfnissen entsprechend.
+              Es fing alles mit dem Zyklus an... Vor einigen Jahren die Pille
+              abgesetzt, mit Erschrecken festgestellt, dass ich bei null stehe -
+              zumindest was meinen Zyklus angeht. Denn:{" "}
+              <strong>
+                Nach 10 Jahren Pilleneinnahme hatte ich null Ahnung und null
+                Bewusstsein für meinen Zyklus, war total überfordert und wusste
+                gar nicht wo ich anfangen sollte.
+              </strong>
             </p>
             <p className="pb-6">
-              Das Thema Selfcare und mentale Gesundheit ist zu meiner Priorität
-              geworden, nachdem ich auf die unschöne Art lernen durfte, welchen
-              Einfluss anhaltender starker Stress und Druck auf die allgemeine
-              Gesundheit hat.
+              Seitdem ich die Pille abgesetzt habe, verwende ich die NFP-Methode
+              mit{" "}
+              <Link
+                className="text-blue-500"
+                href="/post/erfahrungsbericht-trackle"
+              >
+                trackle
+              </Link>{" "}
+              zur Verhütung. Von diesem Zeitpunkt an habe ich meine Zyklusphasen
+              genau verfolgt, mir so viel Wissen wie möglich über den Zyklus
+              angeeignet und mich selbst und meine Stimmungen beobachtet. Mit
+              der Zeit wurde ich unglaublich dankbar für den wiederkehrenden
+              Rhythmus, dem wir Frauen folgen. Ich habe die Analogien zu den
+              Jahreszeiten verstanden und gefeiert. Gefeiert, dass ich einfach
+              ich sein kann und mein Körper seinem natürlichen Rhythmus folgen
+              darf. Ich habe mich dadurch noch stärker als Frau gefühlt. Dabei
+              habe ich nicht nur mich selbst besser kennengelernt, sondern
+              wollte meine Faszination auch mit anderen Frauen teilen und ihnen
+              dabei helfen, ihren eigenen Zyklus und Körper besser zu verstehen.
+              Denn genau das verdienen wir alle: ein{" "}
+              <strong>
+                Bewusstsein für unseren eigenen Zyklus und unseren Körper, sowie
+                mehr Selbstbewusstsein & Selbstliebe.
+              </strong>{" "}
+              So entstand femlove.blog. ✨
             </p>
             <p className="pb-6">
-              Der Zyklus...Long Story short: Vor drei Jahren die Pille
-              abgesetzt, mit Erschrecken festgestellt, dass ich bei NULL stehe -
-              zumindest was meinen Zyklus angeht. Denn: Nach 10 Jahren
-              Pilleneinnahme hatte ich 0 Ahnung und 0 Bewusstsein für meinen
-              Zyklus, war maximal überfordert und wusste gar nicht wo ich
-              anfangen soll. Dazu kamen Schmerzen, die ich durch die Pille
-              natürlich nicht kannte; dachte es wäre normal → Spoiler: Ist es
-              nicht.
+              Zudem ist der Zyklus ein{" "}
+              <strong>wichtiges Vitalzeichen unserer Gesundheit.</strong> Dein
+              Lebensstil, deine allgemeine Gesundheit und viele andere Faktoren
+              beeinflussen deinen Zyklus. So zeigen sich Ungleichgewichte oft
+              durch verstärktes PMS und/oder Periodenschmerzen.
             </p>
             <p className="pb-6">
-              Ich verhüte seit Absetzen der Pille mithilfe der NFP-Methode mit
-              trackle. Ich habe meine Zyklusphasen ab diesem Punkt quasi
-              studiert, versucht mir so viel Wissen wie möglich über den Zyklus
-              anzueignen, mich und meine Stimmungen beobachtet und ganz viel
-              dokumentiert. Ich wurde mit der Zeit richtig dankbar für diesen
-              immer wiederkehrenden Rhythmus, dem wir Frauen folgen. Ich habe
-              die Analogien zu den Jahreszeiten verstanden und gefeiert.
-              Gefeiert, dass ich ich bin. Dass mein Körper einfach seinem
-              natürlichen Rhythmus nachgehen kann, mich mehr als Frau gefühlt.
+              Auf meinem Blog vereine ich heute all diese Aspekte. Mein Ziel ist
+              es, dass du ganzheitlich gesund bist und im Einklang mit deinem
+              Zyklus leben kannst. Mir liegen insbesondere die Bereiche
+              Stressmanagement, Ernährung und Bewegung am Herzen.
+            </p>
+            <p className="pb-6 font-bold">
+              Kleiner Side-Fact, wofür der Name “Femlove” steht:
+            </p>
+            <p className="pb-3">
+              👩 <strong>Fem</strong>: Steht für <strong>Feminität</strong>,
+              Weiblichkeit, Frausein - all das, was uns Frauen ausmacht.
             </p>
             <p className="pb-6">
-              Ich habe erkannt, dass Gesundheit ein Zusammenspiel aus mehreren
-              Faktoren ist und nicht nur einseitig z.B. aus Sicht der Ernährung
-              betrachtet werden kann. Zudem darf nicht die Besonderheit, die wir
-              als Frauen haben, vergessen werden; unseren Zyklus. Ganzheitliche
-              Gesundheit für Frauen. 🤍
+              🤍 <strong>Love</strong>: Das Love aus Selflove. Wenn wir Frauen
+              uns mit uns als Frau, unserer Gesundheit und unseren Bedürfnissen
+              auseinandersetzen, können wir gleichzeitig den Weg zu mehr
+              <strong>Selbstliebe</strong> und -akzeptanz schaffen.
+            </p>
+            <h3 className="pb-6 text-lg font-bold">
+              🫶 Ganzheitliche Gesundheit für Frauen
+            </h3>
+            <p className="pb-6">
+              Meine Mission ist es, Frauen dabei zu unterstützen, eine tiefere
+              Verbindung zu sich selbst und ihrem Zyklus herzustellen, um
+              Expertinnen ihrer eigenen Gesundheit zu werden. Mein Ziel ist es
+              dabei, Frauen zu mehr Energie, Wohlbefinden und Selbstbewusstsein
+              zu verhelfen. 🔥
             </p>
             <p className="pb-6">
-              Aufgrund meines Interesses und der eigenen Erfahrungen, habe ich
-              auch ein großes Interesse daran, mich stets weiterzubilden und
-              fachlich zu vertiefen.
+              Es ist an der Zeit, dass wir Frauen unsere innere Kraft, Stärke
+              und Verbundenheit zeigen und selbstbewusst zu uns stehen. Doch das
+              ist nur möglich, wenn wir Frauen aufgeklärt und ganzheitlich
+              gesund sind - auf jeder Ebene. Deshalb setze ich mich dafür ein,
+              dass der Zyklus als etwas Normales betrachtet und ohne Tabus offen
+              diskutiert wird. 💪
             </p>
-            <p className="pb-6">
+
+            <h3 className="pb-6 text-lg font-bold">
+              Meine Expertise für dich & deine Gesundheit:
+            </h3>
+
+            <p>
               💫 Life Coach und Holistic Health & Wellness Coach (Fokus: Health
-              & Wellness) 💫 + Zusatzmodul speziell zum Thema Periodengesundheit
-              (i.A.) 💫 + Zusatzmodul über Darmgesundheit (i.A.) 💫
-              Autodidaktische Aneignung zum Thema Zyklus und Zyklusbewusstsein.
+              & Wellness)
+            </p>
+            <p>💫 + Zusatzmodul speziell zum Thema Periodengesundheit (i.A.)</p>
+            <p>💫 + Zusatzmodul über Darmgesundheit (i.A.)</p>
+            <p>
+              💫 Autodidaktische Aneignung zum Thema Zyklus und
+              Zyklusbewusstsein
+            </p>
+            <p className="pb-6">
+              💫 Meine eigenen Erfahrungen, damit du einen kürzen Weg gehen
+              kannst
             </p>
             <h3 className="pb-6 text-lg font-bold">
-              Meine Mission mit Femlove:
+              So kannst du mit mir zusammenarbeiten:
             </h3>
             <p className="pb-6">
-              All das führte mich letztendlich zu Femlove. Ich nutze Femlove als
-              Blog und Ort, an dem ich mein Wissen, meine Erfahrungen, Tipps &
-              Tricks mit dir teile. Denn...
+              Im Rahmen meines 1:1-Coachings werden wir gemeinsam den Weg gehen,
+              damit du deinen individuellen Zyklus besser verstehst und deine
+              Gesundheit in die eigenen Hände nehmen kannst. Ich biete
+              umfassende Unterstützung in den Bereichen Stressmanagement,
+              Ernährung und Bewegung, damit du ganzheitlich gesund und im
+              Einklang mit deinem Zyklus leben kannst.
             </p>
-            <h3 className="pb-6 text-lg font-bold">
-              Jede Frau - auch du - verdient es:
-            </h3>
             <p className="pb-6">
-              ✨ ganzheitlich gesund zu leben, ✨ sich selbst und ihren Zyklus
-              besser kennenzulernen, ✨ zyklusgerecht- und bewusst zu leben, ✨
-              das Gefühl zu haben, dass alles im Einklang ist, ✨ ausgeglichen,
-              glücklich und selbstbewusst zu leben, ✨ sich selbst nicht aus den
-              Augen zu verlieren, ✨ über sich hinauszuwachsen, ✨ trotz
-              Zeitmangel etwas für ihre Gesundheit zu tun.
+              Lass uns zusammenarbeiten und deinen Weg zu mehr Energie,
+              Wohlbefinden und Selbstbewusstsein einschlagen. Erfahre hier mehr
+              darüber, wie ich dich auf deiner individuellen Reise unterstützen
+              kann.
             </p>
-            <p className="pb-6 font-bold">BE YOU. DO YOU. FOR YOU. ❤️</p>
+            <p>Love, Franzi</p>
           </div>
           <div className="relative w-full pb-8 mb-2 lg:w-1/2 lg:mb-0 lg:text-lg">
             <Image

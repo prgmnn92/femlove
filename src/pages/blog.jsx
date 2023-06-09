@@ -20,11 +20,13 @@ const Blog = ({ posts, siteConfig, preview }) => {
   const [searchPhrase, setSearchPhrase] = useState("");
   const filters = [
     "Alle Beiträge", // First element will always set categoryFilter to  = ""
-    "Weiblicher Zyklus",
+    "Zyklus & Hormonbalance",
+    "Ernährung & Nährstoffe",
+    "Selfcare & Wohlbefinden",
     "Menstruation",
-    "Ernährung",
+    "PMS",
     "Hormonfreie Verhütung",
-    "Sonstiges",
+    "Sonstiges & Lifestyle",
   ];
 
   return (
