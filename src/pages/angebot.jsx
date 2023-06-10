@@ -20,8 +20,14 @@ const Angebot = ({ siteConfig }) => {
           <HeadingH1>Mein Angebot</HeadingH1>
         </Container>
       </section>
-      <WorkTogether />
-      <StepsView />
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-8 mx-auto text-center md:py-24">
+          Hier entsteht gerade mein neues Angebot für dich. Die Seite ist in
+          Kürze wieder voll & ganz verfügbar.
+        </div>
+      </section>
+      {/* <WorkTogether /> */}
+      {/* <StepsView /> */}
       <CTA />
     </Layout>
   );
