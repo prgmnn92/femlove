@@ -118,9 +118,7 @@ const Angebot = ({ siteConfig }) => {
           </div>
         </div>
       </section>
-
       <ConvertKitForm />
-
       <section className="text-gray-600 body-font">
         <div className="container flex flex-wrap items-center px-5 py-8 mx-auto md:py-24">
           <div className="flex flex-col w-full mt-10 text-lg font-medium rounded-lg md:mt-0">
@@ -312,8 +310,7 @@ const Angebot = ({ siteConfig }) => {
           </div>
         </div>
       </section>
-      {/* <WorkTogether /> */}
-      {/* <StepsView /> */}
+      ‚
       <CTA />
     </Layout>
   );

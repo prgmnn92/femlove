@@ -17,7 +17,7 @@ const ÜberMich = ({ siteConfig }) => {
       <section>
         <Container className="px-4 py-8 lg:py-12">
           <HeadingH1>Hi, ich bin Franzi</HeadingH1>
-          <p className="text-center">
+          <p className="text-xl italic text-center">
             Deine Holistic Health & Wellness Coachin
           </p>
         </Container>
@@ -28,7 +28,7 @@ const ÜberMich = ({ siteConfig }) => {
             <Image
               alt="feature"
               className="object-contain object-center w-full sticky top-[120px]"
-              src="/images/me.webp"
+              src="/images/ueber-mich-1.webp"
               width={500}
               height={700}
             />
