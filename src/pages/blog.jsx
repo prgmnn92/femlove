@@ -5,15 +5,15 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { configQuery, postqueryBlogs } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 
-import BlogList from "@/components/BlogList";
+import BlogList from "@/components/blog/BlogList";
 import Container from "@/components/Container";
-import CTA from "@/components/CTA";
-import HeadingH1 from "@/components/headings/HeadingH1";
+import H1 from "@/components/headings/H1";
 import Input from "@/components/Input";
 import Layout from "@/components/Layout";
 import PreviewSuspense from "@/components/PreviewSuspense";
+import CTA from "@/components/sections/CTA";
 
-const PreviewBlogList = lazy(() => import("@/components/PreviewBlogList"));
+const PreviewBlogList = lazy(() => import("@/components/blog/PreviewBlogList"));
 
 const Blog = ({ posts, siteConfig, preview }) => {
   const [categoryFilter, setCategoryFilter] = useState("");
@@ -32,7 +32,7 @@ const Blog = ({ posts, siteConfig, preview }) => {
   return (
     <Layout {...siteConfig}>
       <Container className="px-4 py-8 lg:py-12">
-        <HeadingH1>Alle Beiträge</HeadingH1>
+        <H1>Alle Beiträge</H1>
         <div className="my-2">
           <Input
             value={searchPhrase}
@@ -48,7 +48,7 @@ const Blog = ({ posts, siteConfig, preview }) => {
             if (!categoryFilter && item === filters[0]) isActive = true;
             return (
               <div
-                className={`p-2 mr-4 cursor-pointer transition-all font-medium rounded-full hover:bg-f-red  hover:text-white ${
+                className={`p-2 mr-4 mb-4 cursor-pointer transition-all font-medium rounded-full hover:bg-f-red  hover:text-white ${
                   isActive
                     ? "bg-f-red text-white "
                     : "bg-f-red/70 text-f-offwhite"

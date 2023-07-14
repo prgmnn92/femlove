@@ -7,12 +7,12 @@ import { previewData } from "next/headers";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 
-import BlogPost from "@/components/BlogPost";
-import CTA from "@/components/CTA";
+import BlogPost from "@/components/blog/BlogPost";
+import CTA from "@/components/sections/CTA";
 import Layout from "@/components/Layout";
 import PreviewSuspense from "@/components/PreviewSuspense";
 
-const PreviewBlogPost = lazy(() => import("@/components/PreviewBlogPost"));
+const PreviewBlogPost = lazy(() => import("@/components/blog/PreviewBlogPost"));
 
 const Post = (props) => {
   const { postdata, siteconfig, preview, data } = props;

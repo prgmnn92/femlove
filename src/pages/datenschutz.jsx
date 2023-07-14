@@ -2,8 +2,8 @@
 import React from "react";
 
 import Container from "@/components/Container";
-import CTA from "@/components/CTA";
-import HeadingH1 from "@/components/headings/HeadingH1";
+import CTA from "@/components/sections/CTA";
+import H1 from "@/components/headings/H1";
 import Layout from "@/components/Layout";
 
 const Datenschutz = () => {
@@ -11,7 +11,7 @@ const Datenschutz = () => {
     <Layout>
       <section>
         <Container className="px-4 py-8 lg:py-12">
-          <HeadingH1>Datenschutz</HeadingH1>
+          <H1>Datenschutz</H1>
           <div className="block-text ">
             <h6 className="mt-6 mb-6 font-medium text-md lg:text-lg">
               <span>Einleitung</span>

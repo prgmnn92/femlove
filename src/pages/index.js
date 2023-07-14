@@ -4,13 +4,13 @@ import { configQuery, postqueryHome } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 import Image from "next/image";
 
-import AboutMe2 from "@/components/AboutMe2";
-import BlogPreview from "@/components/BlogPreview";
+import BlogPreview from "@/components/blog/BlogPreview";
 import Container from "@/components/Container";
-import CTA from "@/components/CTA";
-import HeroForm from "@/components/HeroForm";
+import HeroForm from "@/components/forms/HeroForm";
+import ModalForm from "@/components/forms/ModalForm";
 import Layout from "@/components/Layout";
-import ModalForm from "@/components/ModalForm";
+import AboutMe from "@/components/sections/AboutMe";
+import CTA from "@/components/sections/CTA";
 
 export default function Home({ posts, siteConfig }) {
   return (
@@ -43,7 +43,7 @@ export default function Home({ posts, siteConfig }) {
             />
           </div>
         </Container>
-        <AboutMe2 />
+        <AboutMe />
         <BlogPreview posts={posts} />
         <CTA />
         <Quote />

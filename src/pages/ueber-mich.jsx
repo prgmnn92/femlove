@@ -7,16 +7,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Container from "@/components/Container";
-import CTA from "@/components/CTA";
-import HeadingH1 from "@/components/headings/HeadingH1";
+import H1 from "@/components/headings/H1";
 import Layout from "@/components/Layout";
+import CTA from "@/components/sections/CTA";
 
 const ÜberMich = ({ siteConfig }) => {
   return (
     <Layout {...siteConfig}>
       <section>
         <Container className="px-4 py-8 lg:py-12">
-          <HeadingH1>Hi, ich bin Franzi</HeadingH1>
+          <H1>Hi, ich bin Franzi</H1>
           <p className="text-xl italic text-center">
             Deine Holistic Health & Wellness Coachin
           </p>

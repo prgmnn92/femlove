@@ -5,8 +5,8 @@ import { sanityClient } from "@lib/sanity";
 import Link from "next/link";
 
 import Container from "@/components/Container";
-import CTA from "@/components/CTA";
-import HeadingH1 from "@/components/headings/HeadingH1";
+import CTA from "@/components/sections/CTA";
+import H1 from "@/components/headings/H1";
 import Layout from "@/components/Layout";
 
 const EmpfehlungsCard = ({ title, children }) => {
@@ -25,7 +25,7 @@ const Empfehlungen = ({ siteConfig }) => {
     <Layout {...siteConfig}>
       <section>
         <Container className="px-4 py-8 lg:py-12">
-          <HeadingH1>Meine Empfehlungen</HeadingH1>
+          <H1>Meine Empfehlungen</H1>
           <EmpfehlungsCard title={"NFP mit trackle"}>
             <p className="pb-3">
               Mit diesem Link erhältst du 10 % Rabatt auf deine

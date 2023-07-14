@@ -6,7 +6,7 @@ import { getImageDimensions } from "@sanity/asset-utils";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import Container from "./Container";
+import Container from "../Container";
 
 const BlogPost = ({ post }) => {
   const router = useRouter();

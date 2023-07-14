@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import Button from "./Button";
+import Button from "../Button";
 
 export default function ModalForm() {
   const [isVisible, setVisible] = useState(false);

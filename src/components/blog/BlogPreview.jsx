@@ -5,8 +5,8 @@ import Link from "next/link";
 
 import BlogCard from "./BlogCard";
 import BlogList from "./BlogList";
-import Button from "./Button";
-import Container from "./Container";
+import Button from "../Button";
+import Container from "../Container";
 
 const BlogPreview = ({ posts }) => {
   posts = posts

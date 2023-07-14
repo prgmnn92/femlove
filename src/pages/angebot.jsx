@@ -6,9 +6,9 @@ import { sanityClient } from "@lib/sanity";
 import Image from "next/image";
 
 import Container from "@/components/Container";
-import CTA from "@/components/CTA";
-import HeadingH1 from "@/components/headings/HeadingH1";
+import H1 from "@/components/headings/H1";
 import Layout from "@/components/Layout";
+import CTA from "@/components/sections/CTA";
 
 const Angebot = ({ siteConfig }) => {
   return (

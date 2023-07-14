@@ -5,7 +5,7 @@ import { useState } from "react";
 import { getCookie } from "cookies-next";
 import Head from "next/head";
 
-import Consent from "@/components/consent";
+import Consent from "@/components/Consent";
 
 const isProduction = process.env.NODE_ENV === "production";
 

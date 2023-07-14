@@ -1,8 +1,8 @@
 import React from "react";
 
 import Container from "@/components/Container";
-import CTA from "@/components/CTA";
-import HeadingH1 from "@/components/headings/HeadingH1";
+import CTA from "@/components/sections/CTA";
+import H1 from "@/components/headings/H1";
 import Layout from "@/components/Layout";
 
 const Impressum = () => {
@@ -10,7 +10,7 @@ const Impressum = () => {
     <Layout>
       <section>
         <Container className="px-4 py-8 lg:py-12">
-          <HeadingH1>Impressum</HeadingH1>
+          <H1>Impressum</H1>
           <div>
             <p>
               <span>
