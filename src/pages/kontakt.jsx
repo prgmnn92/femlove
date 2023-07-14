@@ -3,10 +3,10 @@ import React from "react";
 import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 
-import ContactForm from "@/components/forms/ContactForm";
 import Container from "@/components/Container";
-import CTA from "@/components/sections/CTA";
+import ContactForm from "@/components/forms/ContactForm";
 import Layout from "@/components/Layout";
+import CTA from "@/components/sections/CTA";
 
 const Kontakt = ({ siteConfig }) => {
   return (

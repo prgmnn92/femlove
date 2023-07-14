@@ -5,9 +5,9 @@ import { sanityClient } from "@lib/sanity";
 import Link from "next/link";
 
 import Container from "@/components/Container";
-import CTA from "@/components/sections/CTA";
 import H1 from "@/components/headings/H1";
 import Layout from "@/components/Layout";
+import CTA from "@/components/sections/CTA";
 
 const EmpfehlungsCard = ({ title, children }) => {
   return (

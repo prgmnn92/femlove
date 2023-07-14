@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
 
-import Footer from "./sections/Footer";
 import Modal from "./Modal";
+import Footer from "./sections/Footer";
 import Navigation from "./sections/Navigation";
 import { ModalContext } from "@/ModalContext";
 
