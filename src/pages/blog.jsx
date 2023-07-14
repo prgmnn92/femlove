@@ -37,7 +37,7 @@ const Blog = ({ posts, siteConfig, preview }) => {
           <Input
             value={searchPhrase}
             onChange={(e) => setSearchPhrase(e.target.value)}
-            placeholder="Search..."
+            placeholder="Suche..."
             className="max-w-sm"
           />
         </div>
