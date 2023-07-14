@@ -2,15 +2,13 @@ import React, { lazy } from "react";
 
 import { singlequery, pathquery, configQuery } from "@lib/groq";
 import { sanityClient, getClient, urlFor } from "@lib/sanity";
-import ErrorPage from "next/error";
-import { previewData } from "next/headers";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 
 import BlogPost from "@/components/blog/BlogPost";
-import CTA from "@/components/sections/CTA";
 import Layout from "@/components/Layout";
 import PreviewSuspense from "@/components/PreviewSuspense";
+import CTA from "@/components/sections/CTA";
 
 const PreviewBlogPost = lazy(() => import("@/components/blog/PreviewBlogPost"));
 
