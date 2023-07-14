@@ -5,6 +5,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { configQuery, postqueryBlogs } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 
+import CategoryFilter from "@/components/blog/BlogCategoryFilter";
 import BlogList from "@/components/blog/BlogList";
 import Container from "@/components/Container";
 import H1 from "@/components/headings/H1";
@@ -33,46 +34,26 @@ const Blog = ({ posts, siteConfig, preview }) => {
     <Layout {...siteConfig}>
       <Container className="px-4 py-8 lg:py-12">
         <H1>Alle Beiträge</H1>
-        <div className="my-2">
-          <Input
-            value={searchPhrase}
-            onChange={(e) => setSearchPhrase(e.target.value)}
-            placeholder="Suche..."
-            className="max-w-sm"
-          />
-        </div>
-        <div className="flex-wrap hidden pb-8 md:flex">
-          {filters?.map((item) => {
-            let isActive = categoryFilter == item;
-            // Set all to active if nothing is selected
-            if (!categoryFilter && item === filters[0]) isActive = true;
-            return (
-              <div
-                className={`p-2 mr-4 mb-4 cursor-pointer transition-all font-medium rounded-full hover:bg-f-red  hover:text-white ${
-                  isActive
-                    ? "bg-f-red text-white "
-                    : "bg-f-red/70 text-f-offwhite"
-                }`}
-                key={item}
-                onClick={() => {
-                  if (item === filters[0]) {
-                    setCategoryFilter("");
-                    return;
-                  }
-                  setCategoryFilter(item);
-                }}
-              >
-                {item}
-              </div>
-            );
-          })}
-        </div>
-        <div className="relative z-50 block pb-8 md:hidden">
-          <FilterDropdown
-            filters={filters}
-            handleCategoryFilter={setCategoryFilter}
-            categoryFilter={categoryFilter}
-          />
+        <div className="flex">
+          <div className="mr-6">
+            <div className="block text-sm font-medium leading-6 text-gray-900">
+              Suche
+            </div>
+            <div className="mt-2">
+              <Input
+                value={searchPhrase}
+                onChange={(e) => setSearchPhrase(e.target.value)}
+                // placeholder="Suche..."
+                className="max-w-sm"
+              />
+            </div>
+          </div>
+          <div>
+            <CategoryFilter
+              categories={filters}
+              setCategoryFilter={setCategoryFilter}
+            />
+          </div>
         </div>
         {preview ? (
           <PreviewSuspense fallback="Loading...">

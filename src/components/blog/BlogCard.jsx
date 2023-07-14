@@ -26,7 +26,7 @@ const BlogCard = ({ index, post, category }) => {
         </Link>
       </div>
       <div className="max-w-xl">
-        <div className="flex items-center mt-8 text-xs gap-x-4">
+        <div className="flex items-center mt-4 text-xs gap-x-4">
           <time hidden dateTime={post._createdAt} className="text-gray-500">
             {new Intl.DateTimeFormat("en-US", {
               month: "short",
