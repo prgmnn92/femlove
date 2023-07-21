@@ -10,7 +10,7 @@ const SectionBlog = ({ posts }) => {
   return (
     <section>
       <Container className="px-5 py-24 ">
-        <h2 className="pb-0 mb-2 text-3xl font-bold text-gray-900 lg:text-center lg:pb-4 lg:text-4xl title-font">
+        <h2 className="pb-4 mb-2 text-3xl font-bold text-gray-900 lg:text-center lg:pb-4 lg:text-4xl title-font">
           Top Beiträge
         </h2>
         <Slider posts={posts} />
