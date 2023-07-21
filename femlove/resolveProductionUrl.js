@@ -13,6 +13,5 @@ export function resolveProductionUrl(prev, {document}) {
   const searchParams = new URLSearchParams()
   searchParams.set('secret', '12345' || '')
   searchParams.set('slug', document.slug.current)
-  console.log(searchParams)
   return `${productionUrl.origin}/api/preview?${searchParams}`
 }

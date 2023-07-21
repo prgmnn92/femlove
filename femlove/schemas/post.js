@@ -27,6 +27,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'isTopPost',
+      title: 'Is Top Post',
+      type: 'boolean',
+    }),
+    defineField({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'string',

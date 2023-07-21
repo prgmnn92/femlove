@@ -1,9 +1,7 @@
 import React from "react";
 
-import Image from "next/image";
 import Link from "next/link";
 
-import BlogCard from "./BlogCard";
 import BlogList from "./BlogList";
 import Button from "../Button";
 import Container from "../Container";

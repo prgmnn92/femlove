@@ -3,15 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Roxborough-CF';
-  src: url('/fonts/Roxborough-CF.ttf'); 
+  font-family: "Roxborough-CF";
+  src: url("/fonts/Roxborough-CF.ttf");
   font-display: swap;
- }
+}
 
-
- @layer base {
+@layer base {
   html {
-    font-family: 'Montserrat', system-ui, sans-serif;
+    font-family: "Montserrat", system-ui, sans-serif;
   }
 
   h1,
@@ -20,7 +19,7 @@
   h4,
   h5,
   h6 {
-      font-family: 'Roxborough-CF', system-ui, sans-serif;
+    font-family: "Roxborough-CF", system-ui, sans-serif;
   }
 
   video {
@@ -28,21 +27,21 @@
   }
 
   /* Text inside of the blog content page */
-  .block-text  a {
+  .block-text a {
     @apply text-blue-600 underline;
-  } 
+  }
   /* .block-text  h2 {
     @apply mt-6 mb-6 text-xl font-medium lg:text-2xl;
   }  */
-  .block-text  h1 {
+  .block-text h1 {
     @apply mb-8 text-2xl lg:text-4xl;
-  } 
+  }
 
-  .block-text  img {
+  .block-text img {
     @apply mx-auto my-8 max-h-[400px] object-contain;
-  } 
+  }
   .block-text li:last-child {
-   @apply mb-8
+    @apply mb-8;
   }
   /* .block-text  p {
     @apply mb-4;
@@ -52,15 +51,13 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-rox: 'Roxborough-CF', 'Montserrat', Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-rox: "Roxborough-CF", "Montserrat", Monaco, "Cascadia Mono",
+    "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
+    "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -111,35 +108,34 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  font-style: "Montserrat", Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-  'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-  'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  font-style: "Montserrat", Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 }
 
-
-.hover-underline:after {    
+.hover-underline:after {
   background: none repeat scroll 0 0 transparent;
   bottom: -10px;
   content: "";
   display: block;
   height: 3px;
   border-radius: 5px;
-  border-top-right-radius : 0px;
+  border-top-right-radius: 0px;
   left: 50%;
   position: absolute;
-  background: #DD9D90;
+  background: #dd9d90;
   transition: width 0.6s ease 0s, left 0.6s ease 0s;
   transform: translatex(-50%);
   -webkit-transform: translatex(-50%);
   width: 0;
 }
 
-.hover-underline:hover:after { 
-  width: 20px !important; 
+.hover-underline:hover:after {
+  width: 20px !important;
   /* left: 0;  */
 }
 .nav-link--is-active {
-  color: #DD9D90;
+  color: #dd9d90;
 }
 
 .nav-link--is-active:after {
@@ -149,19 +145,39 @@ body {
   display: block;
   height: 3px;
   border-radius: 5px;
-  border-top-right-radius : 0px;
+  border-top-right-radius: 0px;
   left: 50%;
   position: absolute;
-  background: #DD9D90;
+  background: #dd9d90;
   /* transition: width 0.0s ease 0s, left 0.0s ease 0s; */
   transform: translatex(-50%);
   -webkit-transform: translatex(-50%);
-  width: 20px !important; 
+  width: 20px !important;
 }
 
 @media screen and (max-width: 800px) {
   .nav-link--is-active:after {
     bottom: 0px;
   }
-  
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #8585854d !important;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff !important;
+  background: #dd9d90 !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -5px !important;
 }
