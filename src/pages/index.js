@@ -20,7 +20,7 @@ export default function Home({ posts, siteConfig }) {
         <Container className="grid px-4 py-8 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-md mb-4 text-4xl leading-none tracking-tight fontbold md:text-7xl xl:text-7xl ">
-              Ganzheitliche Gesundheit für Frauen.
+              Zyklus & Ganzheitliche Frauengesundheit
             </h1>
             <p className="max-w-xl mb-2 font-light md:text-lg lg:text-xl">
               Femlove ist ein Blog, bei dem sich alles rund um ganzheitliche
