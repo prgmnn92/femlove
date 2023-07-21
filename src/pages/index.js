@@ -11,6 +11,7 @@ import ModalForm from "@/components/forms/ModalForm";
 import Layout from "@/components/Layout";
 import AboutMe from "@/components/sections/AboutMe";
 import CTA from "@/components/sections/CTA";
+import SectionBlog from "@/components/sections/SectionBlog";
 
 export default function Home({ posts, siteConfig }) {
   return (
@@ -44,7 +45,8 @@ export default function Home({ posts, siteConfig }) {
           </div>
         </Container>
         <AboutMe />
-        <BlogPreview posts={posts} />
+        {/* <BlogPreview posts={posts} /> */}
+        <SectionBlog posts={posts} />
         <CTA />
         <Quote />
         <ModalForm />
@@ -56,7 +58,6 @@ export default function Home({ posts, siteConfig }) {
 function Quote() {
   return (
     <section className="relative px-6 py-12 overflow-hidden isolate lg:px-8">
-      {/* <WomenSVG /> */}
       <div className="absolute flex justify-center w-full">
         <WomenSVG className="z-0 opacity-5" />
       </div>
