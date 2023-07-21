@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import Container from "../Container";
+import Socials from "../Socials";
 
 const InPageLinks = [
   { href: "/", name: "Start" },
@@ -79,7 +80,12 @@ const Navigation = () => {
             height={90}
           />
         </Link>
-        <MobileMenu />
+        <div className="flex flex-row items-center justify-center gap-6">
+          <div className="lg:hidden">
+            <Socials />
+          </div>
+          <MobileMenu />
+        </div>
         <div
           className={
             "w-full lg:block lg:w-auto  lg:static absolute left-0 top-[50px] shadow-sm lg:shadow-none  transition-all opacity-1 hidden"
@@ -106,6 +112,9 @@ const Navigation = () => {
               >
                 Newsletter
               </Link>
+            </li>
+            <li>
+              <Socials />
             </li>
           </ul>
         </div>
