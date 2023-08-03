@@ -3,6 +3,7 @@ import React from "react";
 import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Container from "@/components/Container";
 import H1 from "@/components/headings/H1";
@@ -21,6 +22,13 @@ const EmpfehlungsCard = ({ title, children }) => {
 };
 
 const Empfehlungen = ({ siteConfig }) => {
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/");
+
+    return () => {};
+  }, [router]);
+
   return (
     <Layout {...siteConfig}>
       <section>

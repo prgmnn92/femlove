@@ -12,7 +12,6 @@ const InPageLinks = [
   { href: "/", name: "Start" },
   { href: "/blog", name: "Blog" },
   { href: "/ueber-mich", name: "Über Mich" },
-  { href: "/empfehlungen", name: "Empfehlungen" },
   { href: "/angebot", name: "Angebot" },
   {
     href: "https://femlove-by-franzi.ck.page/26b521630c",
