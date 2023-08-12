@@ -14,7 +14,7 @@ const InPageLinks = [
   { href: "/ueber-mich", name: "Über Mich" },
   { href: "/angebot", name: "Angebot" },
   {
-    href: "https://femlove-by-franzi.ck.page/26b521630c",
+    href: "https://femlove-by-franzi.ck.page/newsletter1",
     name: "Für 0 Euro",
     target: "_blank",
   },
@@ -101,7 +101,7 @@ const Navigation = () => {
             ))}
             <li className="pt-4 lg:pt-0">
               <Link
-                href={"https://femlove-by-franzi.ck.page/newsletter"}
+                href={"https://femlove-by-franzi.ck.page/newsletter1"}
                 className={
                   "flex-none rounded-md bg-f-red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-f-red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-f-red transition-all"
                 }
@@ -169,7 +169,7 @@ function MobileMenu() {
             <div className="px-4 py-4">
               <Menu.Item className="flex justify-center px-2 py-2 text-center">
                 <Link
-                  href={"https://femlove-by-franzi.ck.page/newsletter"}
+                  href={"https://femlove-by-franzi.ck.page/newsletter1"}
                   className={
                     "bg-f-main text-white lg:ml-2 rounded-full font-semibold px-7 py-2 mx-auto hover:brightness-105 transition-all"
                   }
