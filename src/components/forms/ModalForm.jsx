@@ -62,12 +62,20 @@ function NewsletterSignUp({ setVisible }) {
           <CloseIcon />
         </div>
         <h2 className="max-w-2xl mx-auto text-3xl font-bold tracking-tight text-center text-white sm:text-4xl">
-          Bleib auf dem Laufenden!
+          Neu: Der wöchentliche Femlove-Newsletter
         </h2>
-        <p className="max-w-xl mx-auto mt-2 text-lg leading-8 text-center text-gray-300">
-          Bleib immer up-to-date und werde Teil meiner Femlove-Community, um
-          exklusive Tipps für einen gesunden und zyklusbewussten Lebensstil zu
-          erhalten. 🔥
+        <p className="mx-auto mt-2 leading-8 text-center text-gray-300 ">
+          ✦ jeden Dienstag erhältst du alltagstaugliche Tipps, Impulse,
+          Learnings oder Action Steps
+        </p>
+        <p className="max-w-xl mx-auto mt-2 leading-8 text-center text-gray-300">
+          ✦ all&apos;bout Zyklusbalance, Stressmanagement, Ernährung & Bewegung
+        </p>
+        <p className="max-w-xl mx-auto mt-2 leading-8 text-center text-gray-300">
+          ✦ kurz & knackig ohne viel Chichi
+        </p>
+        <p className="max-w-xl mx-auto mt-2 leading-8 text-center text-gray-300">
+          Go for your health & melde dich hier für den Femlove-Newsletter an 👇
         </p>
         {showThankYou ? (
           <div className="pt-4 text-lg font-bold text-white">
