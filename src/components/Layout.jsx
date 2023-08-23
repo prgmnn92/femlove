@@ -13,8 +13,6 @@ const Layout = (props) => {
   const { children } = props;
   let [isOpen, setOpenModal] = useState(false);
 
-  //const ogimage = urlFor(props?.openGraphImage) ?? "";
-
   return (
     <>
       <Head>

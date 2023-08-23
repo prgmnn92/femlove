@@ -3,9 +3,9 @@ import React from "react";
 import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 
-import Banner from "@/components/Banner";
 import ContactForm from "@/components/forms/ContactForm";
 import Layout from "@/components/Layout";
+import Banner from "@/components/sections/Banner";
 
 const Kontakt = ({ siteConfig }) => {
   return (

@@ -8,7 +8,7 @@ import Button from "./Button";
 function Consent({ setConsent, consent }) {
   useEffect(() => {
     setConsent(hasCookie("localConsent"));
-  }, []);
+  }, [setConsent]);
 
   const acceptCookie = () => {
     setConsent(true);
@@ -18,10 +18,6 @@ function Consent({ setConsent, consent }) {
   const closeP = () => {
     setConsent(true);
   };
-  // const denyCookie = () => {
-  //   setConsent(true);
-  //   setCookie("localConsent", "false", { maxAge: 60 * 60 * 24 * 365 });
-  // };
   if (consent === true) {
     return null;
   }

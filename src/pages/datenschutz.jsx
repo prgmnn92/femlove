@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
-import Banner from "@/components/Banner";
 import Layout from "@/components/Layout";
+import Banner from "@/components/sections/Banner";
 
 const Datenschutz = () => {
   return (

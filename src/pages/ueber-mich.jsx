@@ -6,21 +6,21 @@ import { sanityClient } from "@lib/sanity";
 import Image from "next/image";
 import Link from "next/link";
 
-import Banner from "@/components/Banner";
 import Layout from "@/components/Layout";
+import Banner from "@/components/sections/Banner";
 import { sourceSerif } from "@/fonts";
 
 const ÜberMich = ({ siteConfig }) => {
   return (
     <Layout {...siteConfig}>
       <Banner
-        title="Hi, ich bin Franzi"
+        title="Hi, ich bin Franziska"
         text="Herzlich Willkommen in meiner Welt."
         subtitle="Über mich"
       />
       <section className="py-16 mt-[-64px] bg-[#F4F4F4] px-4 rounded-[56px] relative z-20">
         <div className="container max-w-4xl mx-auto ">
-          <div className="flex items-start justify-between w-full max-w-5xl gap-8 mx-auto mb-10">
+          <div className="flex flex-col-reverse items-start justify-between w-full max-w-5xl gap-8 mx-auto lg:mb-10 lg:flex-row">
             <div>
               <h2
                 className="pb-4 text-base lg:text-2xl"
@@ -74,7 +74,7 @@ const ÜberMich = ({ siteConfig }) => {
             </div>
             <Image
               alt="feature"
-              className="object-contain object-center w-full rounded-[14px] aspect-auto border-8 border-white border-solid mt-20"
+              className="object-contain object-center w-full rounded-[14px] aspect-auto border-8 border-white border-solid lg:mt-20"
               src="/images/franzi.webp"
               width={250}
               height={400}

@@ -81,7 +81,9 @@ function Navigation() {
                 className={`hidden relative lg:ml-6 lg:flex lg:flex-col lg:items-center lg:inset-auto`}
               >
                 <div className="pt-2">
-                  <NavIcon />
+                  <Link href={"/"}>
+                    <NavIcon />
+                  </Link>
                 </div>
                 <div className="absolute bottom-[-65px] flex items-center gap-4 min-w-[100vw] justify-center">
                   {navigation.map((item) => (

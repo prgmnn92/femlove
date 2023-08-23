@@ -2,21 +2,27 @@ import React from "react";
 
 import Link from "next/link";
 
-import Container from "@/components/Container";
+import Button from "@/components/Button";
+import Layout from "@/components/Layout";
+import Banner from "@/components/sections/Banner";
 
 const FourOhFour = () => {
   return (
     <>
-      <Container
-        className={"min-h-[80vh] flex justify-center items-center flex-col"}
-      >
-        <h1>404 - Page Not Found</h1>
-        <Link className="mt-4" href="/">
-          <p className="px-4 py-2 text-white rounded-full bg-f-red">
-            Zurück zur Startseite
-          </p>
-        </Link>
-      </Container>
+      <Layout>
+        <Banner
+          title={"404 - Seite nicht gefunden"}
+          subtitle={"404"}
+          text={"Leider gibt es diese Seite nicht."}
+        />
+        <section className="py-16 mt-[-64px] bg-[#F4F4F4] px-4 rounded-[56px] relative z-20">
+          <div className="container mx-auto text-center">
+            <Link className="mt-4" href="/">
+              <Button title="Zurück zur Startseite" />
+            </Link>
+          </div>
+        </section>
+      </Layout>
     </>
   );
 };

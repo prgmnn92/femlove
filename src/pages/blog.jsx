@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { configQuery, postqueryBlogs } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 
-import Banner from "@/components/Banner";
-import CategoryFilter from "@/components/blog/BlogCategoryFilter";
+import CategoryFilter from "@/components/blog/CategoryFilter";
 import PostList from "@/components/blog/PostList";
 import Input from "@/components/Input";
 import Layout from "@/components/Layout";
+import Banner from "@/components/sections/Banner";
 
 const Blog = ({ posts, siteConfig, preview }) => {
   const [categoryFilter, setCategoryFilter] = useState("");
@@ -28,7 +28,7 @@ const Blog = ({ posts, siteConfig, preview }) => {
       <Banner
         title={"Femlove-Blog"}
         subtitle={"Das Herzstück"}
-        text={"Hier findest du alle meine Beiträge.."}
+        text={"Hier findest du alle meine Beiträge."}
       />
       <section className="py-16 mt-[-64px] bg-[#F4F4F4] px-4 rounded-[56px] relative z-20">
         <div className="container mx-auto ">
