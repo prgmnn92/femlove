@@ -5,6 +5,7 @@ import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 import Image from "next/image";
 
+import Banner from "@/components/Banner";
 import Button from "@/components/Button";
 import Container from "@/components/Container";
 import Layout from "@/components/Layout";
@@ -13,26 +14,20 @@ import CTA from "@/components/sections/CTA";
 const Angebot = ({ siteConfig }) => {
   return (
     <Layout {...siteConfig}>
-      <section>
-        <Container className="px-4 py-8 lg:py-12 lg:pb-4">
-          <div className="text-center">
-            <h1 className="py-6 text-3xl font-bold text-gray-900 lg:text-4xl title-font">
-              Hier entsteht ein neues Angebot für dich
-            </h1>
-            <p className="text-xl italic">
-              Wenn du nichts mehr bei Femlove verpassen möchtest, melde dich für
-              meinen wöchentlichen Newsletter an.
-            </p>
-            <div className="pt-8">
-              <a
-                href={"https://femlove-by-franzi.ck.page/newsletter1"}
-                target="_blank"
-              >
-                <Button>Hier anmelden</Button>
-              </a>
-            </div>
-          </div>
-        </Container>
+      <Banner
+        title="Hier entsteht ein neues Angebot für dich"
+        subtitle="Angebot"
+        text={
+          "Wenn du nichts mehr bei Femlove verpassen möchtest, melde dich für meinen wöchentlichen Newsletter an."
+        }
+      />
+      <section className="pb-64 text-center bg-[#f4f4f4] rounded-[56px] lg:pt-24 pt-12 mt-[-64px] relative z-20">
+        <a
+          href={"https://femlove-by-franzi.ck.page/newsletter1"}
+          target="_blank"
+        >
+          <Button title="Hier anmelden" />
+        </a>
       </section>
     </Layout>
   );

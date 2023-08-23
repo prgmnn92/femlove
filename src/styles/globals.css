@@ -19,7 +19,9 @@
   h4,
   h5,
   h6 {
-    font-family: "Roxborough-CF", system-ui, sans-serif;
+    /* font-family: "Roxborough-CF", system-ui, sans-serif; */
+    /* font-family: var(--font-source_serif_4); */
+    font-family: "__Source_Serif_4_98e405", "__Source_Serif_4_Fallback_98e405";
   }
 
   video {
@@ -34,9 +36,12 @@
     @apply mt-6 mb-6 text-xl font-medium lg:text-2xl;
   }  */
   .block-text h1 {
-    @apply mb-8 text-2xl lg:text-4xl;
+    /* @apply mb-8 text-2xl lg:text-4xl; */
   }
 
+  .block-text h2 {
+    font-family: "__Source_Serif_4_98e405", "__Source_Serif_4_Fallback_98e405";
+  }
   .block-text img {
     @apply mx-auto my-8 max-h-[400px] object-contain;
   }
@@ -174,10 +179,37 @@ body {
 
 .swiper-pagination-bullet-active {
   color: #fff !important;
-  background: #dd9d90 !important;
+  background: #9c8d7f !important;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: -5px !important;
+}
+
+.swiper-wrapper {
+  padding-bottom: 32px !important;
+  align-items: stretch !important;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
+@-webkit-keyframes zoomin {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }

@@ -1,18 +1,21 @@
 import React from "react";
 
-const Button = ({ children, className, onClick, type, isSecondary }) => {
+const Button = ({ title, small, isSecondary, onClick, type = "button" }) => {
   return (
     <button
-      type={type || "button"}
       onClick={onClick}
-      className={`flex-none rounded-md px-3.5 py-2.5 text-sm font-semibold  shadow-sm hover:bg-f-red-light 
-      focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-f-red transition-all ${className} ${
+      type={type}
+      className={`relative  duration-300 rounded-[14px] transition-all focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  cursor-pointer 
+      ${small ? "px-3 py-1 text-xs" : "px-5 py-2 text-sm"}
+      ${
         isSecondary
-          ? "bg-tranparent text-f-red border-f-red border-2 hover:text-white hover:border-f-red-light"
-          : " bg-f-red text-white"
-      }`}
+          ? "text-black  bg-white hover:text-white hover:bg-f-brown"
+          : "text-white bg-f-brown hover:text-black hover:bg-white"
+      }
+      
+      `}
     >
-      {children}
+      {title}
     </button>
   );
 };

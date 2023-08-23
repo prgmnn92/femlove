@@ -27,12 +27,12 @@ function Consent({ setConsent, consent }) {
   }
   return (
     <div
-      className={`fixed md:flex md:items-center md:justify-between bottom-0 w-full left-0  bg-slate-100 p-4 md:py-4 md:px-8  ${
+      className={`fixed md:flex md:items-center md:justify-between bottom-0 w-full left-0  bg-slate-100 p-4 md:py-4 md:px-8 z-[999999999] text-center  ${
         consent ? "hidden" : ""
       }`}
     >
       Diese Website verwendet Cookies, um das Nutzererlebnis zu verbessern.
-      <div className="">
+      <div className="pt-4 text-center lg:pt-0">
         <button
           onClick={(e) => {
             closeP();
@@ -46,10 +46,8 @@ function Consent({ setConsent, consent }) {
           onClick={() => {
             acceptCookie();
           }}
-          className="w-full mt-2 text-white md:mt-0 bg-f-green md:w-auto "
-        >
-          Akzeptieren
-        </Button>
+          title={"Akzeptieren"}
+        />
       </div>
     </div>
   );

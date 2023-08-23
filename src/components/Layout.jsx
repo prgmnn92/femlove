@@ -4,8 +4,9 @@ import Head from "next/head";
 import { NextSeo } from "next-seo";
 
 import Modal from "./Modal";
+import Navigation from "./Navigation";
 import Footer from "./sections/Footer";
-import Navigation from "./sections/Navigation";
+import { montserrat } from "@/fonts";
 import { ModalContext } from "@/ModalContext";
 
 const Layout = (props) => {
@@ -41,14 +42,14 @@ const Layout = (props) => {
       />
 
       <div className="flex flex-col min-h-screen antialiased">
-        <div className="grow">
+        <div style={montserrat.style} className="overflow-hidden grow">
           <Navigation {...props} />
           <Modal isOpen={isOpen} setOpenModal={setOpenModal} />
           <ModalContext.Provider value={{ setOpenModal }}>
-            <div>{children}</div>
+            {children}
           </ModalContext.Provider>
+          <Footer {...props} />
         </div>
-        <Footer {...props} />
       </div>
     </>
   );

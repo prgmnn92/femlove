@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css/pagination";
 import "swiper/css";
-import BlogCard from "./blog/BlogCard";
+import PostCard from "./PostCard";
 
 const Slider = ({ posts }) => {
   const pagination = {
@@ -19,7 +19,7 @@ const Slider = ({ posts }) => {
   };
   return (
     <Swiper
-      spaceBetween={50}
+      spaceBetween={16}
       slidesPerView={1}
       pagination={pagination}
       modules={[Pagination]}
@@ -42,12 +42,7 @@ const Slider = ({ posts }) => {
     >
       {posts.map((post, idx) => (
         <SwiperSlide key={post._id}>
-          <BlogCard
-            index={idx}
-            post={post}
-            className="mb-6 md:w-1/3 sm:mb-4"
-            category={post.categories}
-          />
+          <PostCard index={idx} post={post} category={post.categories} />
         </SwiperSlide>
       ))}
     </Swiper>

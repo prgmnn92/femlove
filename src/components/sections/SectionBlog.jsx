@@ -16,7 +16,7 @@ const SectionBlog = ({ posts }) => {
         <Slider posts={posts} />
         <div className="flex pt-4 lg:justify-center">
           <Link href={"/blog"}>
-            <Button isSecondary>Alle Beiträge</Button>
+            <Button isSecondary title="Alle Beiträge" />
           </Link>
         </div>
       </Container>

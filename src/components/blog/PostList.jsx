@@ -1,8 +1,8 @@
 import React from "react";
 
-import BlogCard from "@/components/blog/BlogCard";
+import PostCard from "../PostCard";
 
-const BlogList = ({ posts, categoryFilter, searchPhrase }) => {
+const PostList = ({ posts, categoryFilter, searchPhrase }) => {
   let blogPosts = posts
     .filter((post) => {
       let categorieList = post.categories.reduce((acc, item, index) => {
@@ -24,13 +24,12 @@ const BlogList = ({ posts, categoryFilter, searchPhrase }) => {
     });
 
   return (
-    <div className="grid max-w-2xl grid-cols-1 mx-auto mt-16 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+    <div className="grid max-w-2xl grid-cols-1 mx-auto mt-16 gap-x-4 lg:gap-y-12 gap-y-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {blogPosts.map((post, idx) => (
-        <BlogCard
+        <PostCard
           index={idx}
           key={post._id}
           post={post}
-          className="mb-6 md:w-1/3 sm:mb-4"
           category={post.categories}
         />
       ))}
@@ -38,4 +37,4 @@ const BlogList = ({ posts, categoryFilter, searchPhrase }) => {
   );
 };
 
-export default BlogList;
+export default PostList;

@@ -1,20 +1,13 @@
-import React, { useState, Fragment, lazy } from "react";
+import React, { useState } from "react";
 
-import { Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { configQuery, postqueryBlogs } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 
+import Banner from "@/components/Banner";
 import CategoryFilter from "@/components/blog/BlogCategoryFilter";
-import BlogList from "@/components/blog/BlogList";
-import Container from "@/components/Container";
-import H1 from "@/components/headings/H1";
+import PostList from "@/components/blog/PostList";
 import Input from "@/components/Input";
 import Layout from "@/components/Layout";
-import PreviewSuspense from "@/components/PreviewSuspense";
-import CTA from "@/components/sections/CTA";
-
-const PreviewBlogList = lazy(() => import("@/components/blog/PreviewBlogList"));
 
 const Blog = ({ posts, siteConfig, preview }) => {
   const [categoryFilter, setCategoryFilter] = useState("");
@@ -32,109 +25,43 @@ const Blog = ({ posts, siteConfig, preview }) => {
 
   return (
     <Layout {...siteConfig}>
-      <Container className="px-4 py-8 lg:py-12">
-        <H1>Alle Beiträge</H1>
-        <div className="flex">
-          <div className="mr-6">
-            <div className="block text-sm font-medium leading-6 text-gray-900">
-              Suche
+      <Banner
+        title={"Femlove-Blog"}
+        subtitle={"Das Herzstück"}
+        text={"Hier findest du alle meine Beiträge.."}
+      />
+      <section className="py-16 mt-[-64px] bg-[#F4F4F4] px-4 rounded-[56px] relative z-20">
+        <div className="container mx-auto ">
+          <div className="flex">
+            <div className="mr-6">
+              <div className="block text-sm font-medium leading-6 text-gray-900">
+                Suche
+              </div>
+              <div className="mt-2">
+                <Input
+                  value={searchPhrase}
+                  onChange={(e) => setSearchPhrase(e.target.value)}
+                  className="max-w-sm"
+                />
+              </div>
             </div>
-            <div className="mt-2">
-              <Input
-                value={searchPhrase}
-                onChange={(e) => setSearchPhrase(e.target.value)}
-                // placeholder="Suche..."
-                className="max-w-sm"
+            <div>
+              <CategoryFilter
+                categories={filters}
+                setCategoryFilter={setCategoryFilter}
               />
             </div>
           </div>
-          <div>
-            <CategoryFilter
-              categories={filters}
-              setCategoryFilter={setCategoryFilter}
-            />
-          </div>
-        </div>
-        {preview ? (
-          <PreviewSuspense fallback="Loading...">
-            <PreviewBlogList
-              query={postqueryBlogs}
-              categoryFilter={categoryFilter}
-              searchPhrase={searchPhrase}
-            />
-          </PreviewSuspense>
-        ) : (
-          <BlogList
+          <PostList
             posts={posts}
             categoryFilter={categoryFilter}
             searchPhrase={searchPhrase}
           />
-        )}
-      </Container>
-      <CTA />
+        </div>
+      </section>
     </Layout>
   );
 };
-
-function FilterDropdown({ filters, handleCategoryFilter, categoryFilter }) {
-  return (
-    <div className="relative z-5">
-      <Menu as="div" className="relative inline-block text-left">
-        <div>
-          <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white rounded-md bg-f-green hover:bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-            Kategorien
-            <ChevronDownIcon
-              className="w-5 h-5 ml-2 -mr-1 text-violet-200 hover:text-violet-100"
-              aria-hidden="true"
-            />
-          </Menu.Button>
-        </div>
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
-        >
-          <Menu.Items className="absolute left-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <div className="px-1 py-1 ">
-              {filters.map((filterItem) => {
-                let isActive = categoryFilter == filterItem;
-                // Set all to active if nothing is selected
-                if (!categoryFilter && filterItem === filters[0])
-                  isActive = true;
-                return (
-                  <Menu.Item key={filterItem}>
-                    {({ active }) => (
-                      <button
-                        onClick={() => {
-                          if (filterItem === filters[0]) {
-                            handleCategoryFilter("");
-                            return;
-                          }
-                          handleCategoryFilter(filterItem);
-                        }}
-                        className={`${
-                          active ? "bg-f-green text-white" : "text-gray-900"
-                        } ${
-                          isActive ? "bg-f-green text-white" : ""
-                        } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                      >
-                        {filterItem}
-                      </button>
-                    )}
-                  </Menu.Item>
-                );
-              })}
-            </div>
-          </Menu.Items>
-        </Transition>
-      </Menu>
-    </div>
-  );
-}
 
 export async function getStaticProps({ preview }) {
   if (preview) {
