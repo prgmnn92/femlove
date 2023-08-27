@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { configQuery, postqueryBlogs } from "@lib/groq";
+import { categoryQuery, configQuery, postqueryBlogs } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 
 import CategoryFilter from "@/components/blog/CategoryFilter";
@@ -9,19 +9,12 @@ import Input from "@/components/Input";
 import Layout from "@/components/Layout";
 import Banner from "@/components/sections/Banner";
 
-const Blog = ({ posts, siteConfig, preview }) => {
+const Blog = ({ posts, categories, siteConfig, preview }) => {
   const [categoryFilter, setCategoryFilter] = useState("");
   const [searchPhrase, setSearchPhrase] = useState("");
-  const filters = [
-    "Alle Beiträge", // First element will always set categoryFilter to  = ""
-    "Zyklus & Hormonbalance",
-    "Ernährung & Nährstoffe",
-    "Selfcare & Wohlbefinden",
-    "Menstruation",
-    "PMS",
-    "Hormonfreie Verhütung",
-    "Sonstiges & Lifestyle",
-  ];
+  const filters = ["Alle Beiträge", ...categories.map((item) => item.title)];
+
+  console.log(categories);
 
   return (
     <Layout {...siteConfig}>
@@ -69,12 +62,14 @@ export async function getStaticProps({ preview }) {
   }
 
   const posts = await sanityClient.fetch(postqueryBlogs);
+  const categories = await sanityClient.fetch(categoryQuery);
   const config = await sanityClient.fetch(configQuery);
 
   return {
     props: {
       siteConfig: { ...config },
       posts,
+      categories,
     },
   };
 }
