@@ -21,8 +21,8 @@ const Impressum = () => {
               <span>
                 <span>
                   Franziska Pargmann <br />
-                  Bahnhofstraße 12 <br />
-                  38176 Wendeburg
+                  Wurmbergstr. 74 <br />
+                  38122 Braunschweig
                 </span>
               </span>
             </span>
@@ -55,8 +55,9 @@ const Impressum = () => {
               <span>
                 <span>
                   Franziska Pargmann <br />
-                  Bahnhofstr. 12 <br />
-                  38176 Wendeburg
+                  Wurmbergstr. 74
+                  <br />
+                  38122 Braunschweig
                 </span>
               </span>
             </span>

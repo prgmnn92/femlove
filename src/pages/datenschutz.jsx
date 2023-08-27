@@ -213,9 +213,9 @@ const Datenschutz = () => {
             <span>
               Franziska Pargmann
               <br />
-              Bahnhofstr. 12
+              Wurmbergstr. 74
               <br />
-              38176 Wendeburg
+              38122 Braunschweig
             </span>
           </p>
 
