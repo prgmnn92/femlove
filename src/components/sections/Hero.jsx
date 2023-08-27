@@ -29,8 +29,8 @@ const Hero = () => {
         </h1>
         <p className="max-w-md pt-4 pb-8 mx-auto text-sm lg:max-w-lg lg:text-lg text-black/50">
           Femlove ist ein Blog für Frauen, die mehr wollen: Wachstum. Erfüllung.
-          Selbstbestimmtheit. Mit einer tiefen Verbindung zu sich selbst und
-          ihren Bedürfnissen.
+          Selbstbestimmung. Mit einer tiefen Verbindung zu sich selbst und ihren
+          Bedürfnissen.
         </p>
         <Link href="/" className="opacity-0">
           <Button title="Newsletter" />
