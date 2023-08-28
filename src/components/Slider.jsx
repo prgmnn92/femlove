@@ -13,7 +13,6 @@ const Slider = ({ posts }) => {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
-      console.log(className);
       return "<span class=" + className + "></span>";
     },
   };

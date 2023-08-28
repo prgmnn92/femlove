@@ -8,7 +8,7 @@ import Slider from "../Slider";
 
 const Posts = ({ posts }) => {
   return (
-    <section className="py-32 mt-[-64px] bg-[#F4F4F4] px-4">
+    <section id="blog" className="py-32 mt-[-64px] bg-[#F4F4F4] px-4">
       <div className="container relative z-10 mx-auto">
         <Heading title="Beliebteste Beiträge" subtitle="on the blog" />
         {/* BLOG POSTS  */}

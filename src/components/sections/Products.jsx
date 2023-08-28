@@ -22,12 +22,12 @@ const Products = () => {
           <ProductCard
             title={"1:1 Coaching"}
             category={"deep dive"}
-            href={"/kontakt"}
+            href={"/angebot"}
             imageSrc={"/images/coaching.jpg"}
             text={
-              "Bist du ready für den Deep Dive? In meinem 1:1 Coaching-Programm begleite ich dich über mehrere Wochen auf deinem Weg in ein erfülltes und ausgeglichenes Leben."
+              "Bist du ready für den Deep Dive? Ich biete verschiedene Möglichkeiten eines 1:1 Coachings an: Einen “Zyklus-Power-Call”, meinen “Super-Call”, &&&. Für jeden Zeitrahmen und Geldbeutel ist etwas dabei. Erfahre hier direkt mehr."
             }
-            cta="Hier anfragen"
+            cta="Mehr erfahren"
           />
         </div>
       </div>

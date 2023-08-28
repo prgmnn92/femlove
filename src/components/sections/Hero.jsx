@@ -27,18 +27,17 @@ const Hero = () => {
         >
           Zyklusbewusstsein trifft Selbstverwirklichung
         </h1>
-        <p className="max-w-md pt-4 pb-8 mx-auto text-sm lg:max-w-lg lg:text-lg text-black/50">
+        <p className="max-w-md pt-4 pb-16 mx-auto text-sm lg:max-w-lg lg:text-lg text-black/50">
           Femlove ist ein Blog für Frauen, die mehr wollen: Wachstum. Erfüllung.
           Selbstbestimmung. Mit einer tiefen Verbindung zu sich selbst und ihren
           Bedürfnissen.
         </p>
-        <Link href="/" className="opacity-0">
-          <Button title="Newsletter" />
-        </Link>
+        {/* <Link href="/#blog" className="opacity-1">
+          <Button title="Yess, here I am" />
+        </Link> */}
         <InView
           as="div"
           onChange={(inView, entry) => {
-            console.log(inView);
             setImageInView(inView);
           }}
           className="rounded-[14px] absolute left-[-350px] bottom-[50px] overflow-hidden max-w-[180px] max-h-[300px] min-w-[180px] min-h-[300px]"

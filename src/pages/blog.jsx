@@ -14,8 +14,6 @@ const Blog = ({ posts, categories, siteConfig, preview }) => {
   const [searchPhrase, setSearchPhrase] = useState("");
   const filters = ["Alle Beiträge", ...categories.map((item) => item.title)];
 
-  console.log(categories);
-
   return (
     <Layout {...siteConfig}>
       <Banner
