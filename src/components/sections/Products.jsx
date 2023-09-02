@@ -25,7 +25,7 @@ const Products = () => {
             href={"/angebot"}
             imageSrc={"/images/coaching.jpg"}
             text={
-              "Bist du ready für den Deep Dive? Ich biete verschiedene Möglichkeiten eines 1:1 Coachings an: Einen “Zyklus-Power-Call”, meinen “Super-Call”, &&&. Für jeden Zeitrahmen und Geldbeutel ist etwas dabei. Erfahre hier direkt mehr."
+              "Bist du ready für den Deep Dive? Ich biete verschiedene Möglichkeiten eines 1:1 Coachings an: Einen “Zyklus-Power-Call”, meinen “Super-Call”, gemeinsame Monatsplanung und ganz individuelle Coachings."
             }
             cta="Mehr erfahren"
           />

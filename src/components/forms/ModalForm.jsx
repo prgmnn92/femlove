@@ -9,7 +9,7 @@ export default function ModalForm() {
   useEffect(() => {
     let modalTimeout = setTimeout(() => {
       setVisible(true);
-    }, 6000);
+    }, 5000);
     return () => {
       clearTimeout(modalTimeout);
     };
@@ -71,6 +71,7 @@ function NewsletterSignUp({ setVisible }) {
         >
           Neu
         </p>
+        <div className="w-8 h-[1px] bg-black/40 mx-auto my-4 rounded"></div>
         <h2
           style={sourceSerif.style}
           className="max-w-2xl pb-8 mx-auto text-3xl font-light tracking-tight text-center text-black sm:text-4xl"
@@ -79,10 +80,10 @@ function NewsletterSignUp({ setVisible }) {
         </h2>
         <p className="mx-auto mt-2 leading-8 text-center text-gray-600 ">
           ✦ jeden Dienstag erhältst du alltagstaugliche Tipps, Impulse oder
-          Action Steps für ein zyklusbewusstes & erfülltes Leben
+          Action Steps für ein zyklusbewusstes, gesundes & erfülltes Leben
         </p>
         <p className="max-w-xl mx-auto mt-2 leading-8 text-center text-gray-600">
-          ✦ all&apos;bout Zyklusbewusstsein, Growth & Mindset, Gesundheit &
+          ✦ all&apos;bout Zyklusbewusstsein, Selbstverwirklichung, Gesundheit &
           Wohlbefinden
         </p>
         <p className="max-w-xl mx-auto mt-2 leading-8 text-center text-gray-600">

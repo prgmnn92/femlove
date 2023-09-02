@@ -81,11 +81,6 @@ const Post = (props) => {
             <div>
               <MainImage post={post} />
               {post.body && <PortableText value={post.body} />}
-              <p className="pt-4 text-xs">
-                *Anzeige: Bei den mit Sternchen markierten Links handelt es sich
-                um Affiliate-Links, für die ich je nach Erfolg eine kleine
-                Provision erhalte.
-              </p>
             </div>
           </div>
         </article>

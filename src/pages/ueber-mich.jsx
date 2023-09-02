@@ -30,15 +30,13 @@ const ÜberMich = ({ siteConfig }) => {
                 Unzufriedenheitsgedanken? War’s das schon? Kannst deine
                 Stimmungen manchmal selbst nicht verstehen? Fühlst dich von dir
                 disconnected und funktionierst gefühlt nur, um die Bedürfnisse
-                anderer zu erfüllen? OMG, ich kann gar nicht aufhören, weitere
-                Situationen aufzuzählen.
+                anderer zu erfüllen?
               </p>
               <p className="pb-8 text-sm font-light lg:text-lg">
                 Also: Findest du dich auf irgendeine Art wieder, ich verstehe
                 dich zu 100%. Hab all das durch und möchte dich nun an die Hand
-                nehmen, damit auch du deinen Weg in ein erfülltes und
-                selbstbestimmtes Leben - mit einem gesunden & zyklusbewussten
-                Lifestyle - erschaffen kannst.
+                nehmen, damit auch du deinen Weg in ein erfülltes,
+                selbstbestimmtes und gesundes Leben erschaffen kannst.
               </p>
               <p className="pb-8 text-sm font-light lg:text-lg">
                 Hier erfährst du nun erstmal mehr über mich und Femlove.
@@ -67,7 +65,13 @@ const ÜberMich = ({ siteConfig }) => {
             <p>🙌 Team Positive & Growth Mindset</p>
             <p>🙅‍♀️ Äußere Erwartungen</p>
           </div>
-          <div className="py-6 text-sm font-light columns-2 lg:text-lg">
+          <h3
+            className="pt-6 pb-2 text-base lg:text-lg"
+            style={sourceSerif.style}
+          >
+            Das ist mit besonders wichtig:
+          </h3>
+          <div className="pb-6 text-sm font-light columns-2 lg:text-lg">
             <p>❤️ Meine liebsten Menschen.</p>
             <p>❤️ Gesundheit.</p>
             <p>❤️ Freiheit.</p>
@@ -76,9 +80,12 @@ const ÜberMich = ({ siteConfig }) => {
 
           <div className="flex flex-col flex-wrap md:mb-10 lg:w-1/2 lg:text-left"></div>
         </div>
-        <div className="container max-w-3xl mx-auto ">
+        <div className="container max-w-4xl mx-auto ">
           <div className="flex flex-col flex-wrap mb-10 text-sm font-light lg:pr-12 lg:text-left lg:text-lg">
-            <h3 className="pb-2 text-base lg:text-lg" style={sourceSerif.style}>
+            <h3
+              className="pb-2 text-base font-normal lg:text-lg"
+              style={sourceSerif.style}
+            >
               Femlove…
             </h3>
             <p className="pb-4">
@@ -88,33 +95,47 @@ const ÜberMich = ({ siteConfig }) => {
             <p className="pb-4">
               Warum Zyklus? Ich war und bin begeistert von unserem Zyklus und
               wie er unser Leben beeinflusst, wollte mit meinem Blog für noch
-              mehr Zykluswissen sorgen, denn ich stand vor etwa 3 Jahren nach
-              dem Pille Absetzen bei Null, was meinen Zyklus anging.
+              mehr Zykluswissen sorgen, denn ich - wie so viele andere Frauen
+              auch - stand vor etwa 3 Jahren nach dem Pille Absetzen bei Null,
+              was meinen Zyklus anging.
             </p>
             <p className="pb-2">
-              Ich habe schon damals festgestellt, dass der Zyklus bei mir einen
-              wichtigen Part auf dem Weg zu mehr Selbstliebe eingenommen hat und
-              so entstand übrigens auch der Name Femlove:
+              Außerdem habe ich gelernt, dass der Zyklus bei mir einen wichtigen
+              Part auf dem Weg zu mehr Selbstliebe eingenommen hat und so
+              entstand übrigens auch der Name Femlove:
             </p>
             <p className="pb-2">
               “Fem” für Feminität, Weiblichkeit, Frausein - all das, was uns
               Frauen ausmacht. “Love” für den Weg zu mehr Selbstliebe,
               -akzeptanz und -vertrauen.
             </p>
-
-            <p className="pb-4">
-              Mit der Zeit durfte ich lernen, dass ich so viel mehr mit dir
-              teilen möchte. Es ist an der Zeit für eine kleine Veränderung…
-            </p>
-            <p className="pb-4">
-              Ich beschäftige mich schon seit mehreren Jahren intensiv mit
-              Themen wie Persönlichkeitsentwicklung und Selbstverwirklichung,
-              gesellschaftliche Erwartungen und Entwicklungen… Themen, über die
-              ich stundenlang reden könnte. Übrigens: Deep Talk? I’m in. Warum
-              ich damals keinen Blog dazu gestartet habe? Keine Ahnung. Dennoch
-              bin ich um ein Jahr Erfahrung reicher und kombiniere meine
-              Herzensthemen zu einem Herzensprojekt.
-            </p>
+            <div className="grid items-start max-w-2xl grid-cols-1 py-4 mx-auto gap-x-8 gap-y-4 sm:gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+              <div className="relative px-6 pt-96 overflow-hidden bg-gray-900 rounded-[14px] pb-9 sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10 border-8 border-white border-solid ">
+                <Image
+                  src={"/images/ueber1.jpg"}
+                  className="absolute top-0 bottom-0 left-0 right-0 object-cover w-full h-full"
+                  width={400}
+                  height={600}
+                  alt=""
+                />
+              </div>
+              <div>
+                <p className="pb-4">
+                  Mit der Zeit durfte ich lernen, dass ich so viel mehr mit dir
+                  teilen möchte. Es ist an der Zeit für eine kleine Veränderung…
+                </p>
+                <p className="pb-4">
+                  Ich beschäftige mich schon seit mehreren Jahren intensiv mit
+                  Themen wie Persönlichkeitsentwicklung und
+                  Selbstverwirklichung, gesellschaftliche Erwartungen und
+                  Entwicklungen… Themen, über die ich stundenlang reden könnte.
+                  Übrigens: Deep Talk? I’m in. Warum ich damals keinen Blog dazu
+                  gestartet habe? Keine Ahnung. Dennoch bin ich um ein Jahr
+                  Erfahrung reicher und kombiniere meine Herzensthemen zu einem
+                  Herzensprojekt.
+                </p>
+              </div>
+            </div>
             <p className="pb-4">
               Denn ich bin fest davon überzeugt, dass uns ein zyklusbewusster
               Lifestyle - also die Verbindung zu unserem Zyklus - einen Schritt
@@ -172,21 +193,34 @@ const ÜberMich = ({ siteConfig }) => {
             <p className="pb-2 text-xs lg:text-base">
               🫧 Autodidaktische Aneignung zum Thema Achtsamkeit
             </p>
-            <p className="pt-8 pb-4">
-              Meine Mission ist es, Frauen zu einem Leben im Einklang mit ihrem
-              Zyklus, in dem sie mehr Energie haben, sich selbst priorisieren,
-              ihren Bedürfnissen und Leidenschaften nachgehen, sich selbst ein
-              Leben voll Selbstverwirklichung erschaffen.{" "}
-            </p>
-            <p className="pb-4">
-              You can do this! Sei mutig und geh für dich los.
-            </p>
+            <div className="grid items-start max-w-2xl grid-cols-1 py-4 mx-auto gap-x-8 gap-y-4 sm:gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+              <div>
+                <p className="pb-4">
+                  Meine Mission ist es, Frauen zu einem Leben im Einklang mit
+                  ihrem Zyklus, in dem sie mehr Energie haben, sich selbst
+                  priorisieren, ihren Bedürfnissen und Leidenschaften nachgehen,
+                  sich selbst ein Leben voll Selbstverwirklichung erschaffen.{" "}
+                </p>
+                <p className="pb-4">
+                  You can do this! Sei mutig und geh für dich los.
+                </p>
 
-            <p className="pb-4">
-              Deine
-              <br />
-              Franziska
-            </p>
+                <p className="pb-4">
+                  Deine
+                  <br />
+                  Franziska
+                </p>
+              </div>
+              <div className="relative px-6 pt-80 overflow-hidden bg-gray-900 rounded-[14px] pb-9 sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10 border-8 border-white border-solid ">
+                <Image
+                  src={"/images/ueber2.jpg"}
+                  className="absolute top-0 bottom-0 left-0 right-0 object-cover w-full h-full"
+                  width={400}
+                  height={600}
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

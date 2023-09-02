@@ -4,27 +4,151 @@ import React from "react";
 import { configQuery } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 
-import Button from "@/components/Button";
 import Layout from "@/components/Layout";
+import ProductCard from "@/components/ProductCard";
 import Banner from "@/components/sections/Banner";
 
 const Angebot = ({ siteConfig }) => {
+  const angebotPowerCallContent = (
+    <div>
+      <ul>
+        <li className="pb-2">
+          ✦ Verstehe wie du deine Zyklusphasen für dich nutzen kannst
+        </li>
+        <li className="pb-2">✦ Steigere deine Energie und Kreativität</li>
+        <li className="pb-2">
+          ✦ Verbessere deine Produktivität - auch in der 2. Zyklushälfte
+        </li>
+        <li className="pb-2">
+          ✦ Vertiefe die Verbindung zu deinem Körper und seinen Bedürfnissen
+        </li>
+        <li className="pb-2">
+          ✦ Tschüss Energielosigkeit & Stimmungsschwankungen 
+        </li>
+      </ul>
+      <p>☞ ab 69 Euro</p>
+    </div>
+  );
+
+  const angebotSuperCallContent = (
+    <div>
+      <ul>
+        <li className="pb-2">
+          ✦ raus aus dem Unzufriedenheitsdrama, rein in ein erfülltes und
+          selbstbestimmtes Leben
+        </li>
+        <li className="pb-2">
+          ✦ löse dich endlich von äußeren Erwartungen und Vergleichen
+        </li>
+        <li className="pb-2">
+          ✦ lass die Vergangenheit los und fang an die Dinge zu ändern, die in
+          deiner Macht stehen
+        </li>
+        <li className="pb-2">
+          ✦ erkenne deinen Selbstwert, übernimm Verantwortung und geh für dich
+          los
+        </li>
+        <li className="pb-2">
+          ✦ erschaffe ein Leben mit einer guten Portion Energie, Wohlbefinden,
+          Balance und harmonischen Beziehungen
+        </li>
+      </ul>
+      <p>☞ ab 170 Euro</p>
+    </div>
+  );
+
+  const monthlyCallContent = (
+    <div>
+      <ul>
+        <li className="pb-2">
+          🚨 Special Offer: Schnapp dir eine oder mehrere Freundinnen und bucht
+          einen exklusiven Gruppencall zum Sonderpreis! Gemeinsam könnt ihr euch
+          inspirieren und gegenseitig motivieren.
+        </li>
+        <li className="pb-2">
+          ✦ Geh zielgerichtet und mit klarem Fokus durch den Monat
+        </li>
+        <li className="pb-2">
+          ✦ Optional: Passe deine Planung an deinen Zyklus an
+        </li>
+      </ul>
+      <p>
+        ☞ 25 Euro / Sonderpreis bei längerer Zusammenarbeit und Gruppencall auf
+        Anfrage
+      </p>
+    </div>
+  );
+
+  const visionCallContent = (
+    <div>
+      <ul>
+        <li className="pb-2">✦ Lets be creative & have some fun together</li>
+      </ul>
+      <p>
+        Donnerstag, 28.9.2023, 20 Uhr via Zoom (Einladungslink und weitere
+        Informationen erhältst du per Mail)
+      </p>
+    </div>
+  );
+
   return (
     <Layout {...siteConfig}>
       <Banner
-        title="Hier entsteht ein neues Angebot für dich"
+        title="So kannst du mit mir zusammenarbeiten"
         subtitle="Angebot"
         text={
-          "Wenn du nichts mehr bei Femlove verpassen möchtest, melde dich für meinen wöchentlichen Newsletter an."
+          "Bist du bereit für mehr? Ich biete dir verschiedene 1:1 Calls & Coachings an, in denen wir an deinen individuellen Themen arbeiten. Du kannst hier gerne auch ein spezialisiertes Angebot anfragen."
         }
       />
-      <section className="pb-64 text-center bg-[#f4f4f4] rounded-[56px] lg:pt-24 pt-12 mt-[-64px] relative z-20">
-        <a
-          href={"https://femlove-by-franzi.ck.page/newsletter1"}
-          target="_blank"
-        >
-          <Button title="Hier anmelden" />
-        </a>
+      <section className="pb-64 bg-[#f4f4f4] rounded-[56px] lg:pt-24 pt-12 mt-[-64px] relative z-20">
+        <div className="container px-6 mx-auto lg:px-8">
+          <div className="flex flex-col grid-cols-2 gap-x-4 gap-y-8 lg:grid ">
+            <ProductCard
+              title={"1:1 Zyklus-Power Call"}
+              category={"Zyklusbewusstsein"}
+              href={"https://calendly.com/femlove/kostenloses-erstgespraech"}
+              imageSrc={"/images/zykluspower.jpg"}
+              text={
+                "In ein bis zwei Stunden arbeiten wir daran, wie du mehr Zyklusbewusstsein in deinen Alltag integrieren kannst und durch einen ganzheitlichen Lifestyle deinen Zyklus supporten kannst."
+              }
+              bodyContent={angebotPowerCallContent}
+              cta="Kennenlerntermin vereinbaren"
+            />
+            <ProductCard
+              title={"1:1 Super Call"}
+              category={"Selbstverwirklichung"}
+              href={"/angebot"}
+              imageSrc={"/images/supercall.jpg"}
+              text={
+                "Zwei intensive Stunden, in denen wir uns auf deine absoluten Fokusthemen zu konzentrieren. Hier geht es um deine individuellen Herausforderungen und Fragen. Am Ende des Calls bekommst du klare Action Steps."
+              }
+              bodyContent={angebotSuperCallContent}
+              cta="Termin vereinbaren"
+            />
+            <ProductCard
+              title={"Monthly Check In"}
+              category={"new month, fresh goals"}
+              href={"/angebot"}
+              imageSrc={"/images/monthlycheckin.jpg"}
+              text={
+                "Eine Stunde geht es um Verbindung, Reflexion, Planung und Goal-Setting. Individuell mit Platz für deine Fragen."
+              }
+              bodyContent={monthlyCallContent}
+              cta="Mehr erfahren"
+            />
+            <ProductCard
+              title={"Q4 Vision Board Session"}
+              category={"Sonderaktion für 0 Euro"}
+              href={"/angebot"}
+              imageSrc={"/images/visionboard.jpg"}
+              text={
+                "Lass deinen Gedanken, Träumen und Vorstellungen freien Lauf und erstelle dein Vision Board für die letzten Monate des Jahres!"
+              }
+              bodyContent={visionCallContent}
+              cta="Hier anmelden"
+            />
+          </div>
+        </div>
       </section>
     </Layout>
   );
