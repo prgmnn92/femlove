@@ -13,20 +13,20 @@ const Angebot = ({ siteConfig }) => {
     <div>
       <ul>
         <li className="pb-2">
-          ✦ Verstehe wie du deine Zyklusphasen für dich nutzen kannst
-        </li>
-        <li className="pb-2">✦ Steigere deine Energie und Kreativität</li>
-        <li className="pb-2">
-          ✦ Verbessere deine Produktivität - auch in der 2. Zyklushälfte
+          ✦ Verstehe, wie du deine Zyklusphasen für dich nutzen kannst
         </li>
         <li className="pb-2">
-          ✦ Vertiefe die Verbindung zu deinem Körper und seinen Bedürfnissen
+          ✦ Vertiefe die Verbindung zu dir und deinen Bedürfnissen
         </li>
         <li className="pb-2">
-          ✦ Tschüss Energielosigkeit & Stimmungsschwankungen 
+          ✦ Steigere deine Energie, Kreativität und Produktivität
         </li>
       </ul>
       <p>☞ ab 69 Euro</p>
+      <p className="pt-2 ">
+        Vereinbare gleich einen Kennenlerntermin und wir schauen, ob es zwischen
+        uns matcht und worauf wir uns im Zyklus-Power-Call fokussieren können.{" "}
+      </p>
     </div>
   );
 
@@ -34,59 +34,46 @@ const Angebot = ({ siteConfig }) => {
     <div>
       <ul>
         <li className="pb-2">
-          ✦ raus aus dem Unzufriedenheitsdrama, rein in ein erfülltes und
-          selbstbestimmtes Leben
+          ✦ befreie dich endlich von äußeren Erwartungen und Vergleichen
         </li>
         <li className="pb-2">
-          ✦ löse dich endlich von äußeren Erwartungen und Vergleichen
+          ✦ lass die Vergangenheit los und werde zur besten Version deiner
+          Selbst
         </li>
-        <li className="pb-2">
-          ✦ lass die Vergangenheit los und fang an die Dinge zu ändern, die in
-          deiner Macht stehen
-        </li>
-        <li className="pb-2">
-          ✦ erkenne deinen Selbstwert, übernimm Verantwortung und geh für dich
-          los
-        </li>
-        <li className="pb-2">
-          ✦ erschaffe ein Leben mit einer guten Portion Energie, Wohlbefinden,
-          Balance und harmonischen Beziehungen
-        </li>
+        <li className="pb-2">✦ erkenne deinen Wert und geh für dich los</li>
       </ul>
       <p>☞ ab 170 Euro</p>
+      <p className="pt-2 ">
+        Vereinbare gleich einen Kennenlerntermin und wir schauen, ob es zwischen
+        uns matcht und worauf wir uns in dem Super-Call fokussieren. Übrigens:
+        Bei diesem Coaching-Angebot hast du die Option einer langfristigen
+        Zusammenarbeit mit mir. Gerne stelle ich dir für eine langfristige
+        Begleitung ein individuelles Angebot zusammen.
+      </p>
     </div>
   );
 
   const monthlyCallContent = (
     <div>
-      <ul>
-        <li className="pb-2">
-          🚨 Special Offer: Schnapp dir eine oder mehrere Freundinnen und bucht
-          einen exklusiven Gruppencall zum Sonderpreis! Gemeinsam könnt ihr euch
-          inspirieren und gegenseitig motivieren.
-        </li>
-        <li className="pb-2">
-          ✦ Geh zielgerichtet und mit klarem Fokus durch den Monat
-        </li>
-        <li className="pb-2">
-          ✦ Optional: Passe deine Planung an deinen Zyklus an
-        </li>
-      </ul>
-      <p>
-        ☞ 25 Euro / Sonderpreis bei längerer Zusammenarbeit und Gruppencall auf
-        Anfrage
+      <p>☞ 20 Euro für deinen ersten Monats-Check-In</p>
+      <p className="pt-2">
+        🚨 Special Offer: Schnapp dir eine oder mehrere Freundinnen und fragt
+        einen exklusiven Gruppencall zum Sonderpreis an (hier anfragen)!
+        Gemeinsam könnt ihr euch inspirieren und gegenseitig motivieren.
+      </p>
+      <p className="pt-2">
+        Buche hier gleich einen Termin für deinen ersten Monats-Check-In mit
+        mir.
       </p>
     </div>
   );
 
   const visionCallContent = (
     <div>
-      <ul>
-        <li className="pb-2">✦ Lets be creative & have some fun together</li>
-      </ul>
       <p>
-        Donnerstag, 28.9.2023, 20 Uhr via Zoom (Einladungslink und weitere
-        Informationen erhältst du per Mail)
+        Der Termin steht noch nicht fest. Du kannst dich per Mail von mir
+        informieren lassen, sobald der Termin feststeht. Melde dich dazu hier
+        an. ⬇️
       </p>
     </div>
   );
@@ -97,7 +84,7 @@ const Angebot = ({ siteConfig }) => {
         title="So kannst du mit mir zusammenarbeiten"
         subtitle="Angebot"
         text={
-          "Bist du bereit für mehr? Ich biete dir verschiedene 1:1 Calls & Coachings an, in denen wir an deinen individuellen Themen arbeiten. Du kannst hier gerne auch ein spezialisiertes Angebot anfragen."
+          "Bist du bereit für dich loszugehen? Ich unterstütze dich auf deinem individuellen Weg und biete dir verschiedene 1:1 Calls an, in denen wir an deinen aktuellen Themen und Herausforderungen arbeiten."
         }
       />
       <section className="pb-64 bg-[#f4f4f4] rounded-[56px] lg:pt-24 pt-12 mt-[-64px] relative z-20">
@@ -109,7 +96,7 @@ const Angebot = ({ siteConfig }) => {
               href={"https://calendly.com/femlove/kostenloses-erstgespraech"}
               imageSrc={"/images/zykluspower.jpg"}
               text={
-                "In ein bis zwei Stunden arbeiten wir daran, wie du mehr Zyklusbewusstsein in deinen Alltag integrieren kannst und durch einen ganzheitlichen Lifestyle deinen Zyklus supporten kannst."
+                "Wir arbeiten in einer oder in zwei Stunden (du hast die Wahl) daran, wie du deinen individuellen Alltag zyklusbewusster gestalten und deinen Zyklus durch einen ganzheitlichen Lifestyle unterstützen kannst. Entdecke deine Zyklus-Power. ✨"
               }
               bodyContent={angebotPowerCallContent}
               cta="Kennenlerntermin vereinbaren"
@@ -117,35 +104,35 @@ const Angebot = ({ siteConfig }) => {
             <ProductCard
               title={"1:1 Super Call"}
               category={"Selbstverwirklichung"}
-              href={"/angebot"}
+              href={"https://calendly.com/femlove/kostenloses-erstgespraech"}
               imageSrc={"/images/supercall.jpg"}
               text={
-                "Zwei intensive Stunden, in denen wir uns auf deine absoluten Fokusthemen zu konzentrieren. Hier geht es um deine individuellen Herausforderungen und Fragen. Am Ende des Calls bekommst du klare Action Steps."
+                "Du weißt, du möchtest an deiner aktuellen Situation etwas ändern und dich & Träume verwirklichen? Mehr zu dir finden und dich von dem lösen, was dich zurückhält? Weißt aber nicht, wie du das Ganze am besten angehst? In meinem 1:1 Super-Call arbeiten wir ein oder zwei Stunden an ein bis zwei Fokusthemen deiner Wahl. Am Ende des Calls bekommst du individuelle Action Steps mit an die Hand. ✨ "
               }
               bodyContent={angebotSuperCallContent}
-              cta="Termin vereinbaren"
+              cta="Kennenlerntermin vereinbaren"
             />
             <ProductCard
-              title={"Monthly Check In"}
+              title={"Monats-Check-In"}
               category={"new month, fresh goals"}
-              href={"/angebot"}
+              href={"https://calendly.com/femlove/monats-check-in"}
               imageSrc={"/images/monthlycheckin.jpg"}
               text={
-                "Eine Stunde geht es um Verbindung, Reflexion, Planung und Goal-Setting. Individuell mit Platz für deine Fragen."
+                "Und schwups, bist du schon längst im neuen Monat und hast mal wieder deine Monatsplanung vergessen. 🤦‍♀️ Passiert dir mit meinem Monats-Check-In nicht mehr, denn ich gebe dir die Verbindlichkeit und den Support, den du brauchst. Eine Stunde lang geht es um Verbindung, Reflexion, Loslassen, Planung und Goal-Setting. "
               }
               bodyContent={monthlyCallContent}
-              cta="Mehr erfahren"
+              cta="Termin buchen"
             />
             <ProductCard
               title={"Q4 Vision Board Session"}
               category={"Sonderaktion für 0 Euro"}
-              href={"/angebot"}
+              href={"https://femlove-by-franzi.ck.page/48847a1f63"}
               imageSrc={"/images/visionboard.jpg"}
               text={
-                "Lass deinen Gedanken, Träumen und Vorstellungen freien Lauf und erstelle dein Vision Board für die letzten Monate des Jahres!"
+                "Lass deinen Gedanken und Träumen freien Lauf und erstelle dein Vision Board für das letzte Quartal in 2023. Let’s be creative & have some fun together. 💫"
               }
               bodyContent={visionCallContent}
-              cta="Hier anmelden"
+              cta="Informiere mich über den Termin"
             />
           </div>
         </div>

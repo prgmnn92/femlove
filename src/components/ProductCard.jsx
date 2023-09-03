@@ -18,7 +18,7 @@ const ProductCard = ({
   return (
     <div className="rounded-[14px] bg-[#D0D9D7] p-3 flex-col flex">
       <div className="flex flex-col gap-4 lg:flex-row">
-        <div className="relative lg:min-w-[250px] min-w-full lg:px-24 min-h-[200px] rounded-[14px] overflow-hidden max-w-xs">
+        <div className="relative lg:min-w-[250px] min-w-full lg:px-24 min-h-[200px] max-h-[200px] rounded-[14px] overflow-hidden max-w-xs">
           <Image
             width={250}
             height={180}
@@ -45,9 +45,9 @@ const ProductCard = ({
               </h2>
             </div>
           </div>
-          <p className="text-sm font-light lg:text-normal">{text}</p>
+          <p className="pb-10 text-sm font-light lg:text-normal">{text}</p>
           {!bodyContent && (
-            <div className="pt-4">
+            <div className="absolute pt-4 bottom-2">
               <Link href={href}>
                 <Button isSecondary title={cta} />
               </Link>

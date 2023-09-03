@@ -79,11 +79,11 @@ function NewsletterSignUp({ setVisible }) {
           Der wöchentliche Femlove-Newsletter
         </h2>
         <p className="mx-auto mt-2 leading-8 text-center text-gray-600 ">
-          ✦ jeden Dienstag erhältst du alltagstaugliche Tipps, Impulse oder
-          Action Steps für ein zyklusbewusstes, gesundes & erfülltes Leben
+          ✦ jeden Dienstag erhältst du alltagstaugliche Tipps und Impulse in
+          deinem Postfach
         </p>
         <p className="max-w-xl mx-auto mt-2 leading-8 text-center text-gray-600">
-          ✦ all&apos;bout Zyklusbewusstsein, Selbstverwirklichung, Gesundheit &
+          ✦ all about Zyklusbewusstsein, Selbstverwirklichung, Gesundheit &
           Wohlbefinden
         </p>
         <p className="max-w-xl mx-auto mt-2 leading-8 text-center text-gray-600">
