@@ -56,7 +56,7 @@ const ProductCard = ({
         </div>
       </div>
       {bodyContent && (
-        <div className="relative flex-1 max-w-full pb-8">
+        <div className="relative flex-1 max-w-full pb-8 -mt-10 lg:mt-0 ">
           <div className="py-4 text-sm font-light lg:text-normal">
             {bodyContent}
           </div>

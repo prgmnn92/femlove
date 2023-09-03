@@ -22,7 +22,7 @@ const Angebot = ({ siteConfig }) => {
           ✦ Steigere deine Energie, Kreativität und Produktivität
         </li>
       </ul>
-      <p>☞ ab 69 Euro</p>
+      <p className="pt-2">☞ ab 69 Euro</p>
       <p className="pt-2 ">
         Vereinbare gleich einen Kennenlerntermin und wir schauen, ob es zwischen
         uns matcht und worauf wir uns im Zyklus-Power-Call fokussieren können.{" "}
@@ -42,7 +42,7 @@ const Angebot = ({ siteConfig }) => {
         </li>
         <li className="pb-2">✦ erkenne deinen Wert und geh für dich los</li>
       </ul>
-      <p>☞ ab 170 Euro</p>
+      <p className="pt-2">☞ ab 89 Euro</p>
       <p className="pt-2 ">
         Vereinbare gleich einen Kennenlerntermin und wir schauen, ob es zwischen
         uns matcht und worauf wir uns in dem Super-Call fokussieren. Übrigens:
@@ -55,7 +55,7 @@ const Angebot = ({ siteConfig }) => {
 
   const monthlyCallContent = (
     <div>
-      <p>☞ 20 Euro für deinen ersten Monats-Check-In</p>
+      <p className="pt-2">☞ 20 Euro für deinen ersten Monats-Check-In</p>
       <p className="pt-2">
         🚨 Special Offer: Schnapp dir eine oder mehrere Freundinnen und fragt
         einen exklusiven Gruppencall zum Sonderpreis an (hier anfragen)!
