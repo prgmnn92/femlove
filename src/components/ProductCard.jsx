@@ -16,7 +16,7 @@ const ProductCard = ({
   bodyContent,
 }) => {
   return (
-    <div className="rounded-[14px] bg-[#D0D9D7] p-3 flex-col flex">
+    <div className="rounded-[14px] relative bg-[#D0D9D7] p-3 flex-col flex">
       <div className="flex flex-col gap-4 lg:flex-row">
         <div className="relative lg:min-w-[250px] min-w-full lg:px-24 min-h-[200px] max-h-[200px] rounded-[14px] overflow-hidden max-w-xs">
           <Image
