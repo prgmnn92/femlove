@@ -69,31 +69,32 @@ function NewsletterSignUp({ setVisible }) {
           style={josefineSans.style}
           className="text-xs font-light text-center uppercase lg:text-sm"
         >
-          Neu
+          Für 0 Euro
         </p>
         <div className="w-8 h-[1px] bg-black/40 mx-auto my-4 rounded"></div>
         <h2
           style={sourceSerif.style}
           className="max-w-2xl pb-8 mx-auto text-3xl font-light tracking-tight text-center text-black sm:text-4xl"
         >
-          Der wöchentliche Femlove-Newsletter
+          Journalfragen für jede Zyklusphase
         </h2>
         <p className="mx-auto mt-2 leading-8 text-center text-gray-600 ">
-          ✦ jeden Dienstag erhältst du alltagstaugliche Tipps und Impulse in
-          deinem Postfach
+          ✦ in meiner neuen einfachen & kompakten Übersicht findest du für jede
+          Zyklusphase passende Journalfragen und Affirmationen
+        </p>
+        <p className="max-w-xl mx-auto mt-2 font-bold leading-8 text-center text-gray-600">
+          ✦ Die Fragen helfen dir in jeder Zyklusphase dabei, deine Bedürfnisse
+          zu erkennen und deine Energien gut zu nutzen.
         </p>
         <p className="max-w-xl mx-auto mt-2 leading-8 text-center text-gray-600">
-          ✦ all about Zyklusbewusstsein, Selbstverwirklichung, Gesundheit &
-          Wohlbefinden
+          ✦ Einfacher geht Zyklus-Journaling nicht
         </p>
         <p className="max-w-xl mx-auto mt-2 leading-8 text-center text-gray-600">
-          ✦ kurz & knackig ohne viel Chichi
-        </p>
-        <p className="max-w-xl mx-auto mt-2 leading-8 text-center text-gray-600">
-          Melde dich hier für den Femlove-Newsletter an:
+          Melde dich hier an und die Übersicht mit den Journalfragen &
+          Affirmationen macht sich auf den Weg in dein Postfach:
         </p>
         {showThankYou ? (
-          <div className="pt-4 text-lg font-bold text-black">
+          <div className="pt-4 text-lg font-bold text-center text-black">
             Vielen Dank für deine Anmeldung, du erhälst in kürze eine
             Bestätigungsmail.
           </div>
