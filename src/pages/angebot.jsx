@@ -123,7 +123,7 @@ const Angebot = ({ siteConfig }) => {
               bodyContent={monthlyCallContent}
               cta="Termin buchen"
             />
-            <ProductCard
+            {/* <ProductCard
               title={"Q4 Vision Board Session"}
               category={"Sonderaktion für 0 Euro"}
               href={"https://femlove-by-franzi.ck.page/48847a1f63"}
@@ -133,7 +133,7 @@ const Angebot = ({ siteConfig }) => {
               }
               bodyContent={visionCallContent}
               cta="Informiere mich über den Termin"
-            />
+            /> */}
           </div>
         </div>
       </section>
