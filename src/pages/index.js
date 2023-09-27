@@ -3,7 +3,7 @@
 import { configQuery, postqueryHome } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 
-import ModalForm from "@/components/forms/ModalForm";
+// import ModalForm from "@/components/forms/ModalForm";
 import Layout from "@/components/Layout";
 import About from "@/components/sections/About";
 import Hero from "@/components/sections/Hero";
@@ -20,7 +20,7 @@ export default function Home({ posts, siteConfig }) {
         <About />
         <Products />
         <InTouch />
-        <ModalForm />
+        {/* <ModalForm /> */}
       </Layout>
     </>
   );
