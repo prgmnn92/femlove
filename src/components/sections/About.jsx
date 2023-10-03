@@ -11,14 +11,14 @@ import { ArrowIcon, HorizontalShape, VerticalShape } from "../shapes";
 const About = ({ text }) => {
   const defaultText = (
     <>
-      <p className="pb-4 text-sm lg:text-lg">
+      <p className="pb-4 text-sm lg:text-base">
         Reisende, Sunset-Lover, Foodie, Good-Mood-Girl.
       </p>
-      <p className="pb-4 text-sm lg:text-lg">
+      <p className="pb-4 text-sm lg:text-base">
         Vor ca. einem Jahr startete ich mit Femlove - einem Blog rund um den
         weiblichen Zyklus.
       </p>
-      <p className="pb-4 text-sm lg:text-lg">
+      <p className="pb-4 text-sm lg:text-base">
         Mit der Zeit durfte ich lernen, dass ich so viel mehr mit dir teilen
         möchte. Ich bin fest davon überzeugt, dass uns ein zyklusbewusster
         Lifestyle - also die Verbindung zu unserem Zyklus - einen Schritt weiter
@@ -26,13 +26,13 @@ const About = ({ text }) => {
         Verbindung zu dir und deinen Bedürfnissen herzustellen - dich besser zu
         verstehen.
       </p>
-      <p className="pb-4 text-sm lg:text-lg">
+      <p className="pb-4 text-sm lg:text-base">
         Ich nutze diesen Ansatz und gehe einen Schritt weiter. Es geht nun um
         dich und dein Leben: Um Selbstverwirklichung. Hol das Beste aus dir
         heraus, step into your real power und lebe ein erfülltes,
         selbstbestimmtes und ausgeglichenes Leben.
       </p>
-      <p className="pb-4 text-sm lg:text-lg">
+      <p className="pb-4 text-sm lg:text-base">
         Erfahre direkt mehr über mich und meinen Weg:
       </p>
     </>

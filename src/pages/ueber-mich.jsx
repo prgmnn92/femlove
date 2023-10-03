@@ -23,7 +23,7 @@ const ÜberMich = ({ siteConfig }) => {
         <div className="container max-w-4xl mx-auto ">
           <div className="flex flex-col-reverse items-start justify-between w-full max-w-5xl gap-8 mx-auto lg:mb-4 lg:flex-row">
             <div>
-              <p className="pb-8 text-sm font-light lg:text-lg">
+              <p className="pb-8 text-sm font-light lg:text-base">
                 Vielleicht geht es dir ja wie mir in der Vergangenheit: Du hast
                 eigentlich alles, was “von außen” nach einem “perfekten” Leben
                 aussieht, erwischst dich aber immer wieder mit diesen
@@ -32,13 +32,13 @@ const ÜberMich = ({ siteConfig }) => {
                 disconnected und funktionierst gefühlt nur, um die Bedürfnisse
                 anderer zu erfüllen?
               </p>
-              <p className="pb-8 text-sm font-light lg:text-lg">
+              <p className="pb-8 text-sm font-light lg:text-base">
                 Also: Findest du dich auf irgendeine Art wieder, ich verstehe
                 dich zu 100%. Hab all das durch und möchte dich nun an die Hand
                 nehmen, damit auch du deinen Weg in ein erfülltes,
                 selbstbestimmtes und gesundes Leben erschaffen kannst.
               </p>
-              <p className="pb-8 text-sm font-light lg:text-lg">
+              <p className="pb-8 text-sm font-light lg:text-base">
                 Hier erfährst du nun erstmal mehr über mich und Femlove.
               </p>
             </div>
@@ -50,10 +50,10 @@ const ÜberMich = ({ siteConfig }) => {
               height={400}
             />
           </div>
-          <h3 className="pb-2 text-base lg:text-lg" style={sourceSerif.style}>
+          <h3 className="pb-2 text-base lg:text-base" style={sourceSerif.style}>
             Starten wir mal mit ein paar Facts über mich:
           </h3>
-          <div className="text-sm font-light columns-2 lg:text-lg">
+          <div className="text-sm font-light columns-2 lg:text-base">
             <p>🌸 29 Jahre alt</p>
             <p>🥰 Frisch verheiratet</p>
             <p>😀 Good-Mood-Girl</p>
@@ -66,12 +66,12 @@ const ÜberMich = ({ siteConfig }) => {
             <p>🙅‍♀️ Äußere Erwartungen</p>
           </div>
           <h3
-            className="pt-6 pb-2 text-base lg:text-lg"
+            className="pt-6 pb-2 text-base lg:text-base"
             style={sourceSerif.style}
           >
             Das ist mit besonders wichtig:
           </h3>
-          <div className="pb-6 text-sm font-light columns-2 lg:text-lg">
+          <div className="pb-6 text-sm font-light columns-2 lg:text-base">
             <p>❤️ Meine liebsten Menschen.</p>
             <p>❤️ Gesundheit.</p>
             <p>❤️ Freiheit.</p>
@@ -81,9 +81,9 @@ const ÜberMich = ({ siteConfig }) => {
           <div className="flex flex-col flex-wrap md:mb-10 lg:w-1/2 lg:text-left"></div>
         </div>
         <div className="container max-w-4xl mx-auto ">
-          <div className="flex flex-col flex-wrap mb-10 text-sm font-light lg:pr-12 lg:text-left lg:text-lg">
+          <div className="flex flex-col flex-wrap mb-10 text-sm font-light lg:pr-12 lg:text-left lg:text-base">
             <h3
-              className="pb-2 text-base font-normal lg:text-lg"
+              className="pb-2 text-base font-normal lg:text-base"
               style={sourceSerif.style}
             >
               Femlove…

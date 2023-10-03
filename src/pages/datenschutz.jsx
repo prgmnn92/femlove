@@ -10,7 +10,7 @@ const Datenschutz = () => {
       <Banner title={"Datenschutz"} subtitle={"Rechtliches"} />
       <section className="py-16 mt-[-64px] bg-[#F4F4F4] px-4 rounded-[56px] relative z-20">
         <div className="container mx-auto ">
-          <h6 className="mt-6 mb-6 font-medium text-md lg:text-lg">
+          <h6 className="mt-6 mb-6 font-medium text-md lg:text-base">
             <span>Einleitung</span>
           </h6>
 
@@ -47,7 +47,7 @@ const Datenschutz = () => {
             </span>
           </p>
 
-          <h6 className="mt-6 mb-6 font-medium text-md lg:text-lg">
+          <h6 className="mt-6 mb-6 font-medium text-md lg:text-base">
             <span>Inhaltsübersicht</span>
           </h6>
 
@@ -199,11 +199,11 @@ const Datenschutz = () => {
             </span>
           </p>
 
-          <h6 className="mt-6 mb-6 font-medium text-md lg:text-lg">
+          <h6 className="mt-6 mb-6 font-medium text-md lg:text-base">
             <span>Verantwortliche</span>
           </h6>
 
-          <h6 className="mt-6 mb-6 font-medium text-md lg:text-lg">
+          <h6 className="mt-6 mb-6 font-medium text-md lg:text-base">
             <span>
               <span></span>
             </span>
@@ -249,7 +249,7 @@ const Datenschutz = () => {
             </span>
           </p>
 
-          <h6 className="mt-6 mb-6 font-medium text-md lg:text-lg">
+          <h6 className="mt-6 mb-6 font-medium text-md lg:text-base">
             <span>Übersicht der Verarbeitungen</span>
           </h6>
 

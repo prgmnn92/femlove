@@ -12,7 +12,7 @@ const InTouch = () => {
         >
           Noch Fragen?
         </h2>
-        <p className="pt-4 text-sm lg:text-lg">
+        <p className="pt-4 text-sm lg:text-base">
           Schreibe mir einfach eine Nachricht mit deinen Fragen, Anfragen,
           deinem Feedback. Was auch immer du loswerden möchtest: Hier ist Platz
           dafür:

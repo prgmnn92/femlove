@@ -18,7 +18,7 @@ export default function Banner({ title, subtitle, text }) {
           {title}
         </h1>
         {text && (
-          <p className="mt-2 text-base leading-8 text-gray-600 lg:mt-6 lg:text-lg">
+          <p className="mt-2 text-base leading-8 text-gray-600 lg:mt-6 lg:text-base">
             {text}
           </p>
         )}

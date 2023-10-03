@@ -35,7 +35,7 @@ const PostCard = ({ index, post, category }) => {
             </div>
           </div>
           <div className="pb-1 mb-2">
-            <h3 style={sourceSerif.style} className="text-normal lg:text-lg">
+            <h3 style={sourceSerif.style} className="text-normal lg:text-base">
               {post.title}
             </h3>
           </div>
