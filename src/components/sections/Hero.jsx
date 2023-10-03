@@ -1,13 +1,14 @@
 import React, { useRef, useState } from "react";
 
 import Image from "next/image";
-import Link from "next/link";
 import { InView } from "react-intersection-observer";
 
-import Button from "../Button";
 import { BackgroundCircleImage } from "../shapes";
 import { josefineSans, sourceSerif } from "@/fonts";
-const Hero = () => {
+const Hero = ({
+  heading = "Zyklusbewusstsein trifft Selbstverwirklichung",
+  text = "Femlove ist ein Blog für Frauen, die mehr wollen: Wachstum. Erfüllung. Selbstbestimmung. Mit einer tiefen Verbindung zu sich selbst und ihren Bedürfnissen.",
+}) => {
   const image = useRef(null);
   const [imageInView, setImageInView] = useState(false);
 
@@ -25,12 +26,10 @@ const Hero = () => {
           style={sourceSerif.style}
           className="text-3xl font-light lg:text-5xl"
         >
-          Zyklusbewusstsein trifft Selbstverwirklichung
+          {heading}
         </h1>
         <p className="max-w-md pt-4 pb-16 mx-auto text-sm lg:max-w-lg lg:text-lg text-black/50">
-          Femlove ist ein Blog für Frauen, die mehr wollen: Wachstum. Erfüllung.
-          Selbstbestimmung. Mit einer tiefen Verbindung zu sich selbst und ihren
-          Bedürfnissen.
+          {text}
         </p>
         {/* <Link href="/#blog" className="opacity-1">
           <Button title="Yess, here I am" />

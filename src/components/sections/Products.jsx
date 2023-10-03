@@ -15,7 +15,7 @@ const Products = () => {
             href={"https://femlove-by-franzi.ck.page/newsletter1"}
             imageSrc={"/images/newsletter.jpg"}
             text={
-              "Jeden Dienstag bekommst du knackige Tipps und Impulse für ein zyklusbewusstes & ganzheitliches Leben. Auf den Punkt gebracht und ohne viel Chichi."
+              "Jeden Dienstag erwarten dich Impulse, Insights und hilfreiche Tipps zu den Themen Zyklusbewusstsein, Mindset, Selbstfindung und Verwirklichung. Auf den Punkt gebracht und ohne viel Chichi."
             }
             cta="Hier anmelden"
           />
@@ -25,7 +25,7 @@ const Products = () => {
             href={"/angebot"}
             imageSrc={"/images/coaching.jpg"}
             text={
-              "Bist du ready für den Deep Dive? Ich biete verschiedene Möglichkeiten eines 1:1 Coachings an: Einen “Zyklus-Power-Call”, meinen “Super-Call”, gemeinsame Monatsplanung und ganz individuelle Coachings."
+              "Im Rahmen meiner 1:1 Coachings unterstütze ich dich auf deinem Weg zu dir selbst. Meine Schwerpunkte liegen dabei auf der Verbindung zu dir als Frau, auf den Prozess der Selbstfindung und Selbstverwirklichung."
             }
             cta="Mehr erfahren"
           />

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { configQuery, postqueryHome } from "@lib/groq";
+import { configQuery, homeContentQuery, postqueryHome } from "@lib/groq";
 import { sanityClient } from "@lib/sanity";
 
 // import ModalForm from "@/components/forms/ModalForm";
@@ -11,13 +11,18 @@ import InTouch from "@/components/sections/InTouch";
 import Posts from "@/components/sections/Posts";
 import Products from "@/components/sections/Products";
 
-export default function Home({ posts, siteConfig }) {
+export default function Home({ posts, siteConfig, homeContent }) {
+  const {
+    hero_h1: heroHeading,
+    hero_paragraph: heroParagraph,
+    about_text: aboutText,
+  } = homeContent;
   return (
     <>
       <Layout {...siteConfig}>
-        <Hero />
+        <Hero heading={heroHeading} text={heroParagraph} />
         <Posts posts={posts} />
-        <About />
+        <About text={aboutText} />
         <Products />
         <InTouch />
         {/* <ModalForm /> */}
@@ -29,11 +34,13 @@ export default function Home({ posts, siteConfig }) {
 export async function getStaticProps() {
   const posts = await sanityClient.fetch(postqueryHome);
   const config = await sanityClient.fetch(configQuery);
+  const homeContent = await sanityClient.fetch(homeContentQuery);
 
   return {
     props: {
       siteConfig: { ...config },
       posts,
+      homeContent,
     },
   };
 }

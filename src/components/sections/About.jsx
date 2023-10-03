@@ -1,5 +1,6 @@
 import React from "react";
 
+import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +8,36 @@ import Button from "../Button";
 import Heading from "../Heading";
 import { ArrowIcon, HorizontalShape, VerticalShape } from "../shapes";
 
-const About = () => {
+const About = ({ text }) => {
+  const defaultText = (
+    <>
+      <p className="pb-4 text-sm lg:text-lg">
+        Reisende, Sunset-Lover, Foodie, Good-Mood-Girl.
+      </p>
+      <p className="pb-4 text-sm lg:text-lg">
+        Vor ca. einem Jahr startete ich mit Femlove - einem Blog rund um den
+        weiblichen Zyklus.
+      </p>
+      <p className="pb-4 text-sm lg:text-lg">
+        Mit der Zeit durfte ich lernen, dass ich so viel mehr mit dir teilen
+        möchte. Ich bin fest davon überzeugt, dass uns ein zyklusbewusster
+        Lifestyle - also die Verbindung zu unserem Zyklus - einen Schritt weiter
+        zu uns selbst bringt. Zyklusbewusstsein hilft dir eine tiefere
+        Verbindung zu dir und deinen Bedürfnissen herzustellen - dich besser zu
+        verstehen.
+      </p>
+      <p className="pb-4 text-sm lg:text-lg">
+        Ich nutze diesen Ansatz und gehe einen Schritt weiter. Es geht nun um
+        dich und dein Leben: Um Selbstverwirklichung. Hol das Beste aus dir
+        heraus, step into your real power und lebe ein erfülltes,
+        selbstbestimmtes und ausgeglichenes Leben.
+      </p>
+      <p className="pb-4 text-sm lg:text-lg">
+        Erfahre direkt mehr über mich und meinen Weg:
+      </p>
+    </>
+  );
+
   return (
     <section className="lg:py-24 py-12 mt-[-64px] bg-[#EBE9E5] rounded-[56px] relative px-4 overflow-hidden">
       <div className="absolute left-[50%] h-full top-0 lg:block hidden">
@@ -18,30 +48,7 @@ const About = () => {
           <div className="lg:w-1/2 w-full max-w-[550px]">
             <Heading title={"Ich bin Franziska"} subtitle={"über mich"} />
             <div className="lg:pl-[96px] pl-[56px]">
-              <p className="pb-4 text-sm lg:text-lg">
-                Reisende, Sunset-Lover, Foodie, Good-Mood-Girl.
-              </p>
-              <p className="pb-4 text-sm lg:text-lg">
-                Vor ca. einem Jahr startete ich mit Femlove - einem Blog rund um
-                den weiblichen Zyklus.
-              </p>
-              <p className="pb-4 text-sm lg:text-lg">
-                Mit der Zeit durfte ich lernen, dass ich so viel mehr mit dir
-                teilen möchte. Ich bin fest davon überzeugt, dass uns ein
-                zyklusbewusster Lifestyle - also die Verbindung zu unserem
-                Zyklus - einen Schritt weiter zu uns selbst bringt.
-                Zyklusbewusstsein hilft dir eine tiefere Verbindung zu dir und
-                deinen Bedürfnissen herzustellen - dich besser zu verstehen.
-              </p>
-              <p className="pb-4 text-sm lg:text-lg">
-                Ich nutze diesen Ansatz und gehe einen Schritt weiter. Es geht
-                nun um dich und dein Leben: Um Selbstverwirklichung. Hol das
-                Beste aus dir heraus, step into your real power und lebe ein
-                erfülltes, selbstbestimmtes und ausgeglichenes Leben.
-              </p>
-              <p className="pb-4 text-sm lg:text-lg">
-                Erfahre direkt mehr über mich und meinen Weg:
-              </p>
+              {text ? <PortableText value={text} /> : defaultText}
               <div className="relative inline-block pt-8">
                 <Link href={"/ueber-mich"} className="relative z-20">
                   <Button title={"Über mich"} />
