@@ -7,8 +7,8 @@ function ContactForm() {
     <section className="py-16 mt-[-64px] bg-[#F4F4F4] px-4 rounded-[56px] relative z-20">
       <div className="container max-w-3xl mx-auto">
         <form
-          action="/"
-          // method="post"
+          // action="/"
+          method="post"
           data-netlify="true"
           name="contact-page-form"
           className="pb-32"
