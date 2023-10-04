@@ -8,7 +8,7 @@ function ContactForm() {
       <div className="container max-w-3xl mx-auto">
         <form
           action="/"
-          method="post"
+          // method="post"
           data-netlify="true"
           name="contact-page-form"
           className="pb-32"
