@@ -14,7 +14,7 @@ const Hero = ({
 
   return (
     <section className="bg-[#EBE9E5] rounded-[56px]  lg:min-h-[calc(90vh-140px)] min-h-[400px] flex flex-col items-center lg:mt-[140px] mt-20 relative px-4">
-      <div className="container text-center lg:pt-[22vh] pt-24 max-w-xl mx-auto relative z-10">
+      <div className="container text-center lg:pt-[20vh] pt-24 max-w-xl mx-auto relative z-10">
         <p
           style={josefineSans.style}
           className="text-xs font-light uppercase lg:text-sm"
