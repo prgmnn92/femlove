@@ -115,7 +115,7 @@ export async function getStaticProps({ params, preview = false }) {
   });
   const configs = await getClient(preview).fetch(configQuery);
   const siteConfig =
-    configs.find((config) => config.url == "https://femlove.blog/") ||
+    configs.find((config) => config.url == "https://femlove.blog/blog") ||
     configs[0];
   return {
     props: {
