@@ -113,11 +113,14 @@ export async function getStaticProps({ params, preview = false }) {
   const post = await getClient(preview).fetch(singlequery, {
     slug: params.slug,
   });
-  const config = await getClient(preview).fetch(configQuery);
+  const configs = await getClient(preview).fetch(configQuery);
+  const siteConfig =
+    configs.find((config) => config.url == "https://femlove.blog/") ||
+    configs[0];
   return {
     props: {
       postdata: { ...post },
-      siteconfig: { ...config },
+      siteconfig: { ...siteConfig },
       preview,
     },
     revalidate: 60,

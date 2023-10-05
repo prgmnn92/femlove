@@ -33,12 +33,15 @@ export default function Home({ posts, siteConfig, homeContent }) {
 
 export async function getStaticProps() {
   const posts = await sanityClient.fetch(postqueryHome);
-  const config = await sanityClient.fetch(configQuery);
   const homeContent = await sanityClient.fetch(homeContentQuery);
+  const configs = await sanityClient.fetch(configQuery);
+  const siteConfig =
+    configs.find((config) => config.url == "https://femlove.blog/") ||
+    configs[0];
 
   return {
     props: {
-      siteConfig: { ...config },
+      siteConfig: { ...siteConfig },
       posts,
       homeContent,
     },

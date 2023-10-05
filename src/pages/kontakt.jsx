@@ -8,16 +8,8 @@ import Layout from "@/components/Layout";
 import Banner from "@/components/sections/Banner";
 
 const Kontakt = ({ siteConfig }) => {
-  const contactConfig = {
-    ...siteConfig,
-    title: "Kontakt | Femlove - Zyklusbewusstsein x Selbstverwirklichung",
-    description:
-      "Fragen? Wünsche? Feedback? Anfragen? Was auch immer du loswerden möchtest: Hier ist Platz für deine Nachricht",
-    url: siteConfig.url + "/kontakt",
-  };
-
   return (
-    <Layout {...contactConfig}>
+    <Layout {...siteConfig}>
       <Banner
         title="Schreibe mir eine Nachricht"
         subtitle="Kontakt"
@@ -29,10 +21,13 @@ const Kontakt = ({ siteConfig }) => {
 };
 
 export async function getStaticProps() {
-  const config = await sanityClient.fetch(configQuery);
+  const configs = await sanityClient.fetch(configQuery);
+  const siteConfig =
+    configs.find((config) => config.url == "https://femlove.blog/kontakt") ||
+    configs[0];
   return {
     props: {
-      siteConfig: { ...config },
+      siteConfig: { ...siteConfig },
     },
   };
 }

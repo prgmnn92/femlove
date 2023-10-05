@@ -134,10 +134,13 @@ const Angebot = ({ siteConfig }) => {
 //TODO: CTA am ende der Steps?
 
 export async function getStaticProps({ params, preview = false }) {
-  const config = await sanityClient.fetch(configQuery);
+  const configs = await sanityClient.fetch(configQuery);
+  const siteConfig =
+    configs.find((config) => config.url == "https://femlove.blog/angebot") ||
+    configs[0];
   return {
     props: {
-      siteConfig: { ...config },
+      siteConfig: { ...siteConfig },
       preview,
     },
     revalidate: 100,

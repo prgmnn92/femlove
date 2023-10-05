@@ -61,11 +61,14 @@ export async function getStaticProps({ preview }) {
 
   const posts = await sanityClient.fetch(postqueryBlogs);
   const categories = await sanityClient.fetch(categoryQuery);
-  const config = await sanityClient.fetch(configQuery);
+  const configs = await sanityClient.fetch(configQuery);
+  const siteConfig =
+    configs.find((config) => config.url == "https://femlove.blog/blog") ||
+    configs[0];
 
   return {
     props: {
-      siteConfig: { ...config },
+      siteConfig: { ...siteConfig },
       posts,
       categories,
     },

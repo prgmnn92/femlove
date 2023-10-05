@@ -234,11 +234,13 @@ const ÜberMich = ({ siteConfig }) => {
 };
 
 export async function getStaticProps({ params, preview = false }) {
-  const config = await sanityClient.fetch(configQuery);
+  const configs = await sanityClient.fetch(configQuery);
+  const siteConfig = configs.find(
+    (config) => config.url == "https://femlove.blog/ueber-mich"
+  );
   return {
     props: {
-      siteConfig: { ...config },
-      preview,
+      siteConfig: { ...siteConfig },
     },
     revalidate: 100,
   };
