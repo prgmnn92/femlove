@@ -11,215 +11,220 @@ import Layout from "@/components/Layout";
 import Banner from "@/components/sections/Banner";
 import { sourceSerif } from "@/fonts";
 
+const Quote = (props) => {
+  return (
+    <div className="py-[4px] flex gap-[10px]">
+      <div className="min-w-[6px] min-h-full bg-[#D0D9D7]"></div>
+      <div className="text-sm italic font-semibold md:text-base">
+        {props.children}
+      </div>
+    </div>
+  );
+};
+
 const ÜberMich = ({ siteConfig }) => {
   return (
     <Layout {...siteConfig}>
-      <Banner
-        title="Hi, ich bin Franziska"
-        text="Herzlich Willkommen in meiner Welt."
-        subtitle="Über mich"
-      />
-      <section className="py-16 mt-[-64px] bg-[#F4F4F4] px-4 rounded-[56px] relative z-20">
-        <div className="container max-w-4xl mx-auto ">
-          <div className="flex flex-col-reverse items-start justify-between w-full max-w-5xl gap-8 mx-auto lg:mb-4 lg:flex-row">
-            <div>
-              <p className="pb-8 text-sm font-light lg:text-base">
-                Vielleicht geht es dir ja wie mir in der Vergangenheit: Du hast
-                eigentlich alles, was “von außen” nach einem “perfekten” Leben
-                aussieht, erwischst dich aber immer wieder mit diesen
-                Unzufriedenheitsgedanken? War’s das schon? Kannst deine
-                Stimmungen manchmal selbst nicht verstehen? Fühlst dich von dir
-                disconnected und funktionierst gefühlt nur, um die Bedürfnisse
-                anderer zu erfüllen?
+      {/* Hero Section */}
+      <section className="px-6 pb-16 lg:pt-[24vh] pt-24 bg-white lg:px-8">
+        <div className="container max-w-5xl mx-auto ">
+          <div className="flex flex-col gap-8 md:gap-12 md:flex-row">
+            <div className="relative md:min-w-[290px] min-h-[390px] min-w-full rounded-t-[300px] overflow-hidden">
+              <Image
+                src={"/images/ich_oben (kompr.).webp"}
+                width={289}
+                height={387}
+                alt="Bild von Franziska"
+                className="absolute object-cover w-full h-full"
+              />
+            </div>
+            <div className="text-sm md:text-base">
+              <h1 className="mb-4 text-4xl md:mb-6 md:text-5xl">
+                Hi, ich bin Franziska
+              </h1>
+              <p className="mb-3 md:mb-4">
+                Der Mensch hinter Femlove und Life Coachin für Frauen.
               </p>
-              <p className="pb-8 text-sm font-light lg:text-base">
-                Also: Findest du dich auf irgendeine Art wieder, ich verstehe
-                dich zu 100%. Hab all das durch und möchte dich nun an die Hand
-                nehmen, damit auch du deinen Weg in ein erfülltes,
-                selbstbestimmtes und gesundes Leben erschaffen kannst.
+              <p className="mb-3 md:mb-4">
+                Was ich noch so bin? Reisende, Sunset-Lover, Journal-Queen,
+                Supporterin in allen Lebenslagen und Good-Mood-Girl. 🌞
               </p>
-              <p className="pb-8 text-sm font-light lg:text-base">
-                Hier erfährst du nun erstmal mehr über mich und Femlove.
+              <p className="mb-3 md:mb-4">
+                Vor allem aber, bin ich hier, um dir zu helfen - denn vor gar
+                nicht all zu langer Zeit stand ich selbst da: Unzufrieden und
+                unerfüllt, keine Verbindung zu mir und meinen Bedürfnissen...
+                den Rest darfst du gleich erfahren.
+              </p>
+              <p className="mb-3 md:mb-4">
+                Also, schnapp dir einen Kaffee oder Tee und tauche in meine
+                Geschichte ein. 👇
+              </p>
+              <Quote>
+                Den mühsam erstrebten Weg und den Ausblick auf eine steile
+                Karriere habe ich mit 29 Jahren aufgegeben. Mein Drang nach
+                Freiheit und Unabhängigkeit führte mich ans andere Ende der
+                Welt. Und jetzt schreibe ich meine eigene Geschichte.✨
+              </Quote>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Über mich section 1  */}
+      <section className="px-6 pb-16 lg:px-8">
+        <div className="container max-w-5xl mx-auto ">
+          <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
+            <div className="text-sm text-justify md:text-base">
+              <h2 className="mb-4 text-3xl text-left md:mb-6 md:text-4xl">
+                Ich hatte <em>eigentlich</em> alles...
+              </h2>
+              <p className="mb-3 md:mb-4">
+                Lange Zeit hatte ich alles, was nach einem perfekten Leben
+                aussieht. Jegliche Abschlüsse, einen unbefristeten und gut
+                bezahlten Job, eine stabile Beziehung und und und.
+              </p>
+              <p className="mb-3 md:mb-4">
+                Doch tief im Inneren spürte ich keine Erfüllung. Mich überkam
+                immer wieder Unzufriedenheit und Frust - beides konnte ich aber
+                nicht richtig zuordnen. Ich hatte doch ein gutes Leben, warum
+                sollte ich unzufrieden sein?
+              </p>
+              <p className="mb-3 md:mb-4">
+                Mir fehlte der Bezug zu mir, ich habe so lange fleißig daran
+                gearbeitet, mir eine klassische Karriere aufzubauen, dass ich
+                komplett vergessen (oder verdrängt?) habe, wer ich bin, welche
+                Leidenschaften ich habe, was ich vom Leben möchte und was denn
+                noch so möglich ist. Stattdessen war ich das fleißige Bienchen,
+                das nicht nein sagen konnte, ihre eigenen Bedürfnisse hinten
+                anstellt und sich sehr von äußeren Erwartungen leiten lassen
+                hat. Ich habe mir bis dahin ein Leben erschaffen, mit dem ich
+                mich nicht ganz identifizieren konnte.
               </p>
             </div>
+            <div className="relative min-w-[273px] min-h-[235px] overflow-hidden rounded-[14px]">
+              <Image
+                width={273}
+                height={235}
+                src={"/images/bild mitte.webp"}
+                alt="Bild einer Tasse auf einem Buch"
+                className="absolute object-cover w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Über mich section mit container */}
+      <section className="pb-16 md:pb-32 lg:px-8">
+        <div className="container md:max-w-[822px] w-full bg-[#F4F4F4] md:p-16 p-6 mx-auto rounded-[14px] relative">
+          <div className="absolute w-[178px] h-[295px] -bottom-16 -left-32 overflow-hidden rounded-[14px] hidden md:block">
             <Image
-              alt="feature"
-              className="object-contain object-center w-full rounded-[14px] aspect-auto border-8 border-white border-solid lg:mt-4"
-              src="/images/franzi.webp"
-              width={250}
-              height={400}
+              width={178}
+              height={295}
+              src={"/images/bild unten.webp"}
+              alt="Bild einer Tasse auf einem Buch"
+              className="absolute object-cover w-full h-full"
             />
           </div>
-          <h3 className="pb-2 text-base lg:text-base" style={sourceSerif.style}>
-            Starten wir mal mit ein paar Facts über mich:
-          </h3>
-          <div className="text-sm font-light columns-2 lg:text-base">
-            <p>🌸 29 Jahre alt</p>
-            <p>🥰 Frisch verheiratet</p>
-            <p>😀 Good-Mood-Girl</p>
-            <p>🌎 Reise aktuell quer durch Südostasien</p>
-            <p>🌇 Sunset-Lover</p>
-            <p>💪 Fitness & Bewegung = 💗</p>
-            <p>📖 Lesemaus</p>
-            <p>🍕 Foodie</p>
-            <p>🙌 Team Positive & Growth Mindset</p>
-            <p>🙅‍♀️ Äußere Erwartungen</p>
-          </div>
-          <h3
-            className="pt-6 pb-2 text-base lg:text-base"
-            style={sourceSerif.style}
-          >
-            Das ist mit besonders wichtig:
-          </h3>
-          <div className="pb-6 text-sm font-light columns-2 lg:text-base">
-            <p>❤️ Meine liebsten Menschen.</p>
-            <p>❤️ Gesundheit.</p>
-            <p>❤️ Freiheit.</p>
-            <p>❤️ Ehrlichkeit und Vertrauen.</p>
-          </div>
-
-          <div className="flex flex-col flex-wrap md:mb-10 lg:w-1/2 lg:text-left"></div>
-        </div>
-        <div className="container max-w-4xl mx-auto ">
-          <div className="flex flex-col flex-wrap mb-10 text-sm font-light lg:pr-12 lg:text-left lg:text-base">
-            <h3
-              className="pb-2 text-base font-normal lg:text-base"
-              style={sourceSerif.style}
-            >
-              Femlove…
-            </h3>
-            <p className="pb-4">
-              Vor ca. einem Jahr startete ich mit Femlove - einem Blog rund um
-              den weiblichen Zyklus.
+          <div className="text-sm text-justify md:text-base">
+            <h2 className="mb-4 text-3xl text-left md:mb-6 md:text-4xl">
+              Von der Zuschauerin zur <em>Hauptfigur</em>
+            </h2>
+            <p className="mb-3 md:mb-4">
+              Mein Blickwinkel änderte sich komplett. Ich richtete den Blick auf
+              mich und mein Leben. Blickte meiner Wahrheit ins Gesicht, lernte
+              mich selbst besser kennen und fing an, mich nach und nach von
+              äußeren Erwartungen, aber auch von meinen alten Glaubenssätzen zu
+              befreien. Ich erlaubte mir, endlich für mich loszugehen und nicht
+              mehr nur vom Zuschauerrand mein Leben zu betrachten. 
             </p>
-            <p className="pb-4">
-              Warum Zyklus? Ich war und bin begeistert von unserem Zyklus und
-              wie er unser Leben beeinflusst, wollte mit meinem Blog für noch
-              mehr Zykluswissen sorgen, denn ich - wie so viele andere Frauen
-              auch - stand vor etwa 3 Jahren nach dem Pille Absetzen bei Null,
-              was meinen Zyklus anging.
+            <p className="mb-3 md:mb-4">
+              🪄 heute reise ich durch Südostasien und baue mir nebenbei ein
+              Leben nach meinen Vorstellungen und Werten auf. Ich glaube an mich
+              und an den Weg, der mich an mein Ziel bringen wird. Lasse mich
+              nicht mehr von Ängsten und alten Glaubenssätzen aufhalten. 
             </p>
-            <p className="pb-2">
-              Außerdem habe ich gelernt, dass der Zyklus bei mir einen wichtigen
-              Part auf dem Weg zu mehr Selbstliebe eingenommen hat und so
-              entstand übrigens auch der Name Femlove:
+            <p className="mb-3 md:mb-4">
+              Ok ok, verstanden, denkst du dir. Aber was hat der Zyklus damit zu
+              tun?
             </p>
-            <p className="pb-2">
-              “Fem” für Feminität, Weiblichkeit, Frausein - all das, was uns
-              Frauen ausmacht. “Love” für den Weg zu mehr Selbstliebe,
-              -akzeptanz und -vertrauen.
+            <p className="mb-3 md:mb-4">
+              Mit dem Bewusstsein und der Verbindung mit meinem Zyklus und
+              dessen Einfluss auf meinen Alltag, fing ich an, meine Bedürfnisse
+              zu erkennen. Den Druck gegenüber mir selbst herauszunehmen, mich
+              selbst besser zu akzeptieren und zu lieben - mich auch mehr als
+              Frau zu fühlen. Ich bin davon überzeugt, dass sich jede Frau
+              dessen bewusst werden sollte, um sich selbst besser zu verstehen.
             </p>
-            <div className="grid items-start max-w-2xl grid-cols-1 py-4 mx-auto gap-x-8 gap-y-4 sm:gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-              <div className="relative px-6 pt-96 overflow-hidden bg-gray-900 rounded-[14px] pb-9 sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10 border-8 border-white border-solid ">
-                <Image
-                  src={"/images/ueber1.jpg"}
-                  className="absolute top-0 bottom-0 left-0 right-0 object-cover w-full h-full"
-                  width={400}
-                  height={600}
-                  alt=""
-                />
-              </div>
-              <div>
-                <p className="pb-4">
-                  Mit der Zeit durfte ich lernen, dass ich so viel mehr mit dir
-                  teilen möchte. Es ist an der Zeit für eine kleine Veränderung…
-                </p>
-                <p className="pb-4">
-                  Ich beschäftige mich schon seit mehreren Jahren intensiv mit
-                  Themen wie Persönlichkeitsentwicklung und
-                  Selbstverwirklichung, gesellschaftliche Erwartungen und
-                  Entwicklungen… Themen, über die ich stundenlang reden könnte.
-                  Übrigens: Deep Talk? I’m in. Warum ich damals keinen Blog dazu
-                  gestartet habe? Keine Ahnung. Dennoch bin ich um ein Jahr
-                  Erfahrung reicher und kombiniere meine Herzensthemen zu einem
-                  Herzensprojekt.
-                </p>
-              </div>
+            <div className="pt-4 pb-8">
+              <Quote>
+                Der Zyklus ist so viel mehr als nur die Periode. Es geht um
+                tiefe Verbindung und Intuition. Um Selbstannahme und
+                Selbstliebe. Um das Verstehen und Achten der eigenen Bedürfnisse
+                und Grenzen.💖
+              </Quote>
             </div>
-            <p className="pb-4">
-              Denn ich bin fest davon überzeugt, dass uns ein zyklusbewusster
-              Lifestyle - also die Verbindung zu unserem Zyklus - einen Schritt
-              weiter zu uns selbst bringt. Zyklusbewusstsein hilft dir eine
-              tiefere Verbindung zu dir und deinen Bedürfnissen herzustellen -
-              dich besser zu verstehen.
+            <p className="mb-3 md:mb-4">
+              Ich glaube fest daran, dass du das auch kannst. Nein, du musst
+              nicht reisen oder dein Business aufbauen. Ich meine: Dir ein Leben
+              zu erschaffen, in dem du{" "}
+              <strong>Erfüllung und Leichtigkeit</strong> spürst - dich von
+              ständiger Unzufriedenheit, Frust und Ängsten befreist. Ein Leben
+              nach deinen Werten, in dem du dich selbst verwirklichst und
+              <strong> inneren Frieden</strong> findest. Und dafür bin ich hier.
+              Für dich.
             </p>
-            <p className="pb-4">
-              Ich nutze diesen Ansatz und gehe einen Schritt weiter.
-            </p>
-            <p className="pb-4">
-              Bei Femlove geht es nun vielmehr um dich und dein Leben: Um
-              Selbstverwirklichung. Hol das Beste aus dir heraus, step into your
-              real power, und lebe ein erfülltes, selbstbestimmtes und
-              ausgeglichenes Leben.
-            </p>
-            <p>
-              Auf meinem Blog, Instagram und YouTube wie auch in meinem
-              Newsletter erhältst du diversen kostenlosen Content. Ich - als
-              Franziska Pargmann - stehe dir für die intensive Zusammenarbeit im
-              Rahmen von 1:1 Coachings voll und ganz zur Verfügung. Ich zeige
-              dir, wie du mehr aus deinem Leben herausholen kannst, wie du dich
-              aus deinem Hamsterrad befreien kannst, wie du deinen Traum wahr
-              werden lassen kannst - oder vielleicht auch einfach deinen
-              Lifestyle ändern möchtest. Here I am: Mit mir als Coachin an
-              deiner Seite wirst du nicht so schnell aufgeben. Du bekommst über
-              mehrere Wochen meinen vollen Support, individuelle Strategien &&&
-              - je nachdem, wo dein Bedarf am größten ist.
-            </p>
-            <div className="py-8 text-center">
-              <Link href="/angebot">
-                <Button title="Zu meinem Angebot" />
+          </div>
+        </div>
+      </section>
+      {/* Über mich section 2 */}
+      <section className="px-6 pb-32 lg:px-8">
+        <div className="container max-w-5xl mx-auto ">
+          <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
+            <div className="text-sm text-justify md:text-base">
+              <h2 className="mb-4 text-3xl text-left md:mb-6 md:text-4xl">
+                Du darfst dir <em>Unterstützung</em> auf deiner persönlichen
+                Journey holen
+              </h2>
+              <p className="mb-3 md:mb-4">
+                Den Wunsch nach Veränderung, Wachstum und Erfüllung haben so
+                viele Frauen! Doch nur ein Bruchteil geht wirklich für sich los.
+                Warum? Ängste, limitierende Glaubenssätze, mangelndes
+                Selbstvertrauen und Mut sind nur einige der Herausforderungen.
+                Dazu erlauben sie sich nicht, Unterstützung zu holen.
+              </p>
+              <p className="mb-3 md:mb-4">
+                Lass uns auch genau daran arbeiten. Für deine Reise zu dir
+                selbst. Für deine Träume. Entdecke deine Leidenschaft, deine
+                Stärken und erschaffe dir ein Leben, in dem du Erfüllung,
+                Leichtigkeit und tiefe Verbindung spürst.
+              </p>
+              <p className="mb-3 md:mb-4">Denn genau das verdienst du. 🫶</p>
+              <p className="mb-3 md:mb-4">
+                In meinem Coaching verbinde ich den Weg zur Selbstfindung und
+                Verwirklichung mit der Kraft des weiblichen Zyklus.
+              </p>
+              <p className="mb-6 md:mb-8">
+                Ich biete verschiedene Coaching-Programme, aber auch
+                individuelle Einzelstunden und Begleitungen an. Schau direkt mal
+                in meinem Angebot vorbei:
+              </p>
+              <Link href={"/angebot"}>
+                <Button title={"Zum Coaching-Angebot"} />
               </Link>
             </div>
-            <p className="pb-4">
-              Natürlich kann ich auch etwas mehr bieten als meine eigene
-              Erfahrung:
-            </p>
-
-            <p className="pb-2 text-xs lg:text-base">
-              🫧 Life Coachin, Holistic Health & Wellness Coachin
-            </p>
-            <p className="pb-2 text-xs lg:text-base">
-              🫧 + Zusatzmodul zum Thema Periodengesundheit (i.A.)
-            </p>
-            <p className="pb-2 text-xs lg:text-base">
-              🫧 + Zusatzmodul zum Thema Darmgesundheit (i.A.)
-            </p>
-            <p className="pb-2 text-xs lg:text-base">
-              🫧 Autodidaktische Aneignung zum Thema Zyklus & Zyklusbewusstsein
-            </p>
-            <p className="pb-2 text-xs lg:text-base">
-              🫧 Autodidaktische Aneignung zum Thema Persönlichkeitsentwicklung
-            </p>
-            <p className="pb-2 text-xs lg:text-base">
-              🫧 Autodidaktische Aneignung zum Thema Achtsamkeit
-            </p>
-            <div className="grid items-start max-w-2xl grid-cols-1 py-4 mx-auto gap-x-8 gap-y-4 sm:gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-              <div>
-                <p className="pb-4">
-                  Meine Mission ist es, Frauen zu einem Leben im Einklang mit
-                  ihrem Zyklus, in dem sie mehr Energie haben, sich selbst
-                  priorisieren, ihren Bedürfnissen und Leidenschaften nachgehen,
-                  sich selbst ein Leben voll Selbstverwirklichung erschaffen.{" "}
-                </p>
-                <p className="pb-4">
-                  You can do this! Sei mutig und geh für dich los.
-                </p>
-
-                <p className="pb-4">
-                  Deine
-                  <br />
-                  Franziska
-                </p>
-              </div>
-              <div className="relative px-6 pt-80 overflow-hidden bg-gray-900 rounded-[14px] pb-9 sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10 border-8 border-white border-solid ">
+            <div>
+              <div className="relative md:min-w-[290px] min-h-[390px] min-w-full rounded-t-[300px] overflow-hidden">
                 <Image
-                  src={"/images/ueber2.jpg"}
-                  className="absolute top-0 bottom-0 left-0 right-0 object-cover w-full h-full"
-                  width={400}
-                  height={600}
-                  alt=""
+                  src={"/images/ich_unten (kompr.).webp"}
+                  width={289}
+                  height={387}
+                  alt="Bild von Franziska"
+                  className="absolute object-cover w-full h-full"
                 />
               </div>
+              <p className="text-xs">
+                zert. Life Coachin
+                <br />& Holistic Health & Wellness Coachin
+              </p>
             </div>
           </div>
         </div>
