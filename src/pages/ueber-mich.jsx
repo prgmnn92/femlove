@@ -31,7 +31,7 @@ const ÜberMich = ({ siteConfig }) => {
           <div className="flex flex-col gap-8 md:gap-12 md:flex-row">
             <div className="relative md:min-w-[290px] min-h-[390px] min-w-full rounded-t-[300px] overflow-hidden">
               <Image
-                src={"/images/ich_oben (kompr.).webp"}
+                src={"/images/ich_oben.webp"}
                 width={289}
                 height={387}
                 alt="Bild von Franziska"
@@ -104,7 +104,7 @@ const ÜberMich = ({ siteConfig }) => {
               <Image
                 width={273}
                 height={235}
-                src={"/images/bild mitte.webp"}
+                src={"/images/bild_mitte.webp"}
                 alt="Bild einer Tasse auf einem Buch"
                 className="absolute object-cover w-full h-full"
               />
@@ -119,8 +119,8 @@ const ÜberMich = ({ siteConfig }) => {
             <Image
               width={178}
               height={295}
-              src={"/images/bild unten.webp"}
-              alt="Bild einer Tasse auf einem Buch"
+              src={"/images/bild_unten.webp"}
+              alt="Hand streicht über gras"
               className="absolute object-cover w-full h-full"
             />
           </div>
@@ -214,7 +214,7 @@ const ÜberMich = ({ siteConfig }) => {
             <div>
               <div className="relative md:min-w-[290px] min-h-[390px] min-w-full rounded-t-[300px] overflow-hidden">
                 <Image
-                  src={"/images/ich_unten (kompr.).webp"}
+                  src={"/images/ich_unten.webp"}
                   width={289}
                   height={387}
                   alt="Bild von Franziska"
