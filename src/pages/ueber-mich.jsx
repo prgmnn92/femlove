@@ -36,6 +36,7 @@ const ÜberMich = ({ siteConfig }) => {
                 height={387}
                 alt="Bild von Franziska"
                 className="absolute object-cover w-full h-full"
+                priority
               />
             </div>
             <div className="text-sm md:text-base">

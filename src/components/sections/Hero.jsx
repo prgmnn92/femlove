@@ -50,6 +50,7 @@ const Hero = ({
             // ${imageInView ? "scale-100" : "scale-125"}
             //           `}
             alt="placeholder-hero-image"
+            priority
           />
         </InView>
         <Image
@@ -58,6 +59,7 @@ const Hero = ({
           height={230}
           className="rounded-[14px] absolute left-[-270px] bottom-[-80px] object-cover lg:block hidden"
           alt="placeholder-hero-image"
+          priority
         />
         <Image
           src="/images/hero-2.jpg"
@@ -65,6 +67,7 @@ const Hero = ({
           height={400}
           className="rounded-t-full absolute right-[-370px] bottom-[-30px] min-h-[400px] min-w-[300px] object-cover lg:block hidden"
           alt="placeholder-hero-image"
+          priority
         />
       </div>
       <div className="absolute bottom-0 left-0 right-0">
