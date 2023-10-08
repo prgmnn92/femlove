@@ -29,6 +29,7 @@ export default function App({ Component, pageProps }) {
             />
             <script
               async
+              defer
               // strategy="beforeInteractive"
               src="https://www.googletagmanager.com/gtag/js?id=G-1B3C3W4V0P"
             />
