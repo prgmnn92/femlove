@@ -1,22 +1,22 @@
 /* eslint-disable @next/next/next-script-for-ga */
 import "../styles/globals.css";
-import { useState } from "react";
+// import { useState } from "react";
 
-import { getCookie } from "cookies-next";
+// import { getCookie } from "cookies-next";
 import Head from "next/head";
 
-import Consent from "@/components/consent";
+// import Consent from "@/components/consent";
 
-const isProduction = process.env.NODE_ENV === "production";
+// const isProduction = process.env.NODE_ENV === "production";
 
 export default function App({ Component, pageProps }) {
-  const [consent, setConsent] = useState(true);
+  // const [consent, setConsent] = useState(true);
 
-  const consentCookie = getCookie("localConsent");
+  // const consentCookie = getCookie("localConsent");
   return (
     <>
       <Head>
-        {isProduction && (
+        {/* {isProduction && (
           <>
             <link
               rel="dns-prefetch"
@@ -65,10 +65,10 @@ export default function App({ Component, pageProps }) {
               />
             )}
           </>
-        )}
+        )} */}
       </Head>
       <Component {...pageProps} />
-      <Consent consent={consent} setConsent={setConsent} />
+      {/* <Consent consent={consent} setConsent={setConsent} /> */}
     </>
   );
 }
