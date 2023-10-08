@@ -555,6 +555,10 @@ const Angebot = ({ siteConfig }) => {
               </div>
             </div>
           </div>
+          <div className="pt-4 text-xs">
+            <p>*Programmverlängerung je nach Bedarf möglich </p>
+            <p>**Ratenzahlung möglich.</p>
+          </div>
         </div>
       </section>
       {/* cta 1 section */}
