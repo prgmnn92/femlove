@@ -40,7 +40,10 @@ const ÜberMich = ({ siteConfig }) => {
               />
             </div>
             <div className="text-sm md:text-base">
-              <h1 className="mb-4 text-4xl md:mb-6 md:text-5xl">
+              <h1
+                style={sourceSerif.style}
+                className="mb-4 text-4xl md:mb-6 md:text-5xl"
+              >
                 Hi, ich bin Franziska
               </h1>
               <p className="mb-3 md:mb-4">
@@ -75,7 +78,10 @@ const ÜberMich = ({ siteConfig }) => {
         <div className="container max-w-5xl mx-auto ">
           <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
             <div className="text-sm text-justify md:text-base">
-              <h2 className="mb-4 text-3xl text-left md:mb-6 md:text-4xl">
+              <h2
+                style={sourceSerif.style}
+                className="mb-4 text-3xl text-left md:mb-6 md:text-4xl"
+              >
                 Ich hatte <em>eigentlich</em> alles...
               </h2>
               <p className="mb-3 md:mb-4">
@@ -126,7 +132,10 @@ const ÜberMich = ({ siteConfig }) => {
             />
           </div>
           <div className="text-sm text-justify md:text-base">
-            <h2 className="mb-4 text-3xl text-left md:mb-6 md:text-4xl">
+            <h2
+              style={sourceSerif.style}
+              className="mb-4 text-3xl text-left md:mb-6 md:text-4xl"
+            >
               Von der Zuschauerin zur <em>Hauptfigur</em>
             </h2>
             <p className="mb-3 md:mb-4">
@@ -181,7 +190,10 @@ const ÜberMich = ({ siteConfig }) => {
         <div className="container max-w-5xl mx-auto ">
           <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
             <div className="text-sm text-justify md:text-base">
-              <h2 className="mb-4 text-3xl text-left md:mb-6 md:text-4xl">
+              <h2
+                style={sourceSerif.style}
+                className="mb-4 text-3xl text-left md:mb-6 md:text-4xl"
+              >
                 Du darfst dir <em>Unterstützung</em> auf deiner persönlichen
                 Journey holen
               </h2>
@@ -212,7 +224,13 @@ const ÜberMich = ({ siteConfig }) => {
                 <Button title={"Zum Coaching-Angebot"} />
               </Link>
             </div>
-            <div>
+            <div className="relative">
+              <div
+                className="absolute -top-8 -right-12 rotate-[20deg] text-2xl"
+                style={sourceSerif.style}
+              >
+                <em>Let’s do this 🔥</em>
+              </div>
               <div className="relative md:min-w-[290px] min-h-[390px] min-w-full rounded-t-[300px] overflow-hidden">
                 <Image
                   src={"/images/ich_unten.webp"}

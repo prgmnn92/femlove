@@ -99,10 +99,12 @@ function Navigation() {
               </div>
               <div className="absolute inset-y-auto right-0 flex items-center pr-2 lg:ml-6 lg:pr-0">
                 <Link
-                  href={"https://femlove-by-franzi.ck.page/newsletter1"}
+                  href={
+                    "https://calendly.com/femlove/kostenloses-erstgespraech"
+                  }
                   target="_blank"
                 >
-                  <Button title="Newsletter" />
+                  <Button isSecondary title="Kostenloses Kennenlerngespräch" />
                 </Link>
               </div>
             </div>
