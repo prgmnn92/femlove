@@ -12,6 +12,7 @@ const PostCard = ({ index, post, category }) => {
     <Link href={"/post/" + post.slug.current} className="pb-4">
       <div className="rounded-[14px] p-4 bg-white w-full h-full relative">
         <Image
+          priority={index === 0}
           width={370}
           height={280}
           src={urlFor(post.mainImage).url()}
