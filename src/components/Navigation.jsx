@@ -14,11 +14,6 @@ export const navigation = [
   { href: "/blog", name: "Blog" },
   { href: "/ueber-mich", name: "Über Mich" },
   { href: "/angebot", name: "Angebot" },
-  // {
-  //   href: "https://femlove-by-franzi.ck.page/newsletter1",
-  //   name: "Für 0 Euro",
-  //   target: "_blank",
-  // },
   { href: "/kontakt", name: "Kontakt" },
 ];
 
@@ -72,7 +67,7 @@ function Navigation() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="absolute inset-auto z-20 flex items-center flex-shrink-0 ml-0 lg:mt-0 lg:left-0">
+              <div className="absolute inset-auto z-20 flex items-center flex-shrink-0 ml-0 right-4 lg:mt-0 lg:left-0">
                 <InstagramIcon />
                 <PinterestIcon />
               </div>
@@ -97,7 +92,7 @@ function Navigation() {
                   ))}
                 </div>
               </div>
-              <div className="absolute inset-y-auto right-0 flex items-center pr-2 lg:ml-6 lg:pr-0">
+              <div className="absolute inset-y-auto right-0 items-center hidden pr-2 md:flex lg:ml-6 lg:pr-0">
                 <Link
                   href={
                     "https://calendly.com/femlove/kostenloses-erstgespraech"
@@ -126,6 +121,13 @@ function Navigation() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+              <Link
+                className="block pt-4 text-center"
+                href={"https://calendly.com/femlove/kostenloses-erstgespraech"}
+                target="_blank"
+              >
+                <Button isSecondary title="Kostenloses Kennenlerngespräch" />
+              </Link>
             </div>
           </Disclosure.Panel>
         </>

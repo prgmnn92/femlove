@@ -1,6 +1,7 @@
 import React from "react";
 
 const Button = ({ title, small, isSecondary, onClick, type = "button" }) => {
+  "use server";
   return (
     <button
       onClick={onClick}
