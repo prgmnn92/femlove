@@ -18,6 +18,15 @@ export default function App({ Component, pageProps }) {
       <Head>
         {isProduction && (
           <>
+            <link
+              rel="dns-prefetch"
+              href="https://www.googletagmanager.com/"
+            ></link>
+            <link
+              href="https://www.googletagmanager.com/gtag/js?id=G-1B3C3W4V0P"
+              rel="preload"
+              as="script"
+            />
             <script
               async
               // strategy="beforeInteractive"
