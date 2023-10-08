@@ -61,7 +61,7 @@ const About = ({ text }) => {
           </div>
           <div className="relative flex flex-row items-center justify-center w-full lg:w-1/2">
             <Image
-              src="/images/franziska-2.png"
+              src="/images/franziska-2.webp"
               className="object-cover rounded-[14px] w-full lg:min-h-[560px] min-h-[280px] overflow-hidden max-w-[450px] z-10"
               height={480}
               width={400}
