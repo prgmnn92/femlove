@@ -43,7 +43,7 @@ const Hero = ({
         >
           <Image
             ref={image}
-            src="/images/hero-3.jpg"
+            src="/images/hero-3.webp"
             width={180}
             height={300}
             className={`min-h-[300px] min-w-[180px] max-w-[180px] max-h-[300px] object-cover duration-2000 transition-all lg:block hidden`}
@@ -54,7 +54,7 @@ const Hero = ({
           />
         </InView>
         <Image
-          src="/images/hero-1.jpg"
+          src="/images/hero-1.webp"
           width={290}
           height={230}
           className="rounded-[14px] absolute left-[-270px] bottom-[-80px] object-cover lg:block hidden"
@@ -62,7 +62,7 @@ const Hero = ({
           priority
         />
         <Image
-          src="/images/hero-2.jpg"
+          src="/images/hero-2.webp"
           width={300}
           height={400}
           className="rounded-t-full absolute right-[-370px] bottom-[-30px] min-h-[400px] min-w-[300px] object-cover lg:block hidden"

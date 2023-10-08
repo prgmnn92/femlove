@@ -13,7 +13,7 @@ const Products = () => {
             title={"Weekly Newsletter"}
             category={"Für 0 Euro"}
             href={"https://femlove-by-franzi.ck.page/newsletter1"}
-            imageSrc={"/images/newsletter.jpg"}
+            imageSrc={"/images/newsletter.webp"}
             text={
               "Jeden Dienstag erwarten dich Impulse, Insights und hilfreiche Tipps zu den Themen Zyklusbewusstsein, Mindset, Selbstfindung und Verwirklichung. Auf den Punkt gebracht und ohne viel Chichi."
             }
@@ -23,7 +23,7 @@ const Products = () => {
             title={"1:1 Coaching"}
             category={"deep dive"}
             href={"/angebot"}
-            imageSrc={"/images/coaching.jpg"}
+            imageSrc={"/images/coaching.webp"}
             text={
               "Im Rahmen meiner 1:1 Coachings unterstütze ich dich auf deinem Weg zu dir selbst. Meine Schwerpunkte liegen dabei auf der Verbindung zu dir als Frau, auf den Prozess der Selbstfindung und Selbstverwirklichung."
             }

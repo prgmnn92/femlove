@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Button from "./Button";
 import InstagramIcon from "./icons/InstagramIcon";
@@ -86,7 +87,6 @@ function Navigation() {
                       key={item.name}
                       href={item.href}
                       title={item.name}
-                      current={item.current}
                       target={item.target}
                     />
                   ))}
@@ -136,13 +136,15 @@ function Navigation() {
   );
 }
 
-const NavItem = ({ title, href, current, target = "" }) => {
+const NavItem = ({ title, href, target = "" }) => {
+  const router = useRouter();
+  const current = href === router.pathname;
   return (
     <Link href={href} target={target}>
       <div
         className={classNames(
-          current ? "font-bold" : "text-black ",
-          "rounded-[14px] px-3 py-2 hover:font-semibold text-sm font-medium transition-all cursor-pointer inline"
+          current ? "font-semibold" : "font-medium",
+          "rounded-[14px] px-3 py-2 hover:font-semibold text-sm cursor-pointer inline"
         )}
         aria-current={current ? "page" : undefined}
       >
