@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import { setCookie, hasCookie } from "cookies-next";

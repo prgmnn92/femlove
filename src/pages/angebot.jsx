@@ -8,7 +8,6 @@ import { sanityClient } from "@lib/sanity";
 import Image from "next/image";
 import Link from "next/link";
 
-import Button from "@/components/Button";
 import Layout from "@/components/Layout";
 import InTouch from "@/components/sections/InTouch";
 import { sourceSerif, josefineSans } from "@/fonts";
@@ -83,8 +82,12 @@ const Angebot = ({ siteConfig }) => {
                 ein erfülltes und selbstbestimmtes Leben bringen.
               </p>
               <div>
-                <Link href={"/angebot#offer"}>
-                  <Button title={"Yesss! Zeig mir deine 1:1 Angebote"} />
+                <Link
+                  className={`relative z-20 duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer px-5 py-2 text-sm text-white bg-f-brown hover:text-f-brown font-medium  hover:bg-white`}
+                  href={"/angebot#offer"}
+                  aria-label="zu meinem angebot"
+                >
+                  Yesss! Zeig mir deine 1:1 Angebote
                 </Link>
               </div>
             </div>
@@ -389,11 +392,13 @@ const Angebot = ({ siteConfig }) => {
                 </p>
                 <div className="pt-6 md:pt-8">
                   <Link
+                    className={`relative z-20 duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer px-5 py-2 text-sm text-white bg-f-brown hover:text-f-brown font-medium  hover:bg-white`}
                     href={
                       "https://calendly.com/femlove/kostenloses-erstgespraech"
                     }
+                    aria-label="anmeldung zum kennenlerngespräch"
                   >
-                    <Button title={"Kennenlerngespräch vereinbaren"} />
+                    Kennenlerngespräch vereinbaren
                   </Link>
                 </div>
               </div>
@@ -481,11 +486,13 @@ const Angebot = ({ siteConfig }) => {
                 </p>
                 <div className="pt-6 md:pt-8">
                   <Link
+                    className={`relative z-20 duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer px-5 py-2 text-sm text-white bg-f-brown hover:text-f-brown font-medium  hover:bg-white`}
                     href={
                       "https://calendly.com/femlove/kostenloses-erstgespraech"
                     }
+                    aria-label="anmeldung zum kennenlerngespräch"
                   >
-                    <Button title={"Kennenlerngespräch vereinbaren"} />
+                    Kennenlerngespräch vereinbaren
                   </Link>
                 </div>
               </div>
@@ -545,11 +552,13 @@ const Angebot = ({ siteConfig }) => {
                 </p>
                 <div className="pt-6 md:pt-8">
                   <Link
+                    className={`relative z-20 duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer px-5 py-2 text-sm text-white bg-f-brown hover:text-f-brown font-medium  hover:bg-white`}
                     href={
                       "https://calendly.com/femlove/kostenloses-erstgespraech"
                     }
+                    aria-label="anmeldung zum kennenlerngespräch"
                   >
-                    <Button title={"Kennenlerngespräch vereinbaren"} />
+                    Kennenlerngespräch vereinbaren
                   </Link>
                 </div>
               </div>
@@ -595,11 +604,13 @@ const Angebot = ({ siteConfig }) => {
               </p>
               <div className="pt-3 md:pt-4">
                 <Link
+                  className={`relative z-20 duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer px-5 py-2 text-sm text-white bg-f-brown hover:text-f-brown font-medium  hover:bg-white`}
                   href={
                     "https://calendly.com/femlove/kostenloses-erstgespraech"
                   }
+                  aria-label="anmeldung zum kennenlerngespräch"
                 >
-                  <Button title={"Kennenlerngespräch vereinbaren"} />
+                  Kennenlerngespräch vereinbaren
                 </Link>
               </div>
             </div>

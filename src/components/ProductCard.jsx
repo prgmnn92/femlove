@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import Button from "./Button";
 import { josefineSans, sourceSerif } from "@/fonts";
 
 const ProductCard = ({
@@ -47,9 +46,13 @@ const ProductCard = ({
           </div>
           <p className="pb-10 text-sm font-light lg:text-normal">{text}</p>
           {!bodyContent && (
-            <div className="absolute pt-4 bottom-2">
-              <Link href={href}>
-                <Button isSecondary title={cta} />
+            <div className="absolute pt-4 bottom-4">
+              <Link
+                href={href}
+                className="relative  duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer px-5 py-2 text-sm text-f-brown  bg-transparent font-medium hover:text-white hover:bg-f-brown"
+                aria-label={title}
+              >
+                {cta}
               </Link>
             </div>
           )}
@@ -60,9 +63,13 @@ const ProductCard = ({
           <div className="py-4 text-sm font-light lg:text-normal">
             {bodyContent}
           </div>
-          <div className="absolute bottom-0 left-0">
-            <Link href={href}>
-              <Button isSecondary title={cta} />
+          <div className="absolute left-0 bottom-2">
+            <Link
+              href={href}
+              className="relative  duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer px-5 py-2 text-sm text-f-brown  bg-transparent font-medium hover:text-white hover:bg-f-brown"
+              aria-label={title}
+            >
+              {cta}
             </Link>
           </div>
         </div>

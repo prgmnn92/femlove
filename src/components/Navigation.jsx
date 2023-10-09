@@ -5,7 +5,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import Button from "./Button";
 import InstagramIcon from "./icons/InstagramIcon";
 import NavIcon from "./icons/NavIcon";
 import PinterestIcon from "./icons/PinterestIcon";
@@ -94,12 +93,14 @@ function Navigation() {
               </div>
               <div className="absolute inset-y-auto right-0 items-center hidden pr-2 lg:flex lg:ml-6 lg:pr-0">
                 <Link
+                  className="elative  duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer text-f-brown  bg-transparent font-medium hover:text-white hover:bg-f-brown px-5 py-2 text-sm"
                   href={
                     "https://calendly.com/femlove/kostenloses-erstgespraech"
                   }
                   target="_blank"
+                  aria-label="Buche ein kostenloses erstgespräch"
                 >
-                  <Button isSecondary title="Kostenloses Kennenlerngespräch" />
+                  Kostenloses Kennenlerngespräch
                 </Link>
               </div>
             </div>
@@ -121,13 +122,18 @@ function Navigation() {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              <Link
-                className="block pt-4 text-center"
-                href={"https://calendly.com/femlove/kostenloses-erstgespraech"}
-                target="_blank"
-              >
-                <Button isSecondary title="Kostenloses Kennenlerngespräch" />
-              </Link>
+              <div className="block pt-4 text-center">
+                <Link
+                  className="relative  duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer px-5 py-2 text-sm text-f-brown  bg-transparent font-medium hover:text-white hover:bg-f-brown"
+                  href={
+                    "https://calendly.com/femlove/kostenloses-erstgespraech"
+                  }
+                  target="_blank"
+                  aria-label="Buche ein kostenloses erstgespräch"
+                >
+                  Kostenloses Kennenlerngespräch
+                </Link>
+              </div>
             </div>
           </Disclosure.Panel>
         </>

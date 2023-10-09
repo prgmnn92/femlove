@@ -6,9 +6,7 @@ import { sanityClient } from "@lib/sanity";
 import Image from "next/image";
 import Link from "next/link";
 
-import Button from "@/components/Button";
 import Layout from "@/components/Layout";
-import Banner from "@/components/sections/Banner";
 import { sourceSerif } from "@/fonts";
 
 const Quote = (props) => {
@@ -220,8 +218,12 @@ const ÜberMich = ({ siteConfig }) => {
                 individuelle Einzelstunden und Begleitungen an. Schau direkt mal
                 in meinem Angebot vorbei:
               </p>
-              <Link href={"/angebot"}>
-                <Button title={"Zum Coaching-Angebot"} />
+              <Link
+                className={`relative z-20 duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer px-5 py-2 text-sm text-white bg-f-brown hover:text-f-brown font-medium  hover:bg-white`}
+                href={"/angebot"}
+                aria-label="zu meinem angebot"
+              >
+                Zum Coaching-Angebot
               </Link>
             </div>
             <div className="relative">
