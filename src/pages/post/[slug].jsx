@@ -30,9 +30,9 @@ const Post = (props) => {
         <NextSeo
           title={`${post.title} - ${siteConfig.title}`}
           description={post.excerpt || ""}
-          canonical={`${siteConfig?.url}/post/${post.slug.current}`}
+          canonical={`https://femlove.blog/post/${post.slug.current}`}
           openGraph={{
-            url: `${siteConfig?.url}/post/${post.slug.current}`,
+            url: `https://femlove.blog/post/${post.slug.current}`,
             title: `${post.title} - ${siteConfig.title}`,
             description: post.excerpt || "",
             images: [
