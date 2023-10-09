@@ -136,7 +136,7 @@ function Navigation() {
   );
 }
 
-const NavItem = ({ title, href, target = "" }) => {
+const NavItem = ({ title, href, target = "_self" }) => {
   const router = useRouter();
   const current = href === router.pathname;
   return (
