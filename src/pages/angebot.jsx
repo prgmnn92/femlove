@@ -694,9 +694,6 @@ const Angebot = ({ siteConfig }) => {
   );
 };
 
-//TODO: Steps in components unwamdeln
-//TODO: CTA am ende der Steps?
-
 export async function getStaticProps({ params, preview = false }) {
   const configs = await sanityClient.fetch(configQuery);
   const siteConfig =
