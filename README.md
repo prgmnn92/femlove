@@ -12,12 +12,11 @@ Visit here: [femlove](https://femlove.blog/)
 
 ## Other
 
-I've used Airtable for form submissions first, but since I'm using netlify for deployment I'm switching now to netlify forms.
+
 
 ## TBD
 
-- [ ] Customize sanity studio
-- [ ] Improve layout on blog post page
+- [x] Customize sanity studio
+- [x] Improve layout on blog post page
 - [ ] lazy loading for blog page posts
-- [ ] popup modal to gather newsletter subs
 - [ ] improve accept cookies popup
