@@ -13,7 +13,7 @@ export const navigation = [
   { href: "/", name: "Start" },
   { href: "/blog", name: "Blog" },
   { href: "/ueber-mich", name: "Über Mich" },
-  { href: "/angebot", name: "Angebot" },
+  // { href: "/angebot", name: "Angebot" },
   { href: "/kontakt", name: "Kontakt" },
 ];
 
@@ -94,13 +94,11 @@ function Navigation() {
               <div className="absolute inset-y-auto right-0 items-center hidden pr-2 lg:flex lg:ml-6 lg:pr-0">
                 <Link
                   className="elative  duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer text-f-brown  bg-transparent font-medium hover:text-white hover:bg-f-brown px-5 py-2 text-sm"
-                  href={
-                    "https://calendly.com/femlove/kostenloses-erstgespraech"
-                  }
+                  href={"https://femlove-by-franzi.ck.page/37146a21b8"}
                   target="_blank"
-                  aria-label="Buche ein kostenloses erstgespräch"
+                  aria-label="Zyklus Journalfragen download"
                 >
-                  Kostenloses Kennenlerngespräch
+                  Zyklus Journalfragen
                 </Link>
               </div>
             </div>
