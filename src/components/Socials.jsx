@@ -7,7 +7,7 @@ const Socials = () => {
   return (
     <div className="flex flex-row gap-2">
       <InstagramIcon />
-      <PinterestIcon />
+      {/* <PinterestIcon /> */}
     </div>
   );
 };

@@ -69,7 +69,7 @@ function Navigation() {
               </div>
               <div className="absolute inset-auto z-20 flex items-center flex-shrink-0 ml-0 right-4 lg:mt-0 lg:left-0 lg:right-auto">
                 <InstagramIcon />
-                <PinterestIcon />
+                {/* <PinterestIcon /> */}
               </div>
               <div
                 style={{ top: `${navPosition}px` }}

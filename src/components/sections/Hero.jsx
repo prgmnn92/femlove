@@ -19,7 +19,7 @@ const Hero = ({
           style={josefineSans.style}
           className="text-xs font-light uppercase lg:text-sm"
         >
-          step into your power
+          Zyklus & Frausein
         </p>
         <div className="w-8 h-[1px] bg-black/40 mx-auto my-4 rounded"></div>
         <h1
