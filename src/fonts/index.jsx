@@ -1,4 +1,4 @@
-import { Montserrat, Josefin_Sans, Source_Serif_Pro } from "@next/font/google";
+import { Montserrat, Josefin_Sans, Source_Serif_Pro } from "next/font/google";
 
 export const montserrat = Montserrat({
   subsets: ["latin"],
