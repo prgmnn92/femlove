@@ -7,25 +7,25 @@ const Products = () => {
   return (
     <section className="relative pt-16 pb-16 lg:pb-32">
       <div className="container relative z-10 px-4 mx-auto">
-        <Heading title="Ist das interessant für dich?" subtitle="Mehr" />
+        <Heading title="Worauf wartest du noch?" subtitle="Mein Angebot" />
         <div className="flex flex-col gap-4 lg:flex-row">
           <ProductCard
-            title={"Trackle Sensor"}
-            category={"Rabattcode"}
-            href={"/post/erfahrungsbericht-trackle"}
-            imageSrc={"/images/trackle.webp"}
+            title={"Weekly Newsletter"}
+            category={"Für 0 Euro"}
+            href={"https://femlove-by-franzi.ck.page/newsletter1"}
+            imageSrc={"/images/newsletter.webp"}
             text={
-              "Mit dem Rabattcode „FEMLOVE10“ erhältst du 10% Rabatt auf den Kauf eines trackles oder den Abschluss eines trackle Abos (Werbung)"
+              "Jeden Dienstag erwarten dich Impulse, Insights und hilfreiche Tipps zu den Themen Zyklusbewusstsein, Mindset, Selbstfindung und Verwirklichung. Auf den Punkt gebracht und ohne viel Chichi."
             }
-            cta="Erfahrungsbericht"
+            cta="Hier anmelden"
           />
           <ProductCard
-            title={"Frauencoaching"}
-            category={"Franziska Pargmann"}
-            href={"https://www.franziskapargmann.de"}
+            title={"1:1 Coaching"}
+            category={"deep dive"}
+            href={"/angebot"}
             imageSrc={"/images/coaching.webp"}
             text={
-              "Du interessierst dich für mein Coaching und Mentoring Angebot? Dann schau super gerne bei franziskapargmann.de vorbei"
+              "Im Rahmen meiner 1:1 Coachings unterstütze ich dich auf deinem Weg zu dir selbst. Meine Schwerpunkte liegen dabei auf der Verbindung zu dir als Frau, auf den Prozess der Selbstfindung und Selbstverwirklichung."
             }
             cta="Mehr erfahren"
           />
