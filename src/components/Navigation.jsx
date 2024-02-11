@@ -12,7 +12,7 @@ import PinterestIcon from "./icons/PinterestIcon";
 export const navigation = [
   { href: "/", name: "Start" },
   { href: "/blog", name: "Blog" },
-  { href: "/ueber-mich", name: "Über Mich" },
+  // { href: "/ueber-mich", name: "Über Mich" },
   // { href: "/angebot", name: "Angebot" },
   { href: "/kontakt", name: "Kontakt" },
 ];
@@ -113,7 +113,7 @@ function Navigation() {
                   href={item.href}
                   className={classNames(
                     item.current ? "font-bold" : "text-black ",
-                    "rounded-[14px] px-3 py-2 hover:font-semibold text-sm font-medium transition-all cursor-pointer block text-center"
+                    "rounded-[14px] px-3 py-2 hover:font-semibold text-sm font-medium transition-all cursor-pointer block text-center",
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >
@@ -148,7 +148,7 @@ const NavItem = ({ title, href, target = "_self" }) => {
       <div
         className={classNames(
           current ? "font-semibold" : "font-medium",
-          "rounded-[14px] px-3 py-2 hover:font-semibold text-sm cursor-pointer inline"
+          "rounded-[14px] px-3 py-2 hover:font-semibold text-sm cursor-pointer inline",
         )}
         aria-current={current ? "page" : undefined}
       >

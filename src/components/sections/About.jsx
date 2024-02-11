@@ -52,10 +52,10 @@ const About = ({ text }) => {
                 <Link
                   className={`relative z-20 duration-300 rounded-[14px] transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 focus:ring-offset-2  border-[1px] border-solid border-f-brown cursor-pointer px-5 py-2 text-sm text-white bg-f-brown hover:text-f-brown font-medium  hover:bg-white 
       `}
-                  href={"/ueber-mich"}
-                  aria-label="Über mich seite"
+                  href={"/blog"}
+                  aria-label="Blog"
                 >
-                  Über mich
+                  Zum Blog
                 </Link>
                 <div className="absolute top-[-8px] left-[115%]">
                   <ArrowIcon />
