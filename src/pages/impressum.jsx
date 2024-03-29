@@ -16,15 +16,6 @@ const Impressum = () => {
                   <span className="font-semibold">Angaben gemäß § 5 TMG</span>
                 </span>
               </span>
-
-              <br />
-              <span>
-                <span>
-                  Franziska Pargmann <br />
-                  Wurmbergstr. 74 <br />
-                  38122 Braunschweig
-                </span>
-              </span>
             </span>
           </p>
 
@@ -49,15 +40,6 @@ const Impressum = () => {
                   <span className="font-semibold">
                     Redaktionell verantwortlich
                   </span>
-                </span>
-              </span>
-              <br />
-              <span>
-                <span>
-                  Franziska Pargmann <br />
-                  Wurmbergstr. 74
-                  <br />
-                  38122 Braunschweig
                 </span>
               </span>
             </span>
