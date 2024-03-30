@@ -208,17 +208,6 @@ const Datenschutz = () => {
               <span></span>
             </span>
           </h6>
-
-          <p>
-            <span>
-              Franziska Pargmann
-              <br />
-              Wurmbergstr. 74
-              <br />
-              38122 Braunschweig
-            </span>
-          </p>
-
           <p>
             <span>
               <span></span>
