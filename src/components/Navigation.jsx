@@ -14,7 +14,7 @@ export const navigation = [
   { href: "/blog", name: "Blog" },
   // { href: "/ueber-mich", name: "Über Mich" },
   // { href: "/angebot", name: "Angebot" },
-  { href: "/kontakt", name: "Kontakt" },
+  // { href: "/kontakt", name: "Kontakt" },
 ];
 
 function classNames(...classes) {

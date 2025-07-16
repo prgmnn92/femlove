@@ -19,16 +19,6 @@ const Products = () => {
             }
             cta="Erfahrungsbericht"
           />
-          <ProductCard
-            title={"Frauencoaching"}
-            category={"Franziska Pargmann"}
-            href={"https://www.franziskapargmann.de"}
-            imageSrc={"/images/coaching.webp"}
-            text={
-              "Du interessierst dich für mein Coaching und Mentoring Angebot? Dann schau super gerne bei franziskapargmann.de vorbei"
-            }
-            cta="Mehr erfahren"
-          />
         </div>
       </div>
       <div className="absolute bottom-[-30px] flex items-center justify-center w-full -z-10">
